@@ -117,10 +117,10 @@ A TypeScript module to determine whether the bytes is match the specify signatur
 - ```ts
   class MagicBytesMatcher {
     constructor(filter?: (meta: MagicBytesMeta) => boolean): MagicBytesMatcher;
-    *matchAll(item: string | Uint8Array): Generator<MagicBytesMetaWithWeight>;
-    *matchFileAll(file: string | URL | Deno.FsFile): AsyncGenerator<MagicBytesMetaWithWeight>;
     match(item: string | Uint8Array): MagicBytesMetaWithWeight | null;
+    matchAll(item: string | Uint8Array): Generator<MagicBytesMetaWithWeight>;
     matchFile(file: string | URL | Deno.FsFile): Promise<MagicBytesMetaWithWeight | null>;
+    matchFileAll(file: string | URL | Deno.FsFile): AsyncGenerator<MagicBytesMetaWithWeight>;
     test(item: string | Uint8Array): boolean;
     testFile(file: string | URL | Deno.FsFile): Promise<boolean>;
   }
