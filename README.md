@@ -8,26 +8,31 @@
 
 **🆙** ![Latest Release Version](https://img.shields.io/github/release/hugoalh-studio/bytes-matcher-ts?sort=semver&color=2187C0&label=&style=flat "Latest Release Version") (![Latest Release Date](https://img.shields.io/github/release-date/hugoalh-studio/bytes-matcher-ts?color=2187C0&label=&style=flat "Latest Release Date"))
 
-A TypeScript module to determine whether the item is a primitive.
+A TypeScript module to determine whether the bytes is match the specify signature.
 
 ## 🎯 Target
 
+<!--
 - Bun ^ v1.0.0
 - Cloudflare Workers
+-->
 - Deno >= v1.34.0 / >= v1.41.1 *(Via JSR)*
   > **🛡️ Require Permission**
   >
   > *N/A*
+<!--
 - NodeJS >= v16.13.0
+-->
 
 ## 🔰 Usage
 
 ### Via HTTPS
 
+<!--
 > **🎯 Supported Target**
 >
 > - Deno
-
+-->
 1. Import at the script (`<ScriptName>.ts`):
     - Via DenoPKG
       ```ts
@@ -53,10 +58,11 @@ A TypeScript module to determine whether the item is a primitive.
 
 ### Via JSR With Native Support
 
+<!--
 > **🎯 Supported Target**
 >
 > - Deno
-
+-->
 1. Import at the script (`<ScriptName>.ts`):
     ```ts
     import ... from "jsr:@hugoalh/bytes-matcher[@<Tag>]";
@@ -65,6 +71,7 @@ A TypeScript module to determine whether the item is a primitive.
     >
     > Although it is recommended to import the entire module, it is also able to import part of the module with sub path if available, please visit [file `jsr.jsonc`](./jsr.jsonc) property `exports` for available sub paths.
 
+<!--
 ### Via JSR With NPM Compatibility Layer Support
 
 > **🎯 Supported Target**
@@ -97,8 +104,72 @@ A TypeScript module to determine whether the item is a primitive.
     > **ℹ️ Note**
     >
     > Although it is recommended to import the entire module, it is also able to import part of the module with sub path if available, please visit [file `jsr.jsonc`](./jsr.jsonc) property `exports` for available sub paths.
-
+-->
 ## 🧩 API
+
+- ```ts
+  class BytesMatcher {
+    constructor(signature: BytesMatcherSignature<string | Uint8Array>[]): BytesMatcher;
+    test(item: string | Uint8Array): boolean;
+    testFile(file: string | URL | Deno.FsFile): Promise<boolean>;
+    get weight(): number;
+  }
+  ```
+- ```ts
+  class MagicBytesMatcher {
+    constructor(filter?: (meta: MagicBytesMeta) => boolean): MagicBytesMatcher;
+    *matchAll(item: string | Uint8Array): Generator<MagicBytesMetaWithWeight>;
+    *matchFileAll(file: string | URL | Deno.FsFile): AsyncGenerator<MagicBytesMetaWithWeight>;
+    match(item: string | Uint8Array): MagicBytesMetaWithWeight | null;
+    matchFile(file: string | URL | Deno.FsFile): Promise<MagicBytesMetaWithWeight | null>;
+    test(item: string | Uint8Array): boolean;
+    testFile(file: string | URL | Deno.FsFile): Promise<boolean>;
+  }
+  ```
+- ```ts
+  interface BytesMatcherSignature<T extends string | Uint8Array> {
+    offset: number;
+    pattern: T;
+  }
+  ```
+- ```ts
+  interface MagicBytesMeta {
+    /**
+    * Category of the magic bytes.
+    */
+    category: MagicBytesMetaCategory;
+    /**
+    * Extensions of the magic bytes.
+    * @default []
+    */
+    extensions: `.${string}`[];
+    /**
+    * MIMEs of the magic bytes.
+    * @default []
+    */
+    mimes: string[];
+    /**
+    * Name of the magic bytes.
+    */
+    name: string;
+    /**
+    * Variant of the magic bytes. Only available when multiple signatures with same meta.
+    * @default undefined
+    */
+    variant?: string;
+  }
+  ```
+- ```ts
+  interface MagicBytesMetaWithWeight extends MagicBytesMeta {
+    /**
+     * Weight of the magic bytes.
+    */
+    weight: number;
+  }
+  ```
+- ```ts
+  type MagicBytesMetaCategory = "archive" | "audio" | "compressed" | "database" | "diagram" | "disk" | "document" | "ebook" | "executable" | "font" | "formula" | "geospatial" | "image" | "metadata" | "model" | "other" | "package" | "playlist" | "presentation" | "rom" | "spreadsheet" | "subtitle" | "video";
+  ```
 
 > **ℹ️ Note**
 >

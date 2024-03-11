@@ -25,7 +25,7 @@
 
 | **Versions** | **Release Date** | **Long Term Support Date** | **End Of Life Date** |
 |:-:|:-:|:-:|:-:|
-| v1.X.X | *Unknown* | *Unknown* | *Unknown* |
+| v0.1.X | *Unknown* | *N/A* | *Unknown* |
 
 > **ℹ️ Note**
 >

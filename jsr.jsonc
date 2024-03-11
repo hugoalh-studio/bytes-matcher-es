@@ -1,7 +1,7 @@
 // This file is only for JSR related, non-JSR related must set in the file `deno.jsonc`!
 {
 	"name": "@hugoalh/bytes-matcher",
-	"version": "1.0.0",
+	"version": "0.1.0",
 	"exports": {
 		"./magic-bytes": "./magic_bytes.ts",
 		"./matcher": "./matcher.ts",
