@@ -1,0 +1,36 @@
+// This file is only for JSR related, non-JSR related must set in the file `deno.jsonc`!
+{
+	"name": "@hugoalh/bytes-matcher",
+	"version": "1.0.0",
+	"exports": {
+		"./magic-bytes": "./magic_bytes.ts",
+		"./matcher": "./matcher.ts",
+		".": "./mod.ts"
+	},
+	"imports": { },
+	"publish": {
+		"exclude": [
+			"**/*_bench.ts",
+			"**/*_bench.tsx",
+			"**/*_test.ts",
+			"**/*_test.tsx",
+			"**/*.bench.ts",
+			"**/*.bench.tsx",
+			"**/*.test.ts",
+			"**/*.test.tsx",
+			"**/bench.ts",
+			"**/bench.tsx",
+			"**/test.ts",
+			"**/test.tsx",
+			"_convert_magic_bytes_list.ts"
+		],
+		"include": [
+			"**/*.ts",
+			"**/*.tsx",
+			"jsr.jsonc",
+			"LICENSE*.md",
+			"README*.md",
+			"magic_bytes_list.json"
+		]
+	}
+}

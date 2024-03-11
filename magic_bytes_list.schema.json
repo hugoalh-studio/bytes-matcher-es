@@ -1,0 +1,92 @@
+{
+	"$schema": "https://json-schema.org/draft/2020-12/schema",
+	"type": "array",
+	"items": {
+		"type": "object",
+		"properties": {
+			"category": {
+				"enum": [
+					"archive",
+					"audio",
+					"compressed",
+					"database",
+					"diagram",
+					"disk",
+					"document",
+					"ebook",
+					"executable",
+					"font",
+					"formula",
+					"geospatial",
+					"image",
+					"metadata",
+					"model",
+					"other",
+					"package",
+					"playlist",
+					"presentation",
+					"rom",
+					"spreadsheet",
+					"subtitle",
+					"video"
+				]
+			},
+			"extensions": {
+				"type": "array",
+				"items": {
+					"type": "string",
+					"minLength": 1,
+					"pattern": "^\\.[^\\r\\n\\s\\t]+$"
+				},
+				"uniqueItems": true
+			},
+			"mimes": {
+				"type": "array",
+				"items": {
+					"type": "string",
+					"minLength": 1,
+					"pattern": "^(?:[^\\s].*)?[^\\s]$"
+				},
+				"uniqueItems": true
+			},
+			"name": {
+				"type": "string",
+				"minLength": 1,
+				"pattern": "^(?:[^\\s].*)?[^\\s]$"
+			},
+			"signature": {
+				"type": "array",
+				"items": {
+					"type": "object",
+					"properties": {
+						"offset": {
+							"type": "integer"
+						},
+						"pattern": {
+							"type": "string",
+							"minLength": 1
+						}
+					},
+					"required": [
+						"offset",
+						"pattern"
+					]
+				},
+				"uniqueItems": true
+			},
+			"variant": {
+				"type": "string",
+				"minLength": 1,
+				"pattern": "^(?:[^\\s].*)?[^\\s]$"
+			}
+		},
+		"required": [
+			"category",
+			"extensions",
+			"mimes",
+			"name",
+			"signature"
+		]
+	},
+	"uniqueItems": true
+}

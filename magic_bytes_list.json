@@ -1,0 +1,7482 @@
+[
+	{
+		"category": "spreadsheet",
+		"extensions": [
+			".wk1"
+		],
+		"mimes": [],
+		"name": "Lotus 1-2-3 Spreadsheet (V1) File",
+		"signature": [
+			{
+				"offset": 0,
+				"pattern": "\u0000\u0000\u0002\u0000\u0006\u0004\u0006\u0000\b\u0000\u0000\u0000\u0000\u0000"
+			}
+		]
+	},
+	{
+		"category": "spreadsheet",
+		"extensions": [
+			".wk3"
+		],
+		"mimes": [],
+		"name": "Lotus 1-2-3 Spreadsheet (V3) File",
+		"signature": [
+			{
+				"offset": 0,
+				"pattern": "\u0000\u0000\u001a\u0000\u0000\u0010\u0004\u0000\u0000\u0000\u0000\u0000"
+			}
+		]
+	},
+	{
+		"category": "spreadsheet",
+		"extensions": [
+			".wk4",
+			".wk5"
+		],
+		"mimes": [],
+		"name": "Lotus 1-2-3 Spreadsheet (V4 / V5) File",
+		"signature": [
+			{
+				"offset": 0,
+				"pattern": "\u0000\u0000\u001a\u0000\u0002\u0010\u0004\u0000\u0000\u0000\u0000\u0000"
+			}
+		]
+	},
+	{
+		"category": "spreadsheet",
+		"extensions": [
+			".123"
+		],
+		"mimes": [
+			"application/vnd.lotus-1-2-3"
+		],
+		"name": "Lotus 1-2-3 Spreadsheet (V9) File",
+		"signature": [
+			{
+				"offset": 0,
+				"pattern": "\u0000\u0000\u001a\u0000\u0005\u0010\u0004"
+			}
+		]
+	},
+	{
+		"category": "executable",
+		"extensions": [],
+		"mimes": [],
+		"name": "Amiga Hunk Executable",
+		"signature": [
+			{
+				"offset": 0,
+				"pattern": "\u0000\u0000\u0003ó"
+			}
+		]
+	},
+	{
+		"category": "document",
+		"extensions": [
+			".qxd"
+		],
+		"mimes": [
+			"application/vnd.quark.quarkxpress"
+		],
+		"name": "Quark Express Document",
+		"signature": [
+			{
+				"offset": 0,
+				"pattern": "\u0000\u0000MMXPR"
+			}
+		],
+		"variant": "BE"
+	},
+	{
+		"category": "document",
+		"extensions": [
+			".qxd"
+		],
+		"mimes": [
+			"application/vnd.quark.quarkxpress"
+		],
+		"name": "Quark Express Document",
+		"signature": [
+			{
+				"offset": 0,
+				"pattern": "\u0000\u0000IIXPR"
+			}
+		],
+		"variant": "LE"
+	},
+	{
+		"category": "database",
+		"extensions": [
+			".psafe3"
+		],
+		"mimes": [],
+		"name": "Password Gorilla Password Database",
+		"signature": [
+			{
+				"offset": 0,
+				"pattern": "PWS3"
+			}
+		]
+	},
+	{
+		"category": "other",
+		"extensions": [
+			".pcap"
+		],
+		"mimes": [
+			"application/vnd.tcpdump.pcap"
+		],
+		"name": "Libpcap File",
+		"signature": [
+			{
+				"offset": 0,
+				"pattern": "¡²ÃÔ"
+			}
+		],
+		"variant": "BE"
+	},
+	{
+		"category": "other",
+		"extensions": [
+			".pcap"
+		],
+		"mimes": [
+			"application/vnd.tcpdump.pcap"
+		],
+		"name": "Libpcap File",
+		"signature": [
+			{
+				"offset": 0,
+				"pattern": "ÔÃ²¡"
+			}
+		],
+		"variant": "LE"
+	},
+	{
+		"category": "other",
+		"extensions": [
+			".pcap"
+		],
+		"mimes": [
+			"application/vnd.tcpdump.pcap"
+		],
+		"name": "Libpcap File",
+		"signature": [
+			{
+				"offset": 0,
+				"pattern": "¡²<M"
+			}
+		],
+		"variant": "Nanosecond Resolution, BE"
+	},
+	{
+		"category": "other",
+		"extensions": [
+			".pcap"
+		],
+		"mimes": [
+			"application/vnd.tcpdump.pcap"
+		],
+		"name": "Libpcap File",
+		"signature": [
+			{
+				"offset": 0,
+				"pattern": "M<²¡"
+			}
+		],
+		"variant": "Nanosecond Resolution, LE"
+	},
+	{
+		"category": "other",
+		"extensions": [
+			".pcapng"
+		],
+		"mimes": [
+			"application/x-pcapng"
+		],
+		"name": "PCAP Next Generation Dump File",
+		"signature": [
+			{
+				"offset": 0,
+				"pattern": "\n\r\r\n"
+			}
+		]
+	},
+	{
+		"category": "package",
+		"extensions": [
+			".rpm"
+		],
+		"mimes": [
+			"application/x-redhat-package-manager",
+			"application/x-rpm"
+		],
+		"name": "RedHat Package Manager (RPM) Package",
+		"signature": [
+			{
+				"offset": 0,
+				"pattern": "í«îÛ"
+			}
+		]
+	},
+	{
+		"category": "package",
+		"extensions": [
+			".bin"
+		],
+		"mimes": [],
+		"name": "Amazon Kindle Update Package",
+		"signature": [
+			{
+				"offset": 0,
+				"pattern": "SP01"
+			}
+		]
+	},
+	{
+		"category": "other",
+		"extensions": [
+			".wad"
+		],
+		"mimes": [
+			"application/x-doom"
+		],
+		"name": "Internal WAD",
+		"signature": [
+			{
+				"offset": 0,
+				"pattern": "IWAD"
+			}
+		]
+	},
+	{
+		"category": "other",
+		"extensions": [
+			".pdb"
+		],
+		"mimes": [
+			"application/vnd.palm",
+			"application/x-pilot"
+		],
+		"name": "PalmPilot Database/Document File",
+		"signature": [
+			{
+				"offset": 11,
+				"pattern": "\u0000\u0000\u0000\u0000\u0000\u0000\u0000\u0000\u0000\u0000\u0000\u0000\u0000\u0000\u0000\u0000\u0000\u0000\u0000\u0000\u0000\u0000\u0000\u0000"
+			}
+		]
+	},
+	{
+		"category": "archive",
+		"extensions": [
+			".dba"
+		],
+		"mimes": [],
+		"name": "Palm Desktop Calendar Archive",
+		"signature": [
+			{
+				"offset": 0,
+				"pattern": "¾ºþÊ"
+			}
+		]
+	},
+	{
+		"category": "archive",
+		"extensions": [
+			".dba"
+		],
+		"mimes": [],
+		"name": "Palm Desktop To Do Archive",
+		"signature": [
+			{
+				"offset": 0,
+				"pattern": "\u0000\u0001BD"
+			}
+		]
+	},
+	{
+		"category": "archive",
+		"extensions": [
+			".tda"
+		],
+		"mimes": [],
+		"name": "Palm Desktop Calendar Archive",
+		"signature": [
+			{
+				"offset": 0,
+				"pattern": "\u0000\u0001DT"
+			}
+		]
+	},
+	{
+		"category": "other",
+		"extensions": [
+			".tdf$"
+		],
+		"mimes": [],
+		"name": "Telegram Desktop File",
+		"signature": [
+			{
+				"offset": 0,
+				"pattern": "TDF$"
+			}
+		]
+	},
+	{
+		"category": "other",
+		"extensions": [
+			".tdef"
+		],
+		"mimes": [],
+		"name": "Telegram Desktop Encrypted File",
+		"signature": [
+			{
+				"offset": 0,
+				"pattern": "TDEF"
+			}
+		]
+	},
+	{
+		"category": "image",
+		"extensions": [
+			".ico"
+		],
+		"mimes": [
+			"image/vnd.microsoft.icon",
+			"image/x-icon",
+			"image/ico"
+		],
+		"name": "Computer Icons",
+		"signature": [
+			{
+				"offset": 0,
+				"pattern": "\u0000\u0000\u0001\u0000"
+			}
+		]
+	},
+	{
+		"category": "image",
+		"extensions": [
+			".icns"
+		],
+		"mimes": [
+			"image/x-icns"
+		],
+		"name": "Apple Icon Image",
+		"signature": [
+			{
+				"offset": 0,
+				"pattern": "icns"
+			}
+		]
+	},
+	{
+		"category": "image",
+		"extensions": [
+			".heic"
+		],
+		"mimes": [
+			"image/heic"
+		],
+		"name": "High Efficiency Image Container (HEIC)",
+		"signature": [
+			{
+				"offset": 4,
+				"pattern": "ftypheic"
+			}
+		]
+	},
+	{
+		"category": "archive",
+		"extensions": [
+			".lzh"
+		],
+		"mimes": [
+			"application/x-lzh-compressed"
+		],
+		"name": "Lempel Ziv Huffman Archive",
+		"signature": [
+			{
+				"offset": 2,
+				"pattern": "-hl0-"
+			}
+		],
+		"variant": "Method 0 (No Compression)"
+	},
+	{
+		"category": "archive",
+		"extensions": [
+			".lzh"
+		],
+		"mimes": [
+			"application/x-lzh-compressed"
+		],
+		"name": "Lempel Ziv Huffman Archive",
+		"signature": [
+			{
+				"offset": 2,
+				"pattern": "-hl5-"
+			}
+		],
+		"variant": "Method 5 (8 KiB Sliding Window)"
+	},
+	{
+		"category": "other",
+		"extensions": [
+			".bac"
+		],
+		"mimes": [],
+		"name": "AmiBack Amiga Backup Data File",
+		"signature": [
+			{
+				"offset": 0,
+				"pattern": "BACKMIKEDISK"
+			}
+		]
+	},
+	{
+		"category": "other",
+		"extensions": [
+			".idx"
+		],
+		"mimes": [],
+		"name": "AmiBack Amiga Backup Index File",
+		"signature": [
+			{
+				"offset": 0,
+				"pattern": "INDX"
+			}
+		]
+	},
+	{
+		"category": "other",
+		"extensions": [
+			".plist"
+		],
+		"mimes": [],
+		"name": "Binary Property List File",
+		"signature": [
+			{
+				"offset": 0,
+				"pattern": "bplist"
+			}
+		]
+	},
+	{
+		"category": "compressed",
+		"extensions": [
+			".bz2"
+		],
+		"mimes": [
+			"application/x-bzip2"
+		],
+		"name": "BZip2 Archive",
+		"signature": [
+			{
+				"offset": 0,
+				"pattern": "BZh"
+			}
+		]
+	},
+	{
+		"category": "other",
+		"extensions": [
+			".vdr"
+		],
+		"mimes": [],
+		"name": "VirtualDub",
+		"signature": [
+			{
+				"offset": 0,
+				"pattern": "RIFF"
+			},
+			{
+				"offset": 8,
+				"pattern": "VDRM"
+			}
+		]
+	},
+	{
+		"category": "other",
+		"extensions": [
+			".trd"
+		],
+		"mimes": [],
+		"name": "TrID",
+		"signature": [
+			{
+				"offset": 0,
+				"pattern": "RYFF"
+			},
+			{
+				"offset": 8,
+				"pattern": "TRID"
+			}
+		]
+	},
+	{
+		"category": "presentation",
+		"extensions": [
+			".shw"
+		],
+		"mimes": [
+			"application/x-corelpresentations"
+		],
+		"name": "Corel SHOW! 4.0",
+		"signature": [
+			{
+				"offset": 0,
+				"pattern": "RIFF"
+			},
+			{
+				"offset": 8,
+				"pattern": "shw4"
+			}
+		]
+	},
+	{
+		"category": "presentation",
+		"extensions": [
+			".shw"
+		],
+		"mimes": [
+			"application/x-corelpresentations"
+		],
+		"name": "Corel SHOW! 5.0",
+		"signature": [
+			{
+				"offset": 0,
+				"pattern": "RIFF"
+			},
+			{
+				"offset": 8,
+				"pattern": "shw5"
+			}
+		]
+	},
+	{
+		"category": "other",
+		"extensions": [
+			".shb"
+		],
+		"mimes": [],
+		"name": "Corel SHOW! 5.0 Background",
+		"signature": [
+			{
+				"offset": 0,
+				"pattern": "RIFF"
+			},
+			{
+				"offset": 8,
+				"pattern": "shb5"
+			}
+		]
+	},
+	{
+		"category": "other",
+		"extensions": [
+			".shr"
+		],
+		"mimes": [],
+		"name": "Corel SHOW! 5.0 Player",
+		"signature": [
+			{
+				"offset": 0,
+				"pattern": "RIFF"
+			},
+			{
+				"offset": 8,
+				"pattern": "shr5"
+			}
+		]
+	},
+	{
+		"category": "other",
+		"extensions": [
+			".dcr"
+		],
+		"mimes": [
+			"application/x-director"
+		],
+		"name": "Adobe Shockwave File",
+		"signature": [
+			{
+				"offset": 0,
+				"pattern": "RIFX"
+			},
+			{
+				"offset": 8,
+				"pattern": "FGDM"
+			}
+		],
+		"variant": "BE"
+	},
+	{
+		"category": "other",
+		"extensions": [
+			".dcr"
+		],
+		"mimes": [
+			"application/x-director"
+		],
+		"name": "Adobe Shockwave File",
+		"signature": [
+			{
+				"offset": 0,
+				"pattern": "XFIR"
+			},
+			{
+				"offset": 8,
+				"pattern": "MDGF"
+			}
+		],
+		"variant": "LE"
+	},
+	{
+		"category": "video",
+		"extensions": [
+			".mmm"
+		],
+		"mimes": [],
+		"name": "Multimedia Movie",
+		"signature": [
+			{
+				"offset": 0,
+				"pattern": "RIFF"
+			},
+			{
+				"offset": 8,
+				"pattern": "RMMP"
+			}
+		]
+	},
+	{
+		"category": "other",
+		"extensions": [
+			".mny"
+		],
+		"mimes": [
+			"application/x-msmoney"
+		],
+		"name": "Microsoft Money File",
+		"signature": [
+			{
+				"offset": 0,
+				"pattern": "\u0000\u0001\u0000\u0000MSISAM Database"
+			}
+		]
+	},
+	{
+		"category": "database",
+		"extensions": [
+			".accdb"
+		],
+		"mimes": [
+			"application/x-msaccess"
+		],
+		"name": "Microsoft Access 2007 Database",
+		"signature": [
+			{
+				"offset": 0,
+				"pattern": "\u0000\u0001\u0000\u0000Standard ACE DB"
+			}
+		]
+	},
+	{
+		"category": "database",
+		"extensions": [
+			".mdb"
+		],
+		"mimes": [
+			"application/x-msaccess"
+		],
+		"name": "Microsoft Access Database",
+		"signature": [
+			{
+				"offset": 0,
+				"pattern": "\u0000\u0001\u0000\u0000Standard Jet DB"
+			}
+		]
+	},
+	{
+		"category": "other",
+		"extensions": [
+			".swf"
+		],
+		"mimes": [
+			"application/x-shockwave-flash"
+		],
+		"name": "Adobe Flash File",
+		"signature": [
+			{
+				"offset": 0,
+				"pattern": "CWS"
+			}
+		],
+		"variant": "C"
+	},
+	{
+		"category": "other",
+		"extensions": [
+			".swf"
+		],
+		"mimes": [
+			"application/x-shockwave-flash"
+		],
+		"name": "Adobe Flash File",
+		"signature": [
+			{
+				"offset": 0,
+				"pattern": "FWS"
+			}
+		],
+		"variant": "F"
+	},
+	{
+		"category": "document",
+		"extensions": [
+			".indd"
+		],
+		"mimes": [
+			"application/x-indesign"
+		],
+		"name": "Adobe InDesign Document",
+		"signature": [
+			{
+				"offset": 0,
+				"pattern": "\u0006\u0006íõØ\u001dFå½1ïçþt·\u001d"
+			}
+		]
+	},
+	{
+		"category": "archive",
+		"extensions": [
+			".zlib"
+		],
+		"mimes": [],
+		"name": "ZLib Archive",
+		"signature": [
+			{
+				"offset": 0,
+				"pattern": "x\u0001"
+			}
+		],
+		"variant": "No Compression Without Preset Dictionary"
+	},
+	{
+		"category": "archive",
+		"extensions": [
+			".zlib"
+		],
+		"mimes": [],
+		"name": "ZLib Archive",
+		"signature": [
+			{
+				"offset": 0,
+				"pattern": "x^"
+			}
+		],
+		"variant": "Best Speed Without Preset Dictionary"
+	},
+	{
+		"category": "archive",
+		"extensions": [
+			".zlib"
+		],
+		"mimes": [],
+		"name": "ZLib Archive",
+		"signature": [
+			{
+				"offset": 0,
+				"pattern": "x"
+			}
+		],
+		"variant": "Default Compression Without Preset Dictionary"
+	},
+	{
+		"category": "archive",
+		"extensions": [
+			".zlib"
+		],
+		"mimes": [],
+		"name": "ZLib Archive",
+		"signature": [
+			{
+				"offset": 0,
+				"pattern": "xÚ"
+			}
+		],
+		"variant": "Best Compression Without Preset Dictionary"
+	},
+	{
+		"category": "archive",
+		"extensions": [
+			".zlib"
+		],
+		"mimes": [],
+		"name": "ZLib Archive",
+		"signature": [
+			{
+				"offset": 0,
+				"pattern": "x "
+			}
+		],
+		"variant": "No Compression With Preset Dictionary"
+	},
+	{
+		"category": "archive",
+		"extensions": [
+			".zlib"
+		],
+		"mimes": [],
+		"name": "ZLib Archive",
+		"signature": [
+			{
+				"offset": 0,
+				"pattern": "x}"
+			}
+		],
+		"variant": "Best Speed With Preset Dictionary"
+	},
+	{
+		"category": "archive",
+		"extensions": [
+			".zlib"
+		],
+		"mimes": [],
+		"name": "ZLib Archive",
+		"signature": [
+			{
+				"offset": 0,
+				"pattern": "x»"
+			}
+		],
+		"variant": "Default Compression With Preset Dictionary"
+	},
+	{
+		"category": "archive",
+		"extensions": [
+			".zlib"
+		],
+		"mimes": [],
+		"name": "ZLib Archive",
+		"signature": [
+			{
+				"offset": 0,
+				"pattern": "xù"
+			}
+		],
+		"variant": "Best Compression With Preset Dictionary"
+	},
+	{
+		"category": "archive",
+		"extensions": [
+			".zoo"
+		],
+		"mimes": [
+			"application/x-zoo"
+		],
+		"name": "Zoo File",
+		"signature": [
+			{
+				"offset": 0,
+				"pattern": "ZOO"
+			}
+		]
+	},
+	{
+		"category": "image",
+		"extensions": [
+			".pbm"
+		],
+		"mimes": [
+			"image/x-portable-bitmap"
+		],
+		"name": "Portable Bitmap ASCII",
+		"signature": [
+			{
+				"offset": 0,
+				"pattern": "P1\n"
+			}
+		]
+	},
+	{
+		"category": "image",
+		"extensions": [
+			".pbm"
+		],
+		"mimes": [
+			"image/x-portable-bitmap"
+		],
+		"name": "Portable Bitmap Binary",
+		"signature": [
+			{
+				"offset": 0,
+				"pattern": "P4\n"
+			}
+		]
+	},
+	{
+		"category": "other",
+		"extensions": [
+			".pgm"
+		],
+		"mimes": [
+			"image/x-portable-graymap"
+		],
+		"name": "Portable Gray Map ASCII",
+		"signature": [
+			{
+				"offset": 0,
+				"pattern": "P2\n"
+			}
+		]
+	},
+	{
+		"category": "image",
+		"extensions": [
+			".pgm"
+		],
+		"mimes": [
+			"image/x-portable-graymap"
+		],
+		"name": "Portable Gray Map Binary",
+		"signature": [
+			{
+				"offset": 0,
+				"pattern": "P5\t"
+			}
+		],
+		"variant": "Tab"
+	},
+	{
+		"category": "image",
+		"extensions": [
+			".pgm"
+		],
+		"mimes": [
+			"image/x-portable-graymap"
+		],
+		"name": "Portable Gray Map Binary",
+		"signature": [
+			{
+				"offset": 0,
+				"pattern": "P5\n"
+			}
+		],
+		"variant": "LF"
+	},
+	{
+		"category": "image",
+		"extensions": [
+			".pgm"
+		],
+		"mimes": [
+			"image/x-portable-graymap"
+		],
+		"name": "Portable Gray Map Binary",
+		"signature": [
+			{
+				"offset": 0,
+				"pattern": "P5\r"
+			}
+		],
+		"variant": "CR"
+	},
+	{
+		"category": "image",
+		"extensions": [
+			".pgm"
+		],
+		"mimes": [
+			"image/x-portable-graymap"
+		],
+		"name": "Portable Gray Map Binary",
+		"signature": [
+			{
+				"offset": 0,
+				"pattern": "P5 "
+			}
+		],
+		"variant": "Space"
+	},
+	{
+		"category": "image",
+		"extensions": [
+			".ppm"
+		],
+		"mimes": [
+			"image/x-portable-pixmap"
+		],
+		"name": "Portable Pixmap ASCII",
+		"signature": [
+			{
+				"offset": 0,
+				"pattern": "P3\t"
+			}
+		],
+		"variant": "Tab"
+	},
+	{
+		"category": "image",
+		"extensions": [
+			".ppm"
+		],
+		"mimes": [
+			"image/x-portable-pixmap"
+		],
+		"name": "Portable Pixmap ASCII",
+		"signature": [
+			{
+				"offset": 0,
+				"pattern": "P3\n"
+			}
+		],
+		"variant": "LF"
+	},
+	{
+		"category": "image",
+		"extensions": [
+			".ppm"
+		],
+		"mimes": [
+			"image/x-portable-pixmap"
+		],
+		"name": "Portable Pixmap ASCII",
+		"signature": [
+			{
+				"offset": 0,
+				"pattern": "P3\r"
+			}
+		],
+		"variant": "CR"
+	},
+	{
+		"category": "image",
+		"extensions": [
+			".ppm"
+		],
+		"mimes": [
+			"image/x-portable-pixmap"
+		],
+		"name": "Portable Pixmap ASCII",
+		"signature": [
+			{
+				"offset": 0,
+				"pattern": "P3 "
+			}
+		],
+		"variant": "Space"
+	},
+	{
+		"category": "image",
+		"extensions": [
+			".ppm"
+		],
+		"mimes": [
+			"image/x-portable-pixmap"
+		],
+		"name": "Portable Pixmap Binary",
+		"signature": [
+			{
+				"offset": 0,
+				"pattern": "P6\t"
+			}
+		],
+		"variant": "Tab"
+	},
+	{
+		"category": "image",
+		"extensions": [
+			".ppm"
+		],
+		"mimes": [
+			"image/x-portable-pixmap"
+		],
+		"name": "Portable Pixmap Binary",
+		"signature": [
+			{
+				"offset": 0,
+				"pattern": "P6\n"
+			}
+		],
+		"variant": "LF"
+	},
+	{
+		"category": "image",
+		"extensions": [
+			".ppm"
+		],
+		"mimes": [
+			"image/x-portable-pixmap"
+		],
+		"name": "Portable Pixmap Binary",
+		"signature": [
+			{
+				"offset": 0,
+				"pattern": "P6\r"
+			}
+		],
+		"variant": "CR"
+	},
+	{
+		"category": "image",
+		"extensions": [
+			".ppm"
+		],
+		"mimes": [
+			"image/x-portable-pixmap"
+		],
+		"name": "Portable Pixmap Binary",
+		"signature": [
+			{
+				"offset": 0,
+				"pattern": "P6 "
+			}
+		],
+		"variant": "Space"
+	},
+	{
+		"category": "image",
+		"extensions": [
+			".j2c",
+			".j2k",
+			".jp2",
+			".jpc",
+			".jpf",
+			".jpg2",
+			".jpm",
+			".jpx",
+			".mj2"
+		],
+		"mimes": [
+			"image/jp2",
+			"image/jpm",
+			"image/jpx",
+			"image/mj2",
+			"image/x-jp2-codestream",
+			"video/mj2"
+		],
+		"name": "JPEG 2000 Image",
+		"signature": [
+			{
+				"offset": 0,
+				"pattern": "\u0000\u0000\u0000\fjP  \r\n\n"
+			}
+		],
+		"variant": "Long"
+	},
+	{
+		"category": "image",
+		"extensions": [
+			".j2c",
+			".j2k",
+			".jp2",
+			".jpc",
+			".jpf",
+			".jpg2",
+			".jpm",
+			".jpx",
+			".mj2"
+		],
+		"mimes": [
+			"image/jp2",
+			"image/jpm",
+			"image/jpx",
+			"image/mj2",
+			"image/x-jp2-codestream",
+			"video/mj2"
+		],
+		"name": "JPEG 2000 Image",
+		"signature": [
+			{
+				"offset": 0,
+				"pattern": "ÿOÿQ"
+			}
+		],
+		"variant": "Short"
+	},
+	{
+		"category": "other",
+		"extensions": [
+			".hl7"
+		],
+		"mimes": [],
+		"name": "Electronic Data Exchange Health Level Seven (HL7) Standard File",
+		"signature": [
+			{
+				"offset": 0,
+				"pattern": "BSH|"
+			}
+		],
+		"variant": "B"
+	},
+	{
+		"category": "other",
+		"extensions": [
+			".hl7"
+		],
+		"mimes": [],
+		"name": "Electronic Data Exchange Health Level Seven (HL7) Standard File",
+		"signature": [
+			{
+				"offset": 0,
+				"pattern": "MSH|"
+			}
+		],
+		"variant": "M"
+	},
+	{
+		"category": "database",
+		"extensions": [
+			".sqlitedb",
+			".sqlite",
+			".db"
+		],
+		"mimes": [
+			"application/vnd.sqlite3"
+		],
+		"name": "SQLite Database",
+		"signature": [
+			{
+				"offset": 0,
+				"pattern": "SQLite format 3\u0000"
+			}
+		]
+	},
+	{
+		"category": "image",
+		"extensions": [
+			".pic"
+		],
+		"mimes": [
+			"image/x-pict"
+		],
+		"name": "IBM Storyboard Bitmap File",
+		"signature": [
+			{
+				"offset": 0,
+				"pattern": "\u0000"
+			}
+		]
+	},
+	{
+		"category": "video",
+		"extensions": [
+			".mov"
+		],
+		"mimes": [
+			"video/quicktime"
+		],
+		"name": "Apple QuickTime Movie File",
+		"signature": [
+			{
+				"offset": 4,
+				"pattern": "ftypqt"
+			}
+		],
+		"variant": "ftypqt"
+	},
+	{
+		"category": "video",
+		"extensions": [
+			".mov"
+		],
+		"mimes": [
+			"video/quicktime"
+		],
+		"name": "Apple QuickTime Movie File",
+		"signature": [
+			{
+				"offset": 4,
+				"pattern": "free"
+			}
+		],
+		"variant": "free"
+	},
+	{
+		"category": "video",
+		"extensions": [
+			".mov"
+		],
+		"mimes": [
+			"video/quicktime"
+		],
+		"name": "Apple QuickTime Movie File",
+		"signature": [
+			{
+				"offset": 4,
+				"pattern": "mdat"
+			}
+		],
+		"variant": "mdat"
+	},
+	{
+		"category": "video",
+		"extensions": [
+			".mov"
+		],
+		"mimes": [
+			"video/quicktime"
+		],
+		"name": "Apple QuickTime Movie File",
+		"signature": [
+			{
+				"offset": 4,
+				"pattern": "moov"
+			}
+		],
+		"variant": "moov"
+	},
+	{
+		"category": "video",
+		"extensions": [
+			".mov"
+		],
+		"mimes": [
+			"video/quicktime"
+		],
+		"name": "Apple QuickTime Movie File",
+		"signature": [
+			{
+				"offset": 4,
+				"pattern": "skip"
+			}
+		],
+		"variant": "skip"
+	},
+	{
+		"category": "video",
+		"extensions": [
+			".mov"
+		],
+		"mimes": [
+			"video/quicktime"
+		],
+		"name": "Apple QuickTime Movie File",
+		"signature": [
+			{
+				"offset": 4,
+				"pattern": "wide"
+			}
+		],
+		"variant": "wide"
+	},
+	{
+		"category": "other",
+		"extensions": [
+			".pif"
+		],
+		"mimes": [],
+		"name": "Windows Program Information File",
+		"signature": [
+			{
+				"offset": 0,
+				"pattern": "\u0000"
+			}
+		]
+	},
+	{
+		"category": "archive",
+		"extensions": [
+			".sea"
+		],
+		"mimes": [
+			"application/x-sea"
+		],
+		"name": "Mac Stuffit Self-Extracting Archive",
+		"signature": [
+			{
+				"offset": 0,
+				"pattern": "\u0000"
+			}
+		]
+	},
+	{
+		"category": "other",
+		"extensions": [
+			".ytr"
+		],
+		"mimes": [],
+		"name": "IRIS OCR Data File",
+		"signature": [
+			{
+				"offset": 0,
+				"pattern": "\u0000"
+			}
+		]
+	},
+	{
+		"category": "other",
+		"extensions": [],
+		"mimes": [],
+		"name": "Palm Desktop Data File (Access Format)",
+		"signature": [
+			{
+				"offset": 0,
+				"pattern": "\u0000\u0001\u0000\u0000"
+			}
+		]
+	},
+	{
+		"category": "video",
+		"extensions": [
+			".3gp"
+		],
+		"mimes": [
+			"video/3gpp"
+		],
+		"name": "3rd Generation Partnership Project Multimedia File",
+		"signature": [
+			{
+				"offset": 4,
+				"pattern": "ftyp3ge"
+			}
+		],
+		"variant": "e"
+	},
+	{
+		"category": "video",
+		"extensions": [
+			".3gp"
+		],
+		"mimes": [
+			"video/3gpp"
+		],
+		"name": "3rd Generation Partnership Project Multimedia File",
+		"signature": [
+			{
+				"offset": 4,
+				"pattern": "ftyp3gf"
+			}
+		],
+		"variant": "f"
+	},
+	{
+		"category": "video",
+		"extensions": [
+			".3gp"
+		],
+		"mimes": [
+			"video/3gpp"
+		],
+		"name": "3rd Generation Partnership Project Multimedia File",
+		"signature": [
+			{
+				"offset": 4,
+				"pattern": "ftyp3gg"
+			}
+		],
+		"variant": "g"
+	},
+	{
+		"category": "video",
+		"extensions": [
+			".3gp"
+		],
+		"mimes": [
+			"video/3gpp"
+		],
+		"name": "3rd Generation Partnership Project Multimedia File",
+		"signature": [
+			{
+				"offset": 4,
+				"pattern": "ftyp3gh"
+			}
+		],
+		"variant": "h"
+	},
+	{
+		"category": "video",
+		"extensions": [
+			".3gp"
+		],
+		"mimes": [
+			"video/3gpp"
+		],
+		"name": "3rd Generation Partnership Project Multimedia File",
+		"signature": [
+			{
+				"offset": 4,
+				"pattern": "ftyp3gm"
+			}
+		],
+		"variant": "m"
+	},
+	{
+		"category": "video",
+		"extensions": [
+			".3gp"
+		],
+		"mimes": [
+			"video/3gpp"
+		],
+		"name": "3rd Generation Partnership Project Multimedia File",
+		"signature": [
+			{
+				"offset": 4,
+				"pattern": "ftyp3gp"
+			}
+		],
+		"variant": "p"
+	},
+	{
+		"category": "video",
+		"extensions": [
+			".3gp"
+		],
+		"mimes": [
+			"video/3gpp"
+		],
+		"name": "3rd Generation Partnership Project Multimedia File",
+		"signature": [
+			{
+				"offset": 4,
+				"pattern": "ftyp3gr"
+			}
+		],
+		"variant": "r"
+	},
+	{
+		"category": "video",
+		"extensions": [
+			".3gp"
+		],
+		"mimes": [
+			"video/3gpp"
+		],
+		"name": "3rd Generation Partnership Project Multimedia File",
+		"signature": [
+			{
+				"offset": 4,
+				"pattern": "ftyp3gs"
+			}
+		],
+		"variant": "s"
+	},
+	{
+		"category": "video",
+		"extensions": [
+			".3gp"
+		],
+		"mimes": [
+			"video/3gpp"
+		],
+		"name": "3rd Generation Partnership Project Multimedia File",
+		"signature": [
+			{
+				"offset": 4,
+				"pattern": "ftyp3gt"
+			}
+		],
+		"variant": "t"
+	},
+	{
+		"category": "video",
+		"extensions": [
+			".3g2"
+		],
+		"mimes": [
+			"video/3gpp2"
+		],
+		"name": "3rd Generation Partnership Project 2 Multimedia File",
+		"signature": [
+			{
+				"offset": 4,
+				"pattern": "ftyp3g2"
+			}
+		],
+		"variant": "3g2"
+	},
+	{
+		"category": "video",
+		"extensions": [
+			".3g2"
+		],
+		"mimes": [
+			"video/3gpp2"
+		],
+		"name": "3rd Generation Partnership Project 2 Multimedia File",
+		"signature": [
+			{
+				"offset": 4,
+				"pattern": "ftypKDDI"
+			}
+		],
+		"variant": "KDDI"
+	},
+	{
+		"category": "compressed",
+		"extensions": [
+			".tar.z",
+			".z"
+		],
+		"mimes": [
+			"application/x-compress"
+		],
+		"name": "Tar Zip Lempel-Ziv-Welch Algorithm Archive / UNIX Compress",
+		"signature": [
+			{
+				"offset": 0,
+				"pattern": "\u001f"
+			}
+		]
+	},
+	{
+		"category": "compressed",
+		"extensions": [
+			".tar.z",
+			".z"
+		],
+		"mimes": [
+			"application/x-compress"
+		],
+		"name": "Tar Zip LZH Algorithm Archive / UNIX Compress",
+		"signature": [
+			{
+				"offset": 0,
+				"pattern": "\u001f "
+			}
+		]
+	},
+	{
+		"category": "image",
+		"extensions": [
+			".gif"
+		],
+		"mimes": [
+			"image/gif"
+		],
+		"name": "Graphics Interchange Format (GIF) File",
+		"signature": [
+			{
+				"offset": 0,
+				"pattern": "GIF87a"
+			}
+		],
+		"variant": "7"
+	},
+	{
+		"category": "image",
+		"extensions": [
+			".gif"
+		],
+		"mimes": [
+			"image/gif"
+		],
+		"name": "Graphics Interchange Format (GIF) File",
+		"signature": [
+			{
+				"offset": 0,
+				"pattern": "GIF89a"
+			}
+		],
+		"variant": "9"
+	},
+	{
+		"category": "image",
+		"extensions": [
+			".tif",
+			".tiff"
+		],
+		"mimes": [
+			"image/tiff"
+		],
+		"name": "Tagged Image File Format (TIFF)",
+		"signature": [
+			{
+				"offset": 0,
+				"pattern": "MM\u0000*"
+			}
+		],
+		"variant": "BE, 2A"
+	},
+	{
+		"category": "image",
+		"extensions": [
+			".tif",
+			".tiff"
+		],
+		"mimes": [
+			"image/tiff"
+		],
+		"name": "Tagged Image File Format (TIFF)",
+		"signature": [
+			{
+				"offset": 0,
+				"pattern": "II\u0000+"
+			}
+		],
+		"variant": "BE, 2B"
+	},
+	{
+		"category": "image",
+		"extensions": [
+			".tif",
+			".tiff"
+		],
+		"mimes": [
+			"image/tiff"
+		],
+		"name": "Tagged Image File Format (TIFF)",
+		"signature": [
+			{
+				"offset": 0,
+				"pattern": "II*\u0000"
+			}
+		],
+		"variant": "LE, 2A"
+	},
+	{
+		"category": "image",
+		"extensions": [
+			".tif",
+			".tiff"
+		],
+		"mimes": [
+			"image/tiff"
+		],
+		"name": "Tagged Image File Format (TIFF)",
+		"signature": [
+			{
+				"offset": 0,
+				"pattern": "II+\u0000"
+			}
+		],
+		"variant": "LE, 2B"
+	},
+	{
+		"category": "image",
+		"extensions": [
+			".crw"
+		],
+		"mimes": [
+			"image/x-canon-crw"
+		],
+		"name": "Canon RAW Format",
+		"signature": [
+			{
+				"offset": 0,
+				"pattern": "II\u001a\u0000\u0000\u0000HEAPCCDR"
+			}
+		]
+	},
+	{
+		"category": "image",
+		"extensions": [
+			".cr2"
+		],
+		"mimes": [
+			"image/x-canon-cr2"
+		],
+		"name": "Canon RAW Format Version 2",
+		"signature": [
+			{
+				"offset": 0,
+				"pattern": "II*\u0000\u0010\u0000\u0000\u0000CR"
+			}
+		]
+	},
+	{
+		"category": "image",
+		"extensions": [
+			".cr2"
+		],
+		"mimes": [
+			"image/x-canon-cr2"
+		],
+		"name": "Canon RAW Format Version 2",
+		"signature": [
+			{
+				"offset": 0,
+				"pattern": "MM\u0000*\u0010\u0000\u0000\u0000CR"
+			}
+		]
+	},
+	{
+		"category": "image",
+		"extensions": [
+			".cr3"
+		],
+		"mimes": [
+			"image/x-canon-cr3"
+		],
+		"name": "Canon RAW Format Version 3",
+		"signature": [
+			{
+				"offset": 4,
+				"pattern": "ftypcrx"
+			}
+		]
+	},
+	{
+		"category": "image",
+		"extensions": [
+			".cin"
+		],
+		"mimes": [
+			"image/cineon"
+		],
+		"name": "Kodak Cineon Image",
+		"signature": [
+			{
+				"offset": 0,
+				"pattern": "*_×"
+			}
+		]
+	},
+	{
+		"category": "archive",
+		"extensions": [],
+		"mimes": [],
+		"name": "Rob Northen Compression (Version 1) Algorithm Archive",
+		"signature": [
+			{
+				"offset": 0,
+				"pattern": "RNC\u0001"
+			}
+		]
+	},
+	{
+		"category": "archive",
+		"extensions": [],
+		"mimes": [],
+		"name": "Rob Northen Compression (Version 2) Algorithm Archive",
+		"signature": [
+			{
+				"offset": 0,
+				"pattern": "RNC\u0002"
+			}
+		]
+	},
+	{
+		"category": "image",
+		"extensions": [
+			".nui"
+		],
+		"mimes": [],
+		"name": "nuru Image File",
+		"signature": [
+			{
+				"offset": 0,
+				"pattern": "NURUIMG"
+			}
+		]
+	},
+	{
+		"category": "other",
+		"extensions": [
+			".nup"
+		],
+		"mimes": [],
+		"name": "nuru Palette File",
+		"signature": [
+			{
+				"offset": 0,
+				"pattern": "NURUPAL"
+			}
+		]
+	},
+	{
+		"category": "image",
+		"extensions": [
+			".dpx"
+		],
+		"mimes": [
+			"image/x-dpx"
+		],
+		"name": "Digital Picture Exchange (DPX) Image",
+		"signature": [
+			{
+				"offset": 0,
+				"pattern": "SDPX"
+			}
+		],
+		"variant": "BE"
+	},
+	{
+		"category": "image",
+		"extensions": [
+			".dpx"
+		],
+		"mimes": [
+			"image/x-dpx"
+		],
+		"name": "Digital Picture Exchange (DPX) Image",
+		"signature": [
+			{
+				"offset": 0,
+				"pattern": "XPDS"
+			}
+		],
+		"variant": "LE"
+	},
+	{
+		"category": "image",
+		"extensions": [
+			".exr"
+		],
+		"mimes": [
+			"image/aces",
+			"image/x-exr"
+		],
+		"name": "OpenEXR Image",
+		"signature": [
+			{
+				"offset": 0,
+				"pattern": "v/1\u0001"
+			}
+		]
+	},
+	{
+		"category": "image",
+		"extensions": [
+			".bpg"
+		],
+		"mimes": [
+			"image/bpg"
+		],
+		"name": "Better Portable Graphic (BPG)",
+		"signature": [
+			{
+				"offset": 0,
+				"pattern": "BPGû"
+			}
+		]
+	},
+	{
+		"category": "disk",
+		"extensions": [
+			".iso"
+		],
+		"mimes": [
+			"application/x-iso9660-image"
+		],
+		"name": "ISO 9660 CD/DVD Image",
+		"signature": [
+			{
+				"offset": 32769,
+				"pattern": "CD001"
+			}
+		],
+		"variant": "1"
+	},
+	{
+		"category": "disk",
+		"extensions": [
+			".iso"
+		],
+		"mimes": [
+			"application/x-iso9660-image"
+		],
+		"name": "ISO 9660 CD/DVD Image",
+		"signature": [
+			{
+				"offset": 34817,
+				"pattern": "CD001"
+			}
+		],
+		"variant": "2"
+	},
+	{
+		"category": "disk",
+		"extensions": [
+			".iso"
+		],
+		"mimes": [
+			"application/x-iso9660-image"
+		],
+		"name": "ISO 9660 CD/DVD Image",
+		"signature": [
+			{
+				"offset": 36865,
+				"pattern": "CD001"
+			}
+		],
+		"variant": "3"
+	},
+	{
+		"category": "image",
+		"extensions": [
+			".qoi"
+		],
+		"mimes": [
+			"image/x-qoi"
+		],
+		"name": "Quite OK Image (QOI)",
+		"signature": [
+			{
+				"offset": 0,
+				"pattern": "qoif"
+			}
+		]
+	},
+	{
+		"category": "image",
+		"extensions": [
+			".ilbm",
+			".lbm",
+			".ibm",
+			".iff"
+		],
+		"mimes": [],
+		"name": "IFF Interleaved Bitmap Image",
+		"signature": [
+			{
+				"offset": 0,
+				"pattern": "FORM"
+			},
+			{
+				"offset": 8,
+				"pattern": "ILBM"
+			}
+		]
+	},
+	{
+		"category": "audio",
+		"extensions": [
+			".8svx",
+			".8sv",
+			".svx",
+			".snd",
+			".iff"
+		],
+		"mimes": [
+			"audio/basic",
+			"audio/x-8svx"
+		],
+		"name": "IFF 8-Bit Sampled Voice",
+		"signature": [
+			{
+				"offset": 0,
+				"pattern": "FORM"
+			},
+			{
+				"offset": 8,
+				"pattern": "8SVX"
+			}
+		]
+	},
+	{
+		"category": "image",
+		"extensions": [
+			".acbm",
+			".iff"
+		],
+		"mimes": [],
+		"name": "Amiga Contiguous Bitmap File",
+		"signature": [
+			{
+				"offset": 0,
+				"pattern": "FORM"
+			},
+			{
+				"offset": 8,
+				"pattern": "ACBM"
+			}
+		]
+	},
+	{
+		"category": "image",
+		"extensions": [
+			".anbm",
+			".iff"
+		],
+		"mimes": [],
+		"name": "IFF Animated Bitmap File",
+		"signature": [
+			{
+				"offset": 0,
+				"pattern": "FORM"
+			},
+			{
+				"offset": 8,
+				"pattern": "ANBM"
+			}
+		]
+	},
+	{
+		"category": "other",
+		"extensions": [
+			".anim",
+			".iff"
+		],
+		"mimes": [],
+		"name": "IFF CEL Animation File",
+		"signature": [
+			{
+				"offset": 0,
+				"pattern": "FORM"
+			},
+			{
+				"offset": 8,
+				"pattern": "ANIM"
+			}
+		]
+	},
+	{
+		"category": "image",
+		"extensions": [
+			".faxx",
+			".fax",
+			".iff"
+		],
+		"mimes": [],
+		"name": "IFF Facsimile Image",
+		"signature": [
+			{
+				"offset": 0,
+				"pattern": "FORM"
+			},
+			{
+				"offset": 8,
+				"pattern": "FAXX"
+			}
+		]
+	},
+	{
+		"category": "document",
+		"extensions": [
+			".ftxt",
+			".iff"
+		],
+		"mimes": [],
+		"name": "IFF Formatted Text File",
+		"signature": [
+			{
+				"offset": 0,
+				"pattern": "FORM"
+			},
+			{
+				"offset": 8,
+				"pattern": "FTXT"
+			}
+		]
+	},
+	{
+		"category": "other",
+		"extensions": [
+			".smus",
+			".smu",
+			".mus",
+			".iff"
+		],
+		"mimes": [
+			"application/vnd.musician"
+		],
+		"name": "IFF Simple Musical Score File",
+		"signature": [
+			{
+				"offset": 0,
+				"pattern": "FORM"
+			},
+			{
+				"offset": 8,
+				"pattern": "SMUS"
+			}
+		]
+	},
+	{
+		"category": "other",
+		"extensions": [
+			".cmus",
+			".mus",
+			".iff"
+		],
+		"mimes": [
+			"application/vnd.musician"
+		],
+		"name": "IFF Musical Score File",
+		"signature": [
+			{
+				"offset": 0,
+				"pattern": "FORM"
+			},
+			{
+				"offset": 8,
+				"pattern": "CMUS"
+			}
+		]
+	},
+	{
+		"category": "image",
+		"extensions": [
+			".yuv",
+			".yuvn",
+			".iff"
+		],
+		"mimes": [],
+		"name": "IFF YUV Image",
+		"signature": [
+			{
+				"offset": 0,
+				"pattern": "FORM"
+			},
+			{
+				"offset": 8,
+				"pattern": "YUVN"
+			}
+		]
+	},
+	{
+		"category": "video",
+		"extensions": [
+			".iff"
+		],
+		"mimes": [],
+		"name": "Amiga Fantavision Movie",
+		"signature": [
+			{
+				"offset": 0,
+				"pattern": "FORM"
+			},
+			{
+				"offset": 8,
+				"pattern": "FANT"
+			}
+		]
+	},
+	{
+		"category": "audio",
+		"extensions": [
+			".aif",
+			".aifc",
+			".aiff",
+			".iff",
+			".snd"
+		],
+		"mimes": [
+			"audio/basic",
+			"audio/x-aiff"
+		],
+		"name": "Audio Interchange File",
+		"signature": [
+			{
+				"offset": 0,
+				"pattern": "FORM"
+			},
+			{
+				"offset": 8,
+				"pattern": "AIFF"
+			}
+		]
+	},
+	{
+		"category": "metadata",
+		"extensions": [
+			".xml"
+		],
+		"mimes": [
+			"application/xml",
+			"text/xml"
+		],
+		"name": "eXtensible Markup Language (XML) File",
+		"signature": [
+			{
+				"offset": 0,
+				"pattern": "<?xml "
+			}
+		]
+	},
+	{
+		"category": "metadata",
+		"extensions": [
+			".xml"
+		],
+		"mimes": [
+			"application/xml",
+			"text/xml"
+		],
+		"name": "eXtensible Markup Language (XML) File",
+		"signature": [
+			{
+				"offset": 0,
+				"pattern": "<\u0000?\u0000x\u0000m\u0000l\u0000 "
+			}
+		]
+	},
+	{
+		"category": "metadata",
+		"extensions": [
+			".xml"
+		],
+		"mimes": [
+			"application/xml",
+			"text/xml"
+		],
+		"name": "eXtensible Markup Language (XML) File",
+		"signature": [
+			{
+				"offset": 0,
+				"pattern": "\u0000<\u0000?\u0000x\u0000m\u0000l\u0000 "
+			}
+		]
+	},
+	{
+		"category": "metadata",
+		"extensions": [
+			".xml"
+		],
+		"mimes": [
+			"application/xml",
+			"text/xml"
+		],
+		"name": "eXtensible Markup Language (XML) File",
+		"signature": [
+			{
+				"offset": 0,
+				"pattern": "<\u0000\u0000\u0000?\u0000\u0000\u0000x\u0000\u0000\u0000m\u0000\u0000\u0000l\u0000\u0000\u0000 \u0000\u0000\u0000"
+			}
+		]
+	},
+	{
+		"category": "metadata",
+		"extensions": [
+			".xml"
+		],
+		"mimes": [
+			"application/xml",
+			"text/xml"
+		],
+		"name": "eXtensible Markup Language (XML) File",
+		"signature": [
+			{
+				"offset": 0,
+				"pattern": "\u0000\u0000\u0000<\u0000\u0000\u0000?\u0000\u0000\u0000x\u0000\u0000\u0000m\u0000\u0000\u0000l\u0000\u0000\u0000 "
+			}
+		]
+	},
+	{
+		"category": "metadata",
+		"extensions": [
+			".xml"
+		],
+		"mimes": [
+			"application/xml",
+			"text/xml"
+		],
+		"name": "eXtensible Markup Language (XML) File",
+		"signature": [
+			{
+				"offset": 0,
+				"pattern": "Lo§@"
+			}
+		]
+	},
+	{
+		"category": "archive",
+		"extensions": [
+			".wim",
+			".swm",
+			".esd"
+		],
+		"mimes": [
+			"application/x-ms-wim"
+		],
+		"name": "Windows Imaging Format File",
+		"signature": [
+			{
+				"offset": 0,
+				"pattern": "MSWIM\u0000\u0000\u0000Ð\u0000\u0000\u0000\u0000"
+			}
+		]
+	},
+	{
+		"category": "image",
+		"extensions": [
+			".webp"
+		],
+		"mimes": [
+			"image/webp"
+		],
+		"name": "WebP Image",
+		"signature": [
+			{
+				"offset": 0,
+				"pattern": "RIFF"
+			},
+			{
+				"offset": 8,
+				"pattern": "WEBP"
+			}
+		]
+	},
+	{
+		"category": "image",
+		"extensions": [
+			".psd"
+		],
+		"mimes": [
+			"image/vnd.adobe.photoshop"
+		],
+		"name": "Adobe Photoshop Document File",
+		"signature": [
+			{
+				"offset": 0,
+				"pattern": "8BPS"
+			}
+		]
+	},
+	{
+		"category": "image",
+		"extensions": [
+			".bmp"
+		],
+		"mimes": [
+			"image/bmp",
+			"image/x-ms-bmp"
+		],
+		"name": "BMP Image",
+		"signature": [
+			{
+				"offset": 0,
+				"pattern": "BM"
+			}
+		]
+	},
+	{
+		"category": "executable",
+		"extensions": [
+			".wasm"
+		],
+		"mimes": [
+			"application/wasm"
+		],
+		"name": "WebAssembly Binary",
+		"signature": [
+			{
+				"offset": 0,
+				"pattern": "\u0000asm"
+			}
+		]
+	},
+	{
+		"category": "image",
+		"extensions": [
+			".jpg",
+			".jpeg"
+		],
+		"mimes": [
+			"image/jpeg"
+		],
+		"name": "Joint Photographic Experts Group (JPEG) Image",
+		"signature": [
+			{
+				"offset": 0,
+				"pattern": "ÿØÿÛ"
+			}
+		],
+		"variant": "DB"
+	},
+	{
+		"category": "image",
+		"extensions": [
+			".jpg",
+			".jpeg"
+		],
+		"mimes": [
+			"image/jpeg"
+		],
+		"name": "Joint Photographic Experts Group (JPEG) Image",
+		"signature": [
+			{
+				"offset": 0,
+				"pattern": "ÿØÿà"
+			}
+		],
+		"variant": "E0"
+	},
+	{
+		"category": "image",
+		"extensions": [
+			".jpg",
+			".jpeg"
+		],
+		"mimes": [
+			"image/jpeg"
+		],
+		"name": "Joint Photographic Experts Group (JPEG) Image",
+		"signature": [
+			{
+				"offset": 0,
+				"pattern": "ÿØÿî"
+			}
+		],
+		"variant": "EE"
+	},
+	{
+		"category": "image",
+		"extensions": [
+			".jpg",
+			".jpeg"
+		],
+		"mimes": [
+			"image/jpeg"
+		],
+		"name": "JPEG JFIF Image",
+		"signature": [
+			{
+				"offset": 0,
+				"pattern": "ÿØÿà\u0000\u0010JFIF\u0000\u0001"
+			}
+		]
+	},
+	{
+		"category": "compressed",
+		"extensions": [
+			".lz"
+		],
+		"mimes": [
+			"application/x-lzip"
+		],
+		"name": "LZip Archive",
+		"signature": [
+			{
+				"offset": 0,
+				"pattern": "LZIP"
+			}
+		]
+	},
+	{
+		"category": "compressed",
+		"extensions": [
+			".cpio"
+		],
+		"mimes": [
+			"application/x-cpio"
+		],
+		"name": "cpio Archive",
+		"signature": [
+			{
+				"offset": 0,
+				"pattern": "070707"
+			}
+		]
+	},
+	{
+		"category": "executable",
+		"extensions": [
+			".exe"
+		],
+		"mimes": [
+			"application/x-dosexec",
+			"application/x-msdos-program",
+			"application/x-msdownload"
+		],
+		"name": "MS-DOS Executable",
+		"signature": [
+			{
+				"offset": 0,
+				"pattern": "MZ"
+			}
+		],
+		"variant": "MZ"
+	},
+	{
+		"category": "executable",
+		"extensions": [
+			".exe"
+		],
+		"mimes": [
+			"application/x-dosexec",
+			"application/x-msdos-program",
+			"application/x-msdownload"
+		],
+		"name": "MS-DOS Executable",
+		"signature": [
+			{
+				"offset": 0,
+				"pattern": "ZM"
+			}
+		],
+		"variant": "ZM"
+	},
+	{
+		"category": "archive",
+		"extensions": [
+			".rar"
+		],
+		"mimes": [
+			"application/vnd.rar",
+			"application/x-rar-compressed"
+		],
+		"name": "Roshal Archive V1.50",
+		"signature": [
+			{
+				"offset": 0,
+				"pattern": "Rar!\u001a\u0007\u0000"
+			}
+		]
+	},
+	{
+		"category": "archive",
+		"extensions": [
+			".rar"
+		],
+		"mimes": [
+			"application/vnd.rar",
+			"application/x-rar-compressed"
+		],
+		"name": "Roshal Archive V5.00",
+		"signature": [
+			{
+				"offset": 0,
+				"pattern": "Rar!\u001a\u0007\u0001\u0000"
+			}
+		]
+	},
+	{
+		"category": "executable",
+		"extensions": [
+			".elf"
+		],
+		"mimes": [
+			"application/x-executable"
+		],
+		"name": "Executable & Linkable Format",
+		"signature": [
+			{
+				"offset": 0,
+				"pattern": "ELF"
+			}
+		]
+	},
+	{
+		"category": "image",
+		"extensions": [
+			".png"
+		],
+		"mimes": [
+			"image/png"
+		],
+		"name": "Portable Network Graphics (PNG) Image",
+		"signature": [
+			{
+				"offset": 0,
+				"pattern": "PNG\r\n\u001a\n"
+			}
+		]
+	},
+	{
+		"category": "other",
+		"extensions": [
+			".com"
+		],
+		"mimes": [
+			"application/x-msdownload"
+		],
+		"name": "CP/M 3 File",
+		"signature": [
+			{
+				"offset": 0,
+				"pattern": "É"
+			}
+		]
+	},
+	{
+		"category": "image",
+		"extensions": [
+			".d64"
+		],
+		"mimes": [],
+		"name": "Commodore 64 1541 Disk Image (D64 Format)",
+		"signature": [
+			{
+				"offset": 91556,
+				"pattern": " 2A   "
+			}
+		]
+	},
+	{
+		"category": "image",
+		"extensions": [
+			".g64"
+		],
+		"mimes": [],
+		"name": "Commodore 64 1541 Disk Image (G64 Format)",
+		"signature": [
+			{
+				"offset": 0,
+				"pattern": "GSR-1541"
+			}
+		]
+	},
+	{
+		"category": "image",
+		"extensions": [
+			".d81"
+		],
+		"mimes": [],
+		"name": "Commodore 64 1581 Disk Image (D81 Format)",
+		"signature": [
+			{
+				"offset": 399385,
+				"pattern": " 3D  "
+			}
+		]
+	},
+	{
+		"category": "image",
+		"extensions": [
+			".t64"
+		],
+		"mimes": [],
+		"name": "Commodore 64 Tape Image",
+		"signature": [
+			{
+				"offset": 0,
+				"pattern": "C64 tape image file"
+			}
+		]
+	},
+	{
+		"category": "rom",
+		"extensions": [
+			".crt"
+		],
+		"mimes": [
+			"application/x-commodore-64-cartridge"
+		],
+		"name": "Commodore 64 Cartridge Image",
+		"signature": [
+			{
+				"offset": 0,
+				"pattern": "C64 CARTRIDGE   "
+			}
+		]
+	},
+	{
+		"category": "executable",
+		"extensions": [
+			".class"
+		],
+		"mimes": [
+			"application/java-vm"
+		],
+		"name": "Java Class File",
+		"signature": [
+			{
+				"offset": 0,
+				"pattern": "Êþº¾"
+			}
+		]
+	},
+	{
+		"category": "executable",
+		"extensions": [
+			".class"
+		],
+		"mimes": [],
+		"name": "Mach-O Fat Binary",
+		"signature": [
+			{
+				"offset": 0,
+				"pattern": "Êþº¾"
+			}
+		]
+	},
+	{
+		"category": "executable",
+		"extensions": [
+			".mach"
+		],
+		"mimes": [
+			"application/x-mach-binary"
+		],
+		"name": "Mach-O Binary",
+		"signature": [
+			{
+				"offset": 0,
+				"pattern": "þíúÎ"
+			}
+		],
+		"variant": "32-Bit, Head 0"
+	},
+	{
+		"category": "executable",
+		"extensions": [
+			".mach"
+		],
+		"mimes": [
+			"application/x-mach-binary"
+		],
+		"name": "Mach-O Binary",
+		"signature": [
+			{
+				"offset": 4096,
+				"pattern": "þíúÎ"
+			}
+		],
+		"variant": "32-Bit, Head 4096"
+	},
+	{
+		"category": "executable",
+		"extensions": [
+			".mach"
+		],
+		"mimes": [
+			"application/x-mach-binary"
+		],
+		"name": "Mach-O Binary",
+		"signature": [
+			{
+				"offset": 0,
+				"pattern": "þíúÏ"
+			}
+		],
+		"variant": "64-Bit, Head 0"
+	},
+	{
+		"category": "executable",
+		"extensions": [
+			".mach"
+		],
+		"mimes": [
+			"application/x-mach-binary"
+		],
+		"name": "Mach-O Binary",
+		"signature": [
+			{
+				"offset": 4096,
+				"pattern": "þíúÏ"
+			}
+		],
+		"variant": "64-Bit, Head 4096"
+	},
+	{
+		"category": "executable",
+		"extensions": [
+			".mach"
+		],
+		"mimes": [
+			"application/x-mach-binary"
+		],
+		"name": "Mach-O Binary",
+		"signature": [
+			{
+				"offset": 0,
+				"pattern": "Îúíþ"
+			}
+		],
+		"variant": "32-Bit, Reverse Byte Ordering Scheme"
+	},
+	{
+		"category": "executable",
+		"extensions": [
+			".mach"
+		],
+		"mimes": [
+			"application/x-mach-binary"
+		],
+		"name": "Mach-O Binary",
+		"signature": [
+			{
+				"offset": 0,
+				"pattern": "Ïúíþ"
+			}
+		],
+		"variant": "64-Bit, Reverse Byte Ordering Scheme"
+	},
+	{
+		"category": "other",
+		"extensions": [
+			".jks"
+		],
+		"mimes": [
+			"application/x-java-keystore"
+		],
+		"name": "Java KeyStore File",
+		"signature": [
+			{
+				"offset": 0,
+				"pattern": "þíþí"
+			}
+		]
+	},
+	{
+		"category": "document",
+		"extensions": [
+			".ps"
+		],
+		"mimes": [
+			"application/postscript"
+		],
+		"name": "PostScript Document",
+		"signature": [
+			{
+				"offset": 0,
+				"pattern": "%!PS"
+			}
+		]
+	},
+	{
+		"category": "image",
+		"extensions": [
+			".eps",
+			".epsf"
+		],
+		"mimes": [
+			"application/eps"
+		],
+		"name": "Encapsulated PostScript File Version 3.0",
+		"signature": [
+			{
+				"offset": 0,
+				"pattern": "%!PS-Adobe-3.0 EPSF-3.0"
+			}
+		]
+	},
+	{
+		"category": "image",
+		"extensions": [
+			".eps",
+			".epsf"
+		],
+		"mimes": [
+			"application/eps"
+		],
+		"name": "Encapsulated PostScript File Version 3.1",
+		"signature": [
+			{
+				"offset": 0,
+				"pattern": "%!PS-Adobe-3.1 EPSF-3.0"
+			}
+		]
+	},
+	{
+		"category": "other",
+		"extensions": [
+			".chm"
+		],
+		"mimes": [
+			"application/vnd.ms-htmlhelp"
+		],
+		"name": "Microsoft Compiled HTML Help Data",
+		"signature": [
+			{
+				"offset": 0,
+				"pattern": "ITSF\u0003\u0000\u0000\u0000`\u0000\u0000\u0000"
+			}
+		]
+	},
+	{
+		"category": "other",
+		"extensions": [
+			".hlp"
+		],
+		"mimes": [
+			"application/winhlp"
+		],
+		"name": "Windows Help File",
+		"signature": [
+			{
+				"offset": 0,
+				"pattern": "?_"
+			}
+		],
+		"variant": "Short"
+	},
+	{
+		"category": "other",
+		"extensions": [
+			".hlp"
+		],
+		"mimes": [
+			"application/winhlp"
+		],
+		"name": "Windows Help File",
+		"signature": [
+			{
+				"offset": 6,
+				"pattern": "\u0000\u0000ÿÿÿÿ"
+			}
+		],
+		"variant": "Long"
+	},
+	{
+		"category": "document",
+		"extensions": [
+			".pdf"
+		],
+		"mimes": [
+			"application/pdf"
+		],
+		"name": "Portable Document Format (PDF) File",
+		"signature": [
+			{
+				"offset": 0,
+				"pattern": "%PDF-"
+			}
+		]
+	},
+	{
+		"category": "other",
+		"extensions": [
+			".asf"
+		],
+		"mimes": [
+			"application/vnd.ms-asf",
+			"video/x-ms-asf"
+		],
+		"name": "Advanced Systems Format Video",
+		"signature": [
+			{
+				"offset": 0,
+				"pattern": "0&²ufÏ\u0011¦Ù\u0000ª\u0000bÎl"
+			}
+		]
+	},
+	{
+		"category": "audio",
+		"extensions": [
+			".wma"
+		],
+		"mimes": [
+			"audio/x-ms-wma"
+		],
+		"name": "Windows Media Audio",
+		"signature": [
+			{
+				"offset": 0,
+				"pattern": "0&²ufÏ\u0011¦Ù\u0000ª\u0000bÎl"
+			}
+		]
+	},
+	{
+		"category": "video",
+		"extensions": [
+			".wmv"
+		],
+		"mimes": [
+			"video/x-ms-wmv"
+		],
+		"name": "Windows Media Video",
+		"signature": [
+			{
+				"offset": 0,
+				"pattern": "0&²ufÏ\u0011¦Ù\u0000ª\u0000bÎl"
+			}
+		]
+	},
+	{
+		"category": "image",
+		"extensions": [],
+		"mimes": [],
+		"name": "System Deployment Image",
+		"signature": [
+			{
+				"offset": 0,
+				"pattern": "$SDI0001"
+			}
+		]
+	},
+	{
+		"category": "audio",
+		"extensions": [
+			".ogg"
+		],
+		"mimes": [
+			"audio/ogg"
+		],
+		"name": "Ogg Vorbis Audio",
+		"signature": [
+			{
+				"offset": 0,
+				"pattern": "OggS"
+			},
+			{
+				"offset": 28,
+				"pattern": "\u0001vorbis"
+			}
+		]
+	},
+	{
+		"category": "audio",
+		"extensions": [
+			".oga"
+		],
+		"mimes": [
+			"audio/ogg"
+		],
+		"name": "Ogg FLAC Audio",
+		"signature": [
+			{
+				"offset": 0,
+				"pattern": "OggS"
+			},
+			{
+				"offset": 28,
+				"pattern": "FLAC"
+			}
+		]
+	},
+	{
+		"category": "video",
+		"extensions": [
+			".ogv"
+		],
+		"mimes": [
+			"video/ogg"
+		],
+		"name": "Ogg Theora Video",
+		"signature": [
+			{
+				"offset": 0,
+				"pattern": "OggS"
+			},
+			{
+				"offset": 28,
+				"pattern": "theora"
+			}
+		]
+	},
+	{
+		"category": "audio",
+		"extensions": [
+			".wav"
+		],
+		"mimes": [
+			"audio/wav",
+			"audio/wave",
+			"audio/x-wav",
+			"audio/vnd.wave",
+			"audio/x-pn-wav"
+		],
+		"name": "Waveform Audio",
+		"signature": [
+			{
+				"offset": 0,
+				"pattern": "RIFF"
+			},
+			{
+				"offset": 8,
+				"pattern": "WAVE"
+			}
+		]
+	},
+	{
+		"category": "video",
+		"extensions": [
+			".avi"
+		],
+		"mimes": [
+			"video/x-msvideo"
+		],
+		"name": "Audio Video Interleave (AVI)",
+		"signature": [
+			{
+				"offset": 0,
+				"pattern": "RIFF"
+			},
+			{
+				"offset": 8,
+				"pattern": "AVI "
+			}
+		]
+	},
+	{
+		"category": "audio",
+		"extensions": [
+			".mp3"
+		],
+		"mimes": [
+			"audio/mp3",
+			"audio/mpeg"
+		],
+		"name": "MPEG-1/2 Audio Layer 3",
+		"signature": [
+			{
+				"offset": 0,
+				"pattern": "ÿûÿóÿò"
+			}
+		]
+	},
+	{
+		"category": "audio",
+		"extensions": [
+			".mp3"
+		],
+		"mimes": [
+			"audio/mpeg"
+		],
+		"name": "MPEG-1/2 Audio Layer 3 With ID3v2 Container",
+		"signature": [
+			{
+				"offset": 0,
+				"pattern": "ID3"
+			}
+		]
+	},
+	{
+		"category": "image",
+		"extensions": [
+			".cdi"
+		],
+		"mimes": [],
+		"name": "CD-i CD Image",
+		"signature": [
+			{
+				"offset": 387785,
+				"pattern": "CD001"
+			}
+		]
+	},
+	{
+		"category": "image",
+		"extensions": [
+			".mgw"
+		],
+		"mimes": [],
+		"name": "Nintendo Game & Watch Image",
+		"signature": [
+			{
+				"offset": 0,
+				"pattern": "main.bs"
+			}
+		]
+	},
+	{
+		"category": "rom",
+		"extensions": [
+			".nes"
+		],
+		"mimes": [
+			"application/x-nintendo-nes-rom"
+		],
+		"name": "Nintendo Entertainment System ROM",
+		"signature": [
+			{
+				"offset": 0,
+				"pattern": "NES"
+			}
+		]
+	},
+	{
+		"category": "other",
+		"extensions": [
+			".fits"
+		],
+		"mimes": [
+			"image/fits"
+		],
+		"name": "Flexible Image Transport System (FITS) File",
+		"signature": [
+			{
+				"offset": 0,
+				"pattern": "SIMPLE  =                    T"
+			}
+		]
+	},
+	{
+		"category": "audio",
+		"extensions": [
+			".flac"
+		],
+		"mimes": [
+			"audio/x-flac"
+		],
+		"name": "Free Lossless Audio Codec (FLAC) File",
+		"signature": [
+			{
+				"offset": 0,
+				"pattern": "fLaC"
+			}
+		]
+	},
+	{
+		"category": "audio",
+		"extensions": [
+			".mid",
+			".midi"
+		],
+		"mimes": [
+			"audio/midi"
+		],
+		"name": "Musical Instrument Digital Interface (MIDI) Audio",
+		"signature": [
+			{
+				"offset": 0,
+				"pattern": "MThd"
+			}
+		]
+	},
+	{
+		"category": "executable",
+		"extensions": [
+			".dex"
+		],
+		"mimes": [
+			"application/vnd.android.dex"
+		],
+		"name": "Dalvik Executable",
+		"signature": [
+			{
+				"offset": 0,
+				"pattern": "dex\n035\u0000"
+			}
+		]
+	},
+	{
+		"category": "disk",
+		"extensions": [
+			".vmdk"
+		],
+		"mimes": [
+			"application/x-vmdk",
+			"application/x-virtualbox-vmdk"
+		],
+		"name": "Virtual Machine Disk",
+		"signature": [
+			{
+				"offset": 0,
+				"pattern": "COWD\u0001"
+			}
+		],
+		"variant": "COWD"
+	},
+	{
+		"category": "disk",
+		"extensions": [
+			".vmdk"
+		],
+		"mimes": [
+			"application/x-vmdk",
+			"application/x-virtualbox-vmdk"
+		],
+		"name": "Virtual Machine Disk",
+		"signature": [
+			{
+				"offset": 0,
+				"pattern": "KDMV\u0001"
+			}
+		],
+		"variant": "KDMV01"
+	},
+	{
+		"category": "disk",
+		"extensions": [
+			".vmdk"
+		],
+		"mimes": [
+			"application/x-vmdk",
+			"application/x-virtualbox-vmdk"
+		],
+		"name": "Virtual Machine Disk",
+		"signature": [
+			{
+				"offset": 0,
+				"pattern": "KDMV\u0002"
+			}
+		],
+		"variant": "KDMV02"
+	},
+	{
+		"category": "disk",
+		"extensions": [
+			".vmdk"
+		],
+		"mimes": [
+			"application/x-vmdk",
+			"application/x-virtualbox-vmdk"
+		],
+		"name": "Virtual Machine Disk",
+		"signature": [
+			{
+				"offset": 0,
+				"pattern": "KDMV\u0003"
+			}
+		],
+		"variant": "KDMV03"
+	},
+	{
+		"category": "other",
+		"extensions": [
+			".vmdk"
+		],
+		"mimes": [
+			"application/x-virtualbox-vmdk"
+		],
+		"name": "VMware 4 Virtual Disk Description File",
+		"signature": [
+			{
+				"offset": 0,
+				"pattern": "# Disk Descripto"
+			}
+		]
+	},
+	{
+		"category": "package",
+		"extensions": [
+			".crx"
+		],
+		"mimes": [
+			"application/x-chrome-extension",
+			"application/x-google-chrome-extension"
+		],
+		"name": "Google Chrome Extension",
+		"signature": [
+			{
+				"offset": 0,
+				"pattern": "Cr24"
+			}
+		]
+	},
+	{
+		"category": "document",
+		"extensions": [
+			".fh8"
+		],
+		"mimes": [],
+		"name": "FreeHand 8 Document",
+		"signature": [
+			{
+				"offset": 0,
+				"pattern": "AGD3"
+			}
+		]
+	},
+	{
+		"category": "document",
+		"extensions": [
+			".cwk"
+		],
+		"mimes": [],
+		"name": "AppleWorks 5 Document",
+		"signature": [
+			{
+				"offset": 0,
+				"pattern": "\u0005\u0007\u0000\u0000BOBO\u0005\u0007\u0000\u0000\u0000\u0000\u0000\u0000\u0000\u0000\u0000\u0000\u0000\u0001"
+			}
+		]
+	},
+	{
+		"category": "document",
+		"extensions": [
+			".cwk"
+		],
+		"mimes": [],
+		"name": "AppleWorks 6 Document",
+		"signature": [
+			{
+				"offset": 0,
+				"pattern": "\u0006\u0007á\u0000BOBO\u0006\u0007á\u0000\u0000\u0000\u0000\u0000\u0000\u0000\u0000\u0000\u0000\u0001"
+			}
+		]
+	},
+	{
+		"category": "image",
+		"extensions": [
+			".toast"
+		],
+		"mimes": [],
+		"name": "Roxio Toast Disc Image",
+		"signature": [
+			{
+				"offset": 0,
+				"pattern": "ER\u0002\u0000\u0000\u0000"
+			}
+		],
+		"variant": "NoPrefix"
+	},
+	{
+		"category": "image",
+		"extensions": [
+			".toast"
+		],
+		"mimes": [],
+		"name": "Roxio Toast Disc Image",
+		"signature": [
+			{
+				"offset": 0,
+				"pattern": "ER\u0002\u0000\u0000\u0000"
+			}
+		],
+		"variant": "Prefix"
+	},
+	{
+		"category": "archive",
+		"extensions": [
+			".xar"
+		],
+		"mimes": [
+			"application/vnd.xara",
+			"application/x-xar"
+		],
+		"name": "eXtensible ARchive",
+		"signature": [
+			{
+				"offset": 0,
+				"pattern": "xar!"
+			}
+		]
+	},
+	{
+		"category": "other",
+		"extensions": [
+			".dat"
+		],
+		"mimes": [],
+		"name": "Windows Files & Settings Transfer Repository File",
+		"signature": [
+			{
+				"offset": 0,
+				"pattern": "PMOCCMOC"
+			}
+		]
+	},
+	{
+		"category": "archive",
+		"extensions": [
+			".tar"
+		],
+		"mimes": [
+			"application/x-tar"
+		],
+		"name": "Tape Archive",
+		"signature": [
+			{
+				"offset": 257,
+				"pattern": "ustar\u000000ustar  \u0000"
+			}
+		]
+	},
+	{
+		"category": "archive",
+		"extensions": [
+			".oar"
+		],
+		"mimes": [],
+		"name": "OAR Archive",
+		"signature": [
+			{
+				"offset": 0,
+				"pattern": "OAR"
+			}
+		]
+	},
+	{
+		"category": "other",
+		"extensions": [
+			".tox"
+		],
+		"mimes": [],
+		"name": "Open Source Portable Voxel File",
+		"signature": [
+			{
+				"offset": 0,
+				"pattern": "tox3"
+			}
+		]
+	},
+	{
+		"category": "video",
+		"extensions": [
+			".mlv"
+		],
+		"mimes": [],
+		"name": "Magic Lantern Video",
+		"signature": [
+			{
+				"offset": 0,
+				"pattern": "MLVI"
+			}
+		]
+	},
+	{
+		"category": "package",
+		"extensions": [],
+		"mimes": [],
+		"name": "Windows Update Binary Delta Compression File",
+		"signature": [
+			{
+				"offset": 0,
+				"pattern": "DCM\u0001PA30PA30"
+			}
+		]
+	},
+	{
+		"category": "archive",
+		"extensions": [
+			".7z"
+		],
+		"mimes": [
+			"application/x-7z-compressed"
+		],
+		"name": "7-Zip Archive",
+		"signature": [
+			{
+				"offset": 0,
+				"pattern": "7z¼¯'\u001c"
+			}
+		]
+	},
+	{
+		"category": "compressed",
+		"extensions": [
+			".lz4"
+		],
+		"mimes": [
+			"application/x-lz4"
+		],
+		"name": "LZ4 Frame File",
+		"signature": [
+			{
+				"offset": 0,
+				"pattern": "\u0004\"M\u0018"
+			}
+		]
+	},
+	{
+		"category": "image",
+		"extensions": [
+			".flif"
+		],
+		"mimes": [
+			"image/flif"
+		],
+		"name": "Free Lossless Image Format (FLIF) File",
+		"signature": [
+			{
+				"offset": 0,
+				"pattern": "FLIF"
+			}
+		]
+	},
+	{
+		"category": "other",
+		"extensions": [
+			".stg"
+		],
+		"mimes": [],
+		"name": "SEAN Session Analysis Training File",
+		"signature": [
+			{
+				"offset": 0,
+				"pattern": "MIL "
+			}
+		]
+	},
+	{
+		"category": "other",
+		"extensions": [
+			".der"
+		],
+		"mimes": [
+			"application/x-x509-ca-cert"
+		],
+		"name": "DER Encoded X.509 Certificate File",
+		"signature": [
+			{
+				"offset": 0,
+				"pattern": "0"
+			}
+		]
+	},
+	{
+		"category": "other",
+		"extensions": [
+			".ppk"
+		],
+		"mimes": [],
+		"name": "PuTTY Private Key File Version 2",
+		"signature": [
+			{
+				"offset": 0,
+				"pattern": "PuTTY-User-Key-File-2:"
+			}
+		]
+	},
+	{
+		"category": "other",
+		"extensions": [
+			".ppk"
+		],
+		"mimes": [],
+		"name": "PuTTY Private Key File Version 3",
+		"signature": [
+			{
+				"offset": 0,
+				"pattern": "PuTTY-User-Key-File-3:"
+			}
+		]
+	},
+	{
+		"category": "other",
+		"extensions": [],
+		"mimes": [],
+		"name": "OpenSSH Private Key File",
+		"signature": [
+			{
+				"offset": 0,
+				"pattern": "-----BEGIN OPENSSH PRIVATE KEY-----"
+			}
+		]
+	},
+	{
+		"category": "other",
+		"extensions": [
+			".pub"
+		],
+		"mimes": [
+			"application/x-pem-file"
+		],
+		"name": "OpenSSH Public Key File",
+		"signature": [
+			{
+				"offset": 0,
+				"pattern": "-----BEGIN SSH2 KEY-----"
+			}
+		]
+	},
+	{
+		"category": "other",
+		"extensions": [
+			".dcm"
+		],
+		"mimes": [
+			"application/dicom"
+		],
+		"name": "Digital Imaging and Communications in Medicine (DICOM) Medical File Format",
+		"signature": [
+			{
+				"offset": 128,
+				"pattern": "DICM"
+			}
+		]
+	},
+	{
+		"category": "font",
+		"extensions": [
+			".woff"
+		],
+		"mimes": [
+			"font/woff"
+		],
+		"name": "Web Open Font Format (WOFF) 1.0",
+		"signature": [
+			{
+				"offset": 0,
+				"pattern": "wOFF"
+			}
+		]
+	},
+	{
+		"category": "font",
+		"extensions": [
+			".woff2"
+		],
+		"mimes": [
+			"font/woff2"
+		],
+		"name": "Web Open Font Format (WOFF) 2.0",
+		"signature": [
+			{
+				"offset": 0,
+				"pattern": "wOF2"
+			}
+		]
+	},
+	{
+		"category": "image",
+		"extensions": [
+			".lep"
+		],
+		"mimes": [],
+		"name": "Lepton Compressed JPEG Image",
+		"signature": [
+			{
+				"offset": 0,
+				"pattern": "Ï\u0001"
+			}
+		]
+	},
+	{
+		"category": "package",
+		"extensions": [
+			".deb"
+		],
+		"mimes": [
+			"application/vnd.debian.binary-package",
+			"application/x-debian-package"
+		],
+		"name": "Debian Package",
+		"signature": [
+			{
+				"offset": 0,
+				"pattern": "!<arch>\ndebian-binary"
+			}
+		]
+	},
+	{
+		"category": "document",
+		"extensions": [
+			".rtf"
+		],
+		"mimes": [
+			"application/rtf",
+			"text/rtf"
+		],
+		"name": "Rich Text Format (RTF) File",
+		"signature": [
+			{
+				"offset": 0,
+				"pattern": "{\\rtf"
+			},
+			{
+				"offset": -1,
+				"pattern": "}"
+			}
+		]
+	},
+	{
+		"category": "other",
+		"extensions": [],
+		"mimes": [],
+		"name": "Microsoft Tape File",
+		"signature": [
+			{
+				"offset": 0,
+				"pattern": "TAPE"
+			}
+		]
+	},
+	{
+		"category": "other",
+		"extensions": [
+			".mp4"
+		],
+		"mimes": [
+			"application/mp4",
+			"audio/mp4",
+			"video/mp4"
+		],
+		"name": "MPEG-4",
+		"signature": [
+			{
+				"offset": 4,
+				"pattern": "ftypARRI"
+			}
+		],
+		"variant": "ARRI"
+	},
+	{
+		"category": "other",
+		"extensions": [
+			".mp4"
+		],
+		"mimes": [
+			"application/mp4",
+			"audio/mp4",
+			"video/mp4"
+		],
+		"name": "MPEG-4",
+		"signature": [
+			{
+				"offset": 4,
+				"pattern": "ftypMSNV"
+			}
+		],
+		"variant": "MSNV"
+	},
+	{
+		"category": "other",
+		"extensions": [
+			".mp4"
+		],
+		"mimes": [
+			"application/mp4",
+			"audio/mp4",
+			"video/mp4"
+		],
+		"name": "MPEG-4",
+		"signature": [
+			{
+				"offset": 4,
+				"pattern": "ftypNDAS"
+			}
+		],
+		"variant": "NDAS"
+	},
+	{
+		"category": "other",
+		"extensions": [
+			".mp4"
+		],
+		"mimes": [
+			"application/mp4",
+			"audio/mp4",
+			"video/mp4"
+		],
+		"name": "MPEG-4",
+		"signature": [
+			{
+				"offset": 4,
+				"pattern": "ftypNDSC"
+			}
+		],
+		"variant": "NDSC"
+	},
+	{
+		"category": "other",
+		"extensions": [
+			".mp4"
+		],
+		"mimes": [
+			"application/mp4",
+			"audio/mp4",
+			"video/mp4"
+		],
+		"name": "MPEG-4",
+		"signature": [
+			{
+				"offset": 4,
+				"pattern": "ftypNDSH"
+			}
+		],
+		"variant": "NDSH"
+	},
+	{
+		"category": "other",
+		"extensions": [
+			".mp4"
+		],
+		"mimes": [
+			"application/mp4",
+			"audio/mp4",
+			"video/mp4"
+		],
+		"name": "MPEG-4",
+		"signature": [
+			{
+				"offset": 4,
+				"pattern": "ftypNDSM"
+			}
+		],
+		"variant": "NDSM"
+	},
+	{
+		"category": "other",
+		"extensions": [
+			".mp4"
+		],
+		"mimes": [
+			"application/mp4",
+			"audio/mp4",
+			"video/mp4"
+		],
+		"name": "MPEG-4",
+		"signature": [
+			{
+				"offset": 4,
+				"pattern": "ftypNDSP"
+			}
+		],
+		"variant": "NDSP"
+	},
+	{
+		"category": "other",
+		"extensions": [
+			".mp4"
+		],
+		"mimes": [
+			"application/mp4",
+			"audio/mp4",
+			"video/mp4"
+		],
+		"name": "MPEG-4",
+		"signature": [
+			{
+				"offset": 4,
+				"pattern": "ftypNDSS"
+			}
+		],
+		"variant": "NDSS"
+	},
+	{
+		"category": "other",
+		"extensions": [
+			".mp4"
+		],
+		"mimes": [
+			"application/mp4",
+			"audio/mp4",
+			"video/mp4"
+		],
+		"name": "MPEG-4",
+		"signature": [
+			{
+				"offset": 4,
+				"pattern": "ftypNDXC"
+			}
+		],
+		"variant": "NDXC"
+	},
+	{
+		"category": "other",
+		"extensions": [
+			".mp4"
+		],
+		"mimes": [
+			"application/mp4",
+			"audio/mp4",
+			"video/mp4"
+		],
+		"name": "MPEG-4",
+		"signature": [
+			{
+				"offset": 4,
+				"pattern": "ftypNDXH"
+			}
+		],
+		"variant": "NDXH"
+	},
+	{
+		"category": "other",
+		"extensions": [
+			".mp4"
+		],
+		"mimes": [
+			"application/mp4",
+			"audio/mp4",
+			"video/mp4"
+		],
+		"name": "MPEG-4",
+		"signature": [
+			{
+				"offset": 4,
+				"pattern": "ftypNDXM"
+			}
+		],
+		"variant": "NDXM"
+	},
+	{
+		"category": "other",
+		"extensions": [
+			".mp4"
+		],
+		"mimes": [
+			"application/mp4",
+			"audio/mp4",
+			"video/mp4"
+		],
+		"name": "MPEG-4",
+		"signature": [
+			{
+				"offset": 4,
+				"pattern": "ftypNDXP"
+			}
+		],
+		"variant": "NDXP"
+	},
+	{
+		"category": "other",
+		"extensions": [
+			".mp4"
+		],
+		"mimes": [
+			"application/mp4",
+			"audio/mp4",
+			"video/mp4"
+		],
+		"name": "MPEG-4",
+		"signature": [
+			{
+				"offset": 4,
+				"pattern": "ftypNDXS"
+			}
+		],
+		"variant": "NDXS"
+	},
+	{
+		"category": "other",
+		"extensions": [
+			".mp4"
+		],
+		"mimes": [
+			"application/mp4",
+			"audio/mp4",
+			"video/mp4"
+		],
+		"name": "MPEG-4",
+		"signature": [
+			{
+				"offset": 4,
+				"pattern": "ftypXAVC"
+			}
+		],
+		"variant": "XAVC"
+	},
+	{
+		"category": "other",
+		"extensions": [
+			".mp4"
+		],
+		"mimes": [
+			"application/mp4",
+			"audio/mp4",
+			"video/mp4"
+		],
+		"name": "MPEG-4",
+		"signature": [
+			{
+				"offset": 4,
+				"pattern": "ftypavc1"
+			}
+		],
+		"variant": "avc1"
+	},
+	{
+		"category": "other",
+		"extensions": [
+			".mp4"
+		],
+		"mimes": [
+			"application/mp4",
+			"audio/mp4",
+			"video/mp4"
+		],
+		"name": "MPEG-4",
+		"signature": [
+			{
+				"offset": 4,
+				"pattern": "ftypdash"
+			}
+		],
+		"variant": "dash"
+	},
+	{
+		"category": "other",
+		"extensions": [
+			".mp4"
+		],
+		"mimes": [
+			"application/mp4",
+			"audio/mp4",
+			"video/mp4"
+		],
+		"name": "MPEG-4",
+		"signature": [
+			{
+				"offset": 4,
+				"pattern": "ftypiso2"
+			}
+		],
+		"variant": "iso2"
+	},
+	{
+		"category": "other",
+		"extensions": [
+			".mp4"
+		],
+		"mimes": [
+			"application/mp4",
+			"audio/mp4",
+			"video/mp4"
+		],
+		"name": "MPEG-4",
+		"signature": [
+			{
+				"offset": 4,
+				"pattern": "ftypiso3"
+			}
+		],
+		"variant": "iso3"
+	},
+	{
+		"category": "other",
+		"extensions": [
+			".mp4"
+		],
+		"mimes": [
+			"application/mp4",
+			"audio/mp4",
+			"video/mp4"
+		],
+		"name": "MPEG-4",
+		"signature": [
+			{
+				"offset": 4,
+				"pattern": "ftypiso4"
+			}
+		],
+		"variant": "iso4"
+	},
+	{
+		"category": "other",
+		"extensions": [
+			".mp4"
+		],
+		"mimes": [
+			"application/mp4",
+			"audio/mp4",
+			"video/mp4"
+		],
+		"name": "MPEG-4",
+		"signature": [
+			{
+				"offset": 4,
+				"pattern": "ftypiso5"
+			}
+		],
+		"variant": "iso5"
+	},
+	{
+		"category": "other",
+		"extensions": [
+			".mp4"
+		],
+		"mimes": [
+			"application/mp4",
+			"audio/mp4",
+			"video/mp4"
+		],
+		"name": "MPEG-4",
+		"signature": [
+			{
+				"offset": 4,
+				"pattern": "ftypiso6"
+			}
+		],
+		"variant": "iso6"
+	},
+	{
+		"category": "other",
+		"extensions": [
+			".mp4"
+		],
+		"mimes": [
+			"application/mp4",
+			"audio/mp4",
+			"video/mp4"
+		],
+		"name": "MPEG-4",
+		"signature": [
+			{
+				"offset": 4,
+				"pattern": "ftypisom"
+			}
+		],
+		"variant": "isom"
+	},
+	{
+		"category": "other",
+		"extensions": [
+			".mp4"
+		],
+		"mimes": [
+			"application/mp4",
+			"audio/mp4",
+			"video/mp4"
+		],
+		"name": "MPEG-4",
+		"signature": [
+			{
+				"offset": 4,
+				"pattern": "ftypmmp4"
+			}
+		],
+		"variant": "mmp4"
+	},
+	{
+		"category": "other",
+		"extensions": [
+			".mp4"
+		],
+		"mimes": [
+			"application/mp4",
+			"audio/mp4",
+			"video/mp4"
+		],
+		"name": "MPEG-4",
+		"signature": [
+			{
+				"offset": 4,
+				"pattern": "ftypmobi"
+			}
+		],
+		"variant": "mobi"
+	},
+	{
+		"category": "other",
+		"extensions": [
+			".mp4"
+		],
+		"mimes": [
+			"application/mp4",
+			"audio/mp4",
+			"video/mp4"
+		],
+		"name": "MPEG-4",
+		"signature": [
+			{
+				"offset": 4,
+				"pattern": "ftypmp21"
+			}
+		],
+		"variant": "mp21"
+	},
+	{
+		"category": "other",
+		"extensions": [
+			".mp4"
+		],
+		"mimes": [
+			"application/mp4",
+			"audio/mp4",
+			"video/mp4"
+		],
+		"name": "MPEG-4",
+		"signature": [
+			{
+				"offset": 4,
+				"pattern": "ftypmp41"
+			}
+		],
+		"variant": "mp41"
+	},
+	{
+		"category": "other",
+		"extensions": [
+			".mp4"
+		],
+		"mimes": [
+			"application/mp4",
+			"audio/mp4",
+			"video/mp4"
+		],
+		"name": "MPEG-4",
+		"signature": [
+			{
+				"offset": 4,
+				"pattern": "ftypmp42"
+			}
+		],
+		"variant": "mp42"
+	},
+	{
+		"category": "other",
+		"extensions": [
+			".mp4"
+		],
+		"mimes": [
+			"application/mp4",
+			"audio/mp4",
+			"video/mp4"
+		],
+		"name": "MPEG-4",
+		"signature": [
+			{
+				"offset": 4,
+				"pattern": "ftypmp4v"
+			}
+		],
+		"variant": "mp4v"
+	},
+	{
+		"category": "other",
+		"extensions": [
+			".mp4"
+		],
+		"mimes": [
+			"application/mp4",
+			"audio/mp4",
+			"video/mp4"
+		],
+		"name": "MPEG-4",
+		"signature": [
+			{
+				"offset": 4,
+				"pattern": "ftypmp71"
+			}
+		],
+		"variant": "mp71"
+	},
+	{
+		"category": "other",
+		"extensions": [
+			".orc"
+		],
+		"mimes": [],
+		"name": "Apache Optimized Row Columnar (ORC) File",
+		"signature": [
+			{
+				"offset": 0,
+				"pattern": "ORC"
+			}
+		]
+	},
+	{
+		"category": "playlist",
+		"extensions": [
+			".m3u8",
+			".m3u"
+		],
+		"mimes": [
+			"application/vnd.apple.mpegurl",
+			"audio/x-mpegurl"
+		],
+		"name": "Multimedia Playlist",
+		"signature": [
+			{
+				"offset": 0,
+				"pattern": "#EXTM3U"
+			}
+		]
+	},
+	{
+		"category": "archive",
+		"extensions": [
+			".m"
+		],
+		"mimes": [],
+		"name": "M2 Archive",
+		"signature": [
+			{
+				"offset": 0,
+				"pattern": "mdf\u0000"
+			}
+		]
+	},
+	{
+		"category": "archive",
+		"extensions": [
+			".pak"
+		],
+		"mimes": [],
+		"name": "Capcom RE Engine Game Data Archive",
+		"signature": [
+			{
+				"offset": 0,
+				"pattern": "KPKA"
+			}
+		]
+	},
+	{
+		"category": "archive",
+		"extensions": [
+			".arc"
+		],
+		"mimes": [],
+		"name": "Capcom MT Framework Game Data Archive",
+		"signature": [
+			{
+				"offset": 0,
+				"pattern": "ARC"
+			}
+		]
+	},
+	{
+		"category": "other",
+		"extensions": [
+			".pl"
+		],
+		"mimes": [],
+		"name": "Interleaf PrinterLeaf",
+		"signature": [
+			{
+				"offset": 0,
+				"pattern": "ÐOPS"
+			}
+		]
+	},
+	{
+		"category": "other",
+		"extensions": [
+			".nii"
+		],
+		"mimes": [],
+		"name": "NIfTI File",
+		"signature": [
+			{
+				"offset": 344,
+				"pattern": "n+1\u0000"
+			}
+		]
+	},
+	{
+		"category": "other",
+		"extensions": [
+			".hdr"
+		],
+		"mimes": [],
+		"name": "NIfTI Header File",
+		"signature": [
+			{
+				"offset": 344,
+				"pattern": "ni1\u0000"
+			}
+		]
+	},
+	{
+		"category": "other",
+		"extensions": [],
+		"mimes": [],
+		"name": "Digital Metaphors Report Builder File",
+		"signature": [
+			{
+				"offset": 0,
+				"pattern": "RAF64"
+			}
+		]
+	},
+	{
+		"category": "other",
+		"extensions": [],
+		"mimes": [],
+		"name": "Visionaire 3 Engine Resource File",
+		"signature": [
+			{
+				"offset": 0,
+				"pattern": "VIS3"
+			}
+		]
+	},
+	{
+		"category": "other",
+		"extensions": [
+			".pwrdata"
+		],
+		"mimes": [],
+		"name": "SAP Power Monitor (Version 1.1.0) Data File",
+		"signature": [
+			{
+				"offset": 0,
+				"pattern": "pwrdata"
+			}
+		]
+	},
+	{
+		"category": "archive",
+		"extensions": [
+			".arc"
+		],
+		"mimes": [
+			"application/x-freearc"
+		],
+		"name": "ARC Archive",
+		"signature": [
+			{
+				"offset": 0,
+				"pattern": "\u001a\b"
+			}
+		]
+	},
+	{
+		"category": "other",
+		"extensions": [
+			".asc"
+		],
+		"mimes": [
+			"application/pgp"
+		],
+		"name": "PGP Message",
+		"signature": [
+			{
+				"offset": 0,
+				"pattern": "-----BEGIN PGP MESSAGE-----"
+			}
+		]
+	},
+	{
+		"category": "other",
+		"extensions": [
+			".asc"
+		],
+		"mimes": [
+			"application/pgp-keys"
+		],
+		"name": "PGP Private Key Block",
+		"signature": [
+			{
+				"offset": 0,
+				"pattern": "-----BEGIN PGP PRIVATE KEY BLOCK-----"
+			}
+		]
+	},
+	{
+		"category": "other",
+		"extensions": [
+			".asc"
+		],
+		"mimes": [
+			"application/pgp-keys"
+		],
+		"name": "PGP Public Key Block",
+		"signature": [
+			{
+				"offset": 0,
+				"pattern": "-----BEGIN PGP PUBLIC KEY BLOCK-----"
+			}
+		]
+	},
+	{
+		"category": "other",
+		"extensions": [
+			".asc"
+		],
+		"mimes": [
+			"application/pgp-signature"
+		],
+		"name": "PGP Signature",
+		"signature": [
+			{
+				"offset": 0,
+				"pattern": "-----BEGIN PGP SIGNATURE-----"
+			}
+		]
+	},
+	{
+		"category": "other",
+		"extensions": [
+			".asc"
+		],
+		"mimes": [
+			"application/pgp"
+		],
+		"name": "PGP Signed Message",
+		"signature": [
+			{
+				"offset": 0,
+				"pattern": "-----BEGIN PGP SIGNED MESSAGE-----"
+			}
+		]
+	},
+	{
+		"category": "other",
+		"extensions": [
+			".asc"
+		],
+		"mimes": [
+			"application/pgp-keys",
+			"application/pgp-signature"
+		],
+		"name": "Armored PGP Public Key File",
+		"signature": [
+			{
+				"offset": 0,
+				"pattern": "-----BEGIN PGP PUBLIC KEI BLOCK-----"
+			}
+		]
+	},
+	{
+		"category": "document",
+		"extensions": [
+			".cnt"
+		],
+		"mimes": [],
+		"name": "Windows Help Content File",
+		"signature": [
+			{
+				"offset": 0,
+				"pattern": ":Base "
+			}
+		]
+	},
+	{
+		"category": "image",
+		"extensions": [
+			".nri"
+		],
+		"mimes": [],
+		"name": "Nero CD Compilation File",
+		"signature": [
+			{
+				"offset": 0,
+				"pattern": "\u000eNeroISO"
+			}
+		]
+	},
+	{
+		"category": "spreadsheet",
+		"extensions": [
+			".wks"
+		],
+		"mimes": [],
+		"name": "DeskMate Worksheet File",
+		"signature": [
+			{
+				"offset": 0,
+				"pattern": "\u000eWKS"
+			}
+		]
+	},
+	{
+		"category": "spreadsheet",
+		"extensions": [
+			".wks"
+		],
+		"mimes": [
+			"application/vnd.ms-works"
+		],
+		"name": "Microsoft Works Spreadsheet",
+		"signature": [
+			{
+				"offset": 0,
+				"pattern": "\u0000\u0000\u0002\u0000\u0004\u0004\u0005T\u0002\u0000"
+			}
+		],
+		"variant": "00"
+	},
+	{
+		"category": "spreadsheet",
+		"extensions": [
+			".wks"
+		],
+		"mimes": [
+			"application/vnd.ms-works"
+		],
+		"name": "Microsoft Works Spreadsheet",
+		"signature": [
+			{
+				"offset": 0,
+				"pattern": "ÿ\u0000\u0002\u0000\u0004\u0004\u0005T\u0002\u0000"
+			}
+		],
+		"variant": "FF"
+	},
+	{
+		"category": "other",
+		"extensions": [
+			".sib"
+		],
+		"mimes": [],
+		"name": "Sibelius Music Score File",
+		"signature": [
+			{
+				"offset": 0,
+				"pattern": "\u000fSIBELIUS"
+			}
+		]
+	},
+	{
+		"category": "compressed",
+		"extensions": [
+			".gz",
+			".tar.gz"
+		],
+		"mimes": [
+			"application/gzip"
+		],
+		"name": "GZip Archive",
+		"signature": [
+			{
+				"offset": 0,
+				"pattern": "\u001f"
+			}
+		]
+	},
+	{
+		"category": "compressed",
+		"extensions": [
+			".xz",
+			".tar.xz"
+		],
+		"mimes": [
+			"application/x-xz"
+		],
+		"name": "XZ LZMA2 Archive",
+		"signature": [
+			{
+				"offset": 0,
+				"pattern": "ý7zXZ\u0000"
+			}
+		]
+	},
+	{
+		"category": "other",
+		"extensions": [
+			".crt",
+			".pem"
+		],
+		"mimes": [
+			"application/x-pem-file",
+			"application/x-x509-ca-cert"
+		],
+		"name": "PEM Encoded X.509 Certificate File",
+		"signature": [
+			{
+				"offset": 0,
+				"pattern": "-----BEGIN CERTIFICATE-----"
+			}
+		]
+	},
+	{
+		"category": "other",
+		"extensions": [
+			".csr",
+			".pem"
+		],
+		"mimes": [
+			"application/x-pem-file"
+		],
+		"name": "PEM Encoded X.509 Certificate Signing Request File",
+		"signature": [
+			{
+				"offset": 0,
+				"pattern": "-----BEGIN CERTIFICATE REQUEST-----"
+			}
+		]
+	},
+	{
+		"category": "other",
+		"extensions": [
+			".key",
+			".pem"
+		],
+		"mimes": [
+			"application/x-pem-file"
+		],
+		"name": "Pem Encoded X.509 PKCS#8 Private Key File",
+		"signature": [
+			{
+				"offset": 0,
+				"pattern": "-----BEGIN PRIVATE KEY-----"
+			}
+		]
+	},
+	{
+		"category": "other",
+		"extensions": [
+			".key",
+			".pem"
+		],
+		"mimes": [
+			"application/x-pem-file"
+		],
+		"name": "PEM Encoded X.509 PKCS#1 DSA Private Key File",
+		"signature": [
+			{
+				"offset": 0,
+				"pattern": "-----BEGIN DSA PRIVATE KEY-----"
+			}
+		]
+	},
+	{
+		"category": "other",
+		"extensions": [
+			".key",
+			".pem"
+		],
+		"mimes": [
+			"application/x-pem-file"
+		],
+		"name": "PEM Encoded X.509 PKCS#1 RSA Private Key File",
+		"signature": [
+			{
+				"offset": 0,
+				"pattern": "-----BEGIN REA PRIVATE KEY-----"
+			}
+		]
+	},
+	{
+		"category": "image",
+		"extensions": [
+			".tga"
+		],
+		"mimes": [
+			"image/x-tga"
+		],
+		"name": "Truevision Targa Graphic File",
+		"signature": [
+			{
+				"offset": -18,
+				"pattern": "TRUEVISION-XFILE.\u0000"
+			}
+		]
+	},
+	{
+		"category": "image",
+		"extensions": [
+			".avif"
+		],
+		"mimes": [
+			"image/avif"
+		],
+		"name": "Alliance for Open Media (AOMedia) Video 1 (AV1) Image",
+		"signature": [
+			{
+				"offset": 4,
+				"pattern": "ftypavif"
+			}
+		]
+	},
+	{
+		"category": "image",
+		"extensions": [
+			".avifs"
+		],
+		"mimes": [
+			"image/avif-sequence"
+		],
+		"name": "Alliance for Open Media (AOMedia) Video 1 (AV1) Image Sequence",
+		"signature": [
+			{
+				"offset": 4,
+				"pattern": "ftypavis"
+			}
+		]
+	},
+	{
+		"category": "other",
+		"extensions": [
+			".xxx"
+		],
+		"mimes": [],
+		"name": "Compucon/Singer Embroidery Design File",
+		"signature": [
+			{
+				"offset": 0,
+				"pattern": "\u0000\u0000\u0000\u0000\u0000\u0000\u0000\u0000\u0000\u0000\u0000\u0000\u0000\u0000\u0000\u0000"
+			}
+		]
+	},
+	{
+		"category": "other",
+		"extensions": [
+			".rvt"
+		],
+		"mimes": [],
+		"name": "Revit Project File Subheader",
+		"signature": [
+			{
+				"offset": 512,
+				"pattern": "\u0000\u0000\u0000\u0000\u0000\u0000\u0000\u0000"
+			}
+		]
+	},
+	{
+		"category": "image",
+		"extensions": [
+			".tbi"
+		],
+		"mimes": [],
+		"name": "Windows Disk Image File",
+		"signature": [
+			{
+				"offset": 0,
+				"pattern": "\u0000\u0000\u0000\u0000\u0014\u0000\u0000\u0000"
+			}
+		]
+	},
+	{
+		"category": "other",
+		"extensions": [
+			".dat"
+		],
+		"mimes": [],
+		"name": "Bitcoin Core Wallet File",
+		"signature": [
+			{
+				"offset": 8,
+				"pattern": "\u0000\u0000\u0000\u0000b1\u0005\u0000\t\u0000\u0000\u0000\u0000 \u0000\u0000\u0000\t\u0000\u0000\u0000\u0000\u0000\u0000"
+			}
+		]
+	},
+	{
+		"category": "other",
+		"extensions": [
+			".bsb"
+		],
+		"mimes": [],
+		"name": "NOAA Raster Navigation Chart (RNC) File",
+		"signature": [
+			{
+				"offset": 0,
+				"pattern": "!\r\nCRR/This electronic chart was produced under the authority of USA-NOAA/NOS.\r\n"
+			}
+		]
+	},
+	{
+		"category": "ebook",
+		"extensions": [
+			".epub"
+		],
+		"mimes": [
+			"application/epub+zip"
+		],
+		"name": "Electronic Publication File",
+		"signature": [
+			{
+				"offset": 0,
+				"pattern": "PK\u0003\u0004"
+			},
+			{
+				"offset": 30,
+				"pattern": "mimetypeapplication/epub+zip"
+			}
+		]
+	},
+	{
+		"category": "document",
+		"extensions": [
+			".doc"
+		],
+		"mimes": [
+			"application/msword"
+		],
+		"name": "Microsoft Office Word Document",
+		"signature": [
+			{
+				"offset": 0,
+				"pattern": "ÐÏ\u0011à¡±\u001aá"
+			}
+		]
+	},
+	{
+		"category": "spreadsheet",
+		"extensions": [
+			".xls"
+		],
+		"mimes": [
+			"application/vnd.ms-excel"
+		],
+		"name": "Microsoft Office Excel Spreadsheet",
+		"signature": [
+			{
+				"offset": 0,
+				"pattern": "ÐÏ\u0011à¡±\u001aá"
+			}
+		]
+	},
+	{
+		"category": "presentation",
+		"extensions": [
+			".ppt"
+		],
+		"mimes": [
+			"application/vnd.ms-powerpoint"
+		],
+		"name": "Microsoft Office PowerPoint Document",
+		"signature": [
+			{
+				"offset": 0,
+				"pattern": "ÐÏ\u0011à¡±\u001aá"
+			}
+		]
+	},
+	{
+		"category": "package",
+		"extensions": [
+			".msi"
+		],
+		"mimes": [
+			"application/x-msdownload",
+			"application/x-msi"
+		],
+		"name": "Windows Installer",
+		"signature": [
+			{
+				"offset": 0,
+				"pattern": "ÐÏ\u0011à¡±\u001aá"
+			}
+		]
+	},
+	{
+		"category": "other",
+		"extensions": [
+			".msg"
+		],
+		"mimes": [
+			"application/vnd.ms-outlook"
+		],
+		"name": "Microsoft Outlook Item",
+		"signature": [
+			{
+				"offset": 0,
+				"pattern": "ÐÏ\u0011à¡±\u001aá"
+			}
+		]
+	},
+	{
+		"category": "other",
+		"extensions": [
+			".mk3d",
+			".mka",
+			".mks",
+			".mkv"
+		],
+		"mimes": [
+			"application/x-matroska",
+			"audio/x-matroska",
+			"video/x-matroska"
+		],
+		"name": "Matroska Media File",
+		"signature": [
+			{
+				"offset": 0,
+				"pattern": "\u001aEß£"
+			}
+		]
+	},
+	{
+		"category": "video",
+		"extensions": [
+			".webm"
+		],
+		"mimes": [
+			"video/webm"
+		],
+		"name": "WebM File",
+		"signature": [
+			{
+				"offset": 0,
+				"pattern": "\u001aEß£"
+			}
+		]
+	},
+	{
+		"category": "document",
+		"extensions": [
+			".djvu",
+			".djv"
+		],
+		"mimes": [
+			"image/vnd.djvu"
+		],
+		"name": "DjVu Document",
+		"signature": [
+			{
+				"offset": 0,
+				"pattern": "AT&TFORM"
+			},
+			{
+				"offset": 12,
+				"pattern": "DJVI"
+			}
+		],
+		"variant": "DJVI"
+	},
+	{
+		"category": "document",
+		"extensions": [
+			".djvu",
+			".djv"
+		],
+		"mimes": [
+			"image/vnd.djvu"
+		],
+		"name": "DjVu Document",
+		"signature": [
+			{
+				"offset": 0,
+				"pattern": "AT&TFORM"
+			},
+			{
+				"offset": 12,
+				"pattern": "DJVM"
+			}
+		],
+		"variant": "DJVM"
+	},
+	{
+		"category": "document",
+		"extensions": [
+			".djvu",
+			".djv"
+		],
+		"mimes": [
+			"image/vnd.djvu"
+		],
+		"name": "DjVu Document",
+		"signature": [
+			{
+				"offset": 0,
+				"pattern": "AT&TFORM"
+			},
+			{
+				"offset": 12,
+				"pattern": "DJVU"
+			}
+		],
+		"variant": "DJVU"
+	},
+	{
+		"category": "document",
+		"extensions": [
+			".djvu",
+			".djv"
+		],
+		"mimes": [
+			"image/vnd.djvu"
+		],
+		"name": "DjVu Document",
+		"signature": [
+			{
+				"offset": 0,
+				"pattern": "AT&TFORM"
+			},
+			{
+				"offset": 12,
+				"pattern": "THUM"
+			}
+		],
+		"variant": "THUM"
+	},
+	{
+		"category": "other",
+		"extensions": [],
+		"mimes": [],
+		"name": "uImage File",
+		"signature": [
+			{
+				"offset": 0,
+				"pattern": "'\u0005\u0019V"
+			}
+		]
+	},
+	{
+		"category": "compressed",
+		"extensions": [
+			".lzfse"
+		],
+		"mimes": [
+			"application/x-lzfse"
+		],
+		"name": "Lempel-Ziv Finite State Entropy (LZFSE) File",
+		"signature": [
+			{
+				"offset": 0,
+				"pattern": "bvx-"
+			}
+		],
+		"variant": "-"
+	},
+	{
+		"category": "compressed",
+		"extensions": [
+			".lzfse"
+		],
+		"mimes": [
+			"application/x-lzfse"
+		],
+		"name": "Lempel-Ziv Finite State Entropy (LZFSE) File",
+		"signature": [
+			{
+				"offset": 0,
+				"pattern": "bvx1"
+			}
+		],
+		"variant": "1"
+	},
+	{
+		"category": "compressed",
+		"extensions": [
+			".lzfse"
+		],
+		"mimes": [
+			"application/x-lzfse"
+		],
+		"name": "Lempel-Ziv Finite State Entropy (LZFSE) File",
+		"signature": [
+			{
+				"offset": 0,
+				"pattern": "bvx2"
+			}
+		],
+		"variant": "2"
+	},
+	{
+		"category": "compressed",
+		"extensions": [
+			".lzfse"
+		],
+		"mimes": [
+			"application/x-lzfse"
+		],
+		"name": "Lempel-Ziv Finite State Entropy (LZFSE) File",
+		"signature": [
+			{
+				"offset": 0,
+				"pattern": "bvxn"
+			}
+		],
+		"variant": "n"
+	},
+	{
+		"category": "other",
+		"extensions": [
+			".avro"
+		],
+		"mimes": [
+			"application/vnd.apache.avro"
+		],
+		"name": "Apache Avro Binary File",
+		"signature": [
+			{
+				"offset": 0,
+				"pattern": "Obj\u0001"
+			}
+		]
+	},
+	{
+		"category": "other",
+		"extensions": [
+			".rc"
+		],
+		"mimes": [],
+		"name": "RCFile Columnar File",
+		"signature": [
+			{
+				"offset": 0,
+				"pattern": "SEQ6"
+			}
+		]
+	},
+	{
+		"category": "other",
+		"extensions": [
+			".rbxl"
+		],
+		"mimes": [],
+		"name": "Roblox Place File",
+		"signature": [
+			{
+				"offset": 0,
+				"pattern": "<roblox!"
+			}
+		]
+	},
+	{
+		"category": "other",
+		"extensions": [
+			".obt",
+			".p25"
+		],
+		"mimes": [],
+		"name": "PhotoCap Object Templates File",
+		"signature": [
+			{
+				"offset": 0,
+				"pattern": "exV"
+			}
+		]
+	},
+	{
+		"category": "other",
+		"extensions": [
+			".pcv"
+		],
+		"mimes": [],
+		"name": "PhotoCap Vector File",
+		"signature": [
+			{
+				"offset": 0,
+				"pattern": "UUªª"
+			}
+		]
+	},
+	{
+		"category": "other",
+		"extensions": [
+			".pbt",
+			".pdt",
+			".pea",
+			".peb",
+			".pet",
+			".pgt",
+			".pict",
+			".pjt",
+			".pkt",
+			".pmt"
+		],
+		"mimes": [],
+		"name": "PhotoCap Template File",
+		"signature": [
+			{
+				"offset": 0,
+				"pattern": "xV4"
+			}
+		]
+	},
+	{
+		"category": "other",
+		"extensions": [
+			".parquet"
+		],
+		"mimes": [
+			"application/vnd.apache.parquet"
+		],
+		"name": "Apache Parquet Columnar File",
+		"signature": [
+			{
+				"offset": 0,
+				"pattern": "PAR1"
+			}
+		]
+	},
+	{
+		"category": "other",
+		"extensions": [
+			".ez2"
+		],
+		"mimes": [
+			"application/vnd.ezpix-album"
+		],
+		"name": "Emulator Emaxsynth Samples File",
+		"signature": [
+			{
+				"offset": 0,
+				"pattern": "EMX2"
+			}
+		]
+	},
+	{
+		"category": "other",
+		"extensions": [
+			".ez3"
+		],
+		"mimes": [
+			"application/vnd.ezpix-package"
+		],
+		"name": "Emulator III Synth Samples File",
+		"signature": [
+			{
+				"offset": 0,
+				"pattern": "EMU3"
+			}
+		]
+	},
+	{
+		"category": "executable",
+		"extensions": [
+			".luac"
+		],
+		"mimes": [
+			"application/x-lua-bytecode"
+		],
+		"name": "Lua Bytecode File",
+		"signature": [
+			{
+				"offset": 0,
+				"pattern": "\u001bLua"
+			}
+		]
+	},
+	{
+		"category": "metadata",
+		"extensions": [
+			".alias"
+		],
+		"mimes": [
+			"application/x-apple-alias"
+		],
+		"name": "MacOS File Alias (Symbolic Link)",
+		"signature": [
+			{
+				"offset": 0,
+				"pattern": "book\u0000\u0000\u0000\u0000mark\u0000\u0000\u0000\u0000"
+			}
+		]
+	},
+	{
+		"category": "other",
+		"extensions": [
+			".identifier"
+		],
+		"mimes": [],
+		"name": "Microsoft URL Security Zones Identifier File",
+		"signature": [
+			{
+				"offset": 0,
+				"pattern": "[ZoneTransfer]"
+			}
+		]
+	},
+	{
+		"category": "other",
+		"extensions": [
+			".eml"
+		],
+		"mimes": [
+			"message/rfc822"
+		],
+		"name": "Email Message Var5 File",
+		"signature": [
+			{
+				"offset": 0,
+				"pattern": "Received:"
+			}
+		]
+	},
+	{
+		"category": "other",
+		"extensions": [
+			".tde"
+		],
+		"mimes": [],
+		"name": "Tableau Datasource File",
+		"signature": [
+			{
+				"offset": 0,
+				"pattern": " \u0002\u0001b \u001e«\u0007\u0002\u0000\u0000\u0000"
+			}
+		]
+	},
+	{
+		"category": "other",
+		"extensions": [
+			".kdb"
+		],
+		"mimes": [],
+		"name": "KDB File",
+		"signature": [
+			{
+				"offset": 0,
+				"pattern": "7H\u0003\u0002\u0000\u0000\u0000\u0000X509KEY"
+			}
+		]
+	},
+	{
+		"category": "other",
+		"extensions": [
+			".pgp"
+		],
+		"mimes": [
+			"application/pgp-encrypted"
+		],
+		"name": "PGP File",
+		"signature": [
+			{
+				"offset": 0,
+				"pattern": ""
+			},
+			{
+				"offset": 3,
+				"pattern": "\u0003"
+			}
+		]
+	},
+	{
+		"category": "compressed",
+		"extensions": [
+			".zst"
+		],
+		"mimes": [
+			"application/zstd"
+		],
+		"name": "Zstandard Archive",
+		"signature": [
+			{
+				"offset": 0,
+				"pattern": "(µ/ý"
+			}
+		]
+	},
+	{
+		"category": "archive",
+		"extensions": [
+			".rs"
+		],
+		"mimes": [
+			"application/rls-services+xml"
+		],
+		"name": "QuickZip RS Archive",
+		"signature": [
+			{
+				"offset": 0,
+				"pattern": "RSVKDATA"
+			}
+		]
+	},
+	{
+		"category": "other",
+		"extensions": [
+			".sml"
+		],
+		"mimes": [],
+		"name": "Smile file",
+		"signature": [
+			{
+				"offset": 0,
+				"pattern": ":)\n"
+			}
+		]
+	},
+	{
+		"category": "executable",
+		"extensions": [],
+		"mimes": [],
+		"name": "Preferred Executable Format",
+		"signature": [
+			{
+				"offset": 0,
+				"pattern": "Joy!"
+			}
+		]
+	},
+	{
+		"category": "subtitle",
+		"extensions": [
+			".srt"
+		],
+		"mimes": [
+			"application/x-subrip"
+		],
+		"name": "SubRip File",
+		"signature": [
+			{
+				"offset": 0,
+				"pattern": "ï»¿1\r\n00:"
+			}
+		],
+		"variant": "BOM, CRLF"
+	},
+	{
+		"category": "subtitle",
+		"extensions": [
+			".srt"
+		],
+		"mimes": [
+			"application/x-subrip"
+		],
+		"name": "SubRip File",
+		"signature": [
+			{
+				"offset": 0,
+				"pattern": "ï»¿1\n00:"
+			}
+		],
+		"variant": "BOM, LF"
+	},
+	{
+		"category": "subtitle",
+		"extensions": [
+			".srt"
+		],
+		"mimes": [
+			"application/x-subrip"
+		],
+		"name": "SubRip File",
+		"signature": [
+			{
+				"offset": 0,
+				"pattern": "1\r\n00:"
+			}
+		],
+		"variant": "1, CRLF"
+	},
+	{
+		"category": "subtitle",
+		"extensions": [
+			".srt"
+		],
+		"mimes": [
+			"application/x-subrip"
+		],
+		"name": "SubRip File",
+		"signature": [
+			{
+				"offset": 0,
+				"pattern": "1\n00:"
+			}
+		],
+		"variant": "1, LF"
+	},
+	{
+		"category": "other",
+		"extensions": [
+			".vpk"
+		],
+		"mimes": [],
+		"name": "VPK File",
+		"signature": [
+			{
+				"offset": 0,
+				"pattern": "4\u0012ªU"
+			}
+		]
+	},
+	{
+		"category": "archive",
+		"extensions": [
+			".ace"
+		],
+		"mimes": [
+			"application/x-ace-compressed"
+		],
+		"name": "ACE Archive",
+		"signature": [
+			{
+				"offset": 7,
+				"pattern": "**ACE**"
+			}
+		]
+	},
+	{
+		"category": "archive",
+		"extensions": [
+			".arj"
+		],
+		"mimes": [
+			"application/x-arj"
+		],
+		"name": "Archived by Robert Jung (ARJ) File",
+		"signature": [
+			{
+				"offset": 0,
+				"pattern": "`ê"
+			},
+			{
+				"offset": 10,
+				"pattern": "\u0002"
+			}
+		]
+	},
+	{
+		"category": "archive",
+		"extensions": [
+			".cab"
+		],
+		"mimes": [],
+		"name": "InstallShield Cabinet Archive",
+		"signature": [
+			{
+				"offset": 0,
+				"pattern": "ISc("
+			}
+		]
+	},
+	{
+		"category": "archive",
+		"extensions": [
+			".cab"
+		],
+		"mimes": [
+			"application/vnd.ms-cab-compressed"
+		],
+		"name": "Microsoft Cabinet Archive",
+		"signature": [
+			{
+				"offset": 0,
+				"pattern": "MSCF"
+			}
+		]
+	},
+	{
+		"category": "image",
+		"extensions": [
+			".wmf"
+		],
+		"mimes": [
+			"application/x-msmetafile",
+			"image/wmf"
+		],
+		"name": "Windows Metafile",
+		"signature": [
+			{
+				"offset": 0,
+				"pattern": "\u0001\u0000\t\u0000"
+			}
+		]
+	},
+	{
+		"category": "image",
+		"extensions": [
+			".wmf"
+		],
+		"mimes": [
+			"application/x-msmetafile",
+			"image/wmf"
+		],
+		"name": "Windows Metafile",
+		"signature": [
+			{
+				"offset": 0,
+				"pattern": "\u0002\u0000\t\u0000"
+			}
+		]
+	},
+	{
+		"category": "image",
+		"extensions": [
+			".wmf"
+		],
+		"mimes": [
+			"application/x-msmetafile",
+			"image/wmf"
+		],
+		"name": "Windows Metafile",
+		"signature": [
+			{
+				"offset": 0,
+				"pattern": "×ÍÆ"
+			}
+		]
+	},
+	{
+		"category": "image",
+		"extensions": [
+			".xcf"
+		],
+		"mimes": [
+			"image/x-xcf"
+		],
+		"name": "Experimental Computing Facility File",
+		"signature": [
+			{
+				"offset": 0,
+				"pattern": "gimp xcf"
+			}
+		]
+	},
+	{
+		"category": "image",
+		"extensions": [
+			".xpm"
+		],
+		"mimes": [
+			"image/x-xpixmap"
+		],
+		"name": "X PixMap Image",
+		"signature": [
+			{
+				"offset": 0,
+				"pattern": "/* XPM */"
+			}
+		]
+	},
+	{
+		"category": "other",
+		"extensions": [
+			".aff"
+		],
+		"mimes": [],
+		"name": "Advanced Forensics File",
+		"signature": [
+			{
+				"offset": 0,
+				"pattern": "AFF"
+			}
+		]
+	},
+	{
+		"category": "other",
+		"extensions": [
+			".e01",
+			".ex01"
+		],
+		"mimes": [],
+		"name": "EnCase EWF File",
+		"signature": [
+			{
+				"offset": 0,
+				"pattern": "EVF2"
+			}
+		]
+	},
+	{
+		"category": "disk",
+		"extensions": [
+			".qcow"
+		],
+		"mimes": [
+			"application/x-qemu-disk"
+		],
+		"name": "QEMU Copy On Write (QCOW) File",
+		"signature": [
+			{
+				"offset": 0,
+				"pattern": "QFIû"
+			}
+		]
+	},
+	{
+		"category": "image",
+		"extensions": [
+			".ani"
+		],
+		"mimes": [
+			"application/x-navi-animation"
+		],
+		"name": "Animated Cursor File",
+		"signature": [
+			{
+				"offset": 0,
+				"pattern": "RIFF"
+			},
+			{
+				"offset": 8,
+				"pattern": "ACON"
+			}
+		]
+	},
+	{
+		"category": "metadata",
+		"extensions": [
+			".cda"
+		],
+		"mimes": [
+			"application/x-cdf"
+		],
+		"name": "CD Audio File",
+		"signature": [
+			{
+				"offset": 0,
+				"pattern": "RIFF"
+			},
+			{
+				"offset": 8,
+				"pattern": "CDDAfmt "
+			}
+		]
+	},
+	{
+		"category": "audio",
+		"extensions": [
+			".qcp"
+		],
+		"mimes": [
+			"audio/qcelp"
+		],
+		"name": "Qualcomm PureVoice File",
+		"signature": [
+			{
+				"offset": 0,
+				"pattern": "RIFF"
+			},
+			{
+				"offset": 8,
+				"pattern": "QLCM"
+			}
+		]
+	},
+	{
+		"category": "other",
+		"extensions": [
+			".dir",
+			".dxr",
+			".drx"
+		],
+		"mimes": [
+			"application/x-director"
+		],
+		"name": "Macromedia Director File",
+		"signature": [
+			{
+				"offset": 0,
+				"pattern": "RIFX"
+			},
+			{
+				"offset": 8,
+				"pattern": "MV93"
+			}
+		],
+		"variant": "BE"
+	},
+	{
+		"category": "other",
+		"extensions": [
+			".dir",
+			".dxr",
+			".drx"
+		],
+		"mimes": [
+			"application/x-director"
+		],
+		"name": "Macromedia Director File",
+		"signature": [
+			{
+				"offset": 0,
+				"pattern": "XFIR"
+			},
+			{
+				"offset": 8,
+				"pattern": "39VM"
+			}
+		],
+		"variant": "LE"
+	},
+	{
+		"category": "video",
+		"extensions": [
+			".flv"
+		],
+		"mimes": [
+			"video/x-flv"
+		],
+		"name": "Flash Video",
+		"signature": [
+			{
+				"offset": 0,
+				"pattern": "FLV\u0001"
+			}
+		]
+	},
+	{
+		"category": "disk",
+		"extensions": [
+			".vdi"
+		],
+		"mimes": [
+			"application/x-virtualbox-vdi"
+		],
+		"name": "VirtualBox Virtual Hard Disk File",
+		"signature": [
+			{
+				"offset": 0,
+				"pattern": "<<< Oracle VM VirtualBox Disk Image >>>"
+			}
+		]
+	},
+	{
+		"category": "disk",
+		"extensions": [
+			".vhd"
+		],
+		"mimes": [
+			"application/x-vhd",
+			"application/x-virtualbox-vhd"
+		],
+		"name": "Windows Virtual PC Virtual Hard Disk File",
+		"signature": [
+			{
+				"offset": 0,
+				"pattern": "connectix"
+			}
+		]
+	},
+	{
+		"category": "disk",
+		"extensions": [
+			".vhdx"
+		],
+		"mimes": [
+			"application/x-vhdx"
+		],
+		"name": "Windows Virtual PC Windows 8 Virtual Hard Disk File",
+		"signature": [
+			{
+				"offset": 0,
+				"pattern": "vhdxfile"
+			}
+		]
+	},
+	{
+		"category": "image",
+		"extensions": [
+			".isz"
+		],
+		"mimes": [],
+		"name": "Compressed ISO Image",
+		"signature": [
+			{
+				"offset": 0,
+				"pattern": "IsZ!"
+			}
+		]
+	},
+	{
+		"category": "image",
+		"extensions": [
+			".daa"
+		],
+		"mimes": [],
+		"name": "Direct Access Archive PowerISO File",
+		"signature": [
+			{
+				"offset": 0,
+				"pattern": "DAA"
+			}
+		]
+	},
+	{
+		"category": "other",
+		"extensions": [
+			".evt"
+		],
+		"mimes": [],
+		"name": "Windows Event Viewer File",
+		"signature": [
+			{
+				"offset": 0,
+				"pattern": "LfLe"
+			}
+		]
+	},
+	{
+		"category": "other",
+		"extensions": [
+			".evtx"
+		],
+		"mimes": [],
+		"name": "Windows Event Viewer XML File",
+		"signature": [
+			{
+				"offset": 0,
+				"pattern": "ElfFile"
+			}
+		]
+	},
+	{
+		"category": "database",
+		"extensions": [
+			".sdb"
+		],
+		"mimes": [],
+		"name": "Windows Customized Database",
+		"signature": [
+			{
+				"offset": 8,
+				"pattern": "sdbf"
+			}
+		]
+	},
+	{
+		"category": "other",
+		"extensions": [
+			".grp"
+		],
+		"mimes": [],
+		"name": "Windows Program Manager Program Group File",
+		"signature": [
+			{
+				"offset": 0,
+				"pattern": "PMCC"
+			}
+		]
+	},
+	{
+		"category": "other",
+		"extensions": [
+			".icm"
+		],
+		"mimes": [
+			"application/vnd.iccprofile"
+		],
+		"name": "ICC Profile File",
+		"signature": [
+			{
+				"offset": 0,
+				"pattern": "KCMS"
+			}
+		]
+	},
+	{
+		"category": "other",
+		"extensions": [
+			".dat",
+			".hiv"
+		],
+		"mimes": [],
+		"name": "Windows Registry File",
+		"signature": [
+			{
+				"offset": 0,
+				"pattern": "regf"
+			}
+		]
+	},
+	{
+		"category": "other",
+		"extensions": [
+			".pst"
+		],
+		"mimes": [
+			"application/vnd.ms-outlook"
+		],
+		"name": "Microsoft Outlook Personal Storage Table File",
+		"signature": [
+			{
+				"offset": 0,
+				"pattern": "!BDN"
+			}
+		]
+	},
+	{
+		"category": "model",
+		"extensions": [
+			".drc"
+		],
+		"mimes": [
+			"model/x-draco"
+		],
+		"name": "Google Draco 3D Model File",
+		"signature": [
+			{
+				"offset": 0,
+				"pattern": "DRACO"
+			}
+		]
+	},
+	{
+		"category": "other",
+		"extensions": [
+			".grib",
+			".grib2"
+		],
+		"mimes": [],
+		"name": "Gridded Data File",
+		"signature": [
+			{
+				"offset": 0,
+				"pattern": "GRIB"
+			}
+		]
+	},
+	{
+		"category": "model",
+		"extensions": [
+			".blend"
+		],
+		"mimes": [
+			"application/x-blender"
+		],
+		"name": "Blender File",
+		"signature": [
+			{
+				"offset": 0,
+				"pattern": "BLENDER"
+			}
+		]
+	},
+	{
+		"category": "image",
+		"extensions": [
+			".jxl"
+		],
+		"name": "JPEG XL Image",
+		"mimes": [
+			"image/jxl"
+		],
+		"signature": [
+			{
+				"offset": 0,
+				"pattern": "\u0000\u0000\u0000\fJXL \r\n\n"
+			}
+		],
+		"variant": "Long"
+	},
+	{
+		"category": "image",
+		"extensions": [
+			".jxl"
+		],
+		"name": "JPEG XL Image",
+		"mimes": [
+			"image/jxl"
+		],
+		"signature": [
+			{
+				"offset": 0,
+				"pattern": "ÿ\n"
+			}
+		],
+		"variant": "Short"
+	},
+	{
+		"category": "font",
+		"extensions": [
+			".ttf",
+			".tte",
+			".dfont"
+		],
+		"mimes": [
+			"font/ttf"
+		],
+		"name": "TrueType Font",
+		"signature": [
+			{
+				"offset": 0,
+				"pattern": "\u0000\u0001\u0000\u0000\u0000"
+			}
+		]
+	},
+	{
+		"category": "font",
+		"extensions": [
+			".ttf"
+		],
+		"mimes": [
+			"font/ttf"
+		],
+		"name": "TrueType Font",
+		"signature": [
+			{
+				"offset": 0,
+				"pattern": "true\u0000"
+			}
+		]
+	},
+	{
+		"category": "font",
+		"extensions": [
+			".otf"
+		],
+		"mimes": [
+			"font/otf"
+		],
+		"name": "OpenType Font",
+		"signature": [
+			{
+				"offset": 0,
+				"pattern": "OTTO\u0000"
+			}
+		]
+	},
+	{
+		"category": "other",
+		"extensions": [],
+		"mimes": [],
+		"name": "Modulefile for Environment Modules",
+		"signature": [
+			{
+				"offset": 0,
+				"pattern": "#%Module"
+			}
+		]
+	},
+	{
+		"category": "other",
+		"extensions": [
+			".slob"
+		],
+		"mimes": [],
+		"name": "Slob File",
+		"signature": [
+			{
+				"offset": 0,
+				"pattern": "!-1SLOB\u001f"
+			}
+		]
+	},
+	{
+		"category": "other",
+		"extensions": [],
+		"mimes": [],
+		"name": "Serialized Java Data",
+		"signature": [
+			{
+				"offset": 0,
+				"pattern": "¬í"
+			}
+		]
+	},
+	{
+		"category": "audio",
+		"extensions": [
+			".voc"
+		],
+		"mimes": [
+			"audio/x-voc"
+		],
+		"name": "Creative Voice File",
+		"signature": [
+			{
+				"offset": 0,
+				"pattern": "Creative Voice File\u001a\u001a\u0000"
+			}
+		]
+	},
+	{
+		"category": "audio",
+		"extensions": [
+			".au",
+			".snd"
+		],
+		"mimes": [
+			"audio/basic"
+		],
+		"name": "Au Audio File",
+		"signature": [
+			{
+				"offset": 0,
+				"pattern": ".snd"
+			}
+		]
+	},
+	{
+		"category": "other",
+		"extensions": [],
+		"mimes": [],
+		"name": "OpenGL Iris Perfomer Performer Fast Binary (PFB)",
+		"signature": [
+			{
+				"offset": 0,
+				"pattern": "Û\nÎ\u0000"
+			}
+		]
+	},
+	{
+		"category": "other",
+		"extensions": [
+			".hazelrules"
+		],
+		"mimes": [],
+		"name": "Noodlesoft Hazel Rules File",
+		"signature": [
+			{
+				"offset": 0,
+				"pattern": "HZLR\u0000\u0000\u0000\u0018"
+			}
+		]
+	},
+	{
+		"category": "other",
+		"extensions": [
+			".flp"
+		],
+		"mimes": [],
+		"name": "FL Studio Project File",
+		"signature": [
+			{
+				"offset": 0,
+				"pattern": "FLhd"
+			}
+		]
+	},
+	{
+		"category": "other",
+		"extensions": [
+			".flm"
+		],
+		"mimes": [],
+		"name": "FL Studio Mobile Project File",
+		"signature": [
+			{
+				"offset": 0,
+				"pattern": "10LF"
+			}
+		]
+	},
+	{
+		"category": "other",
+		"extensions": [],
+		"mimes": [],
+		"name": "Vormetric Encryption DPM Version 2.1 Header",
+		"signature": [
+			{
+				"offset": 0,
+				"pattern": "RKMC210"
+			}
+		]
+	},
+	{
+		"category": "image",
+		"extensions": [
+			".drw"
+		],
+		"mimes": [],
+		"name": "Micrografx Vector Graphic File",
+		"signature": [
+			{
+				"offset": 0,
+				"pattern": "\u0001ÿ\u0002\u0004\u0003\u0002"
+			}
+		]
+	},
+	{
+		"category": "other",
+		"extensions": [
+			".dss"
+		],
+		"mimes": [],
+		"name": "Digital Speech Standard (Olympus, Grundig, & Phillips) V2",
+		"signature": [
+			{
+				"offset": 0,
+				"pattern": "\u0002dss"
+			}
+		]
+	},
+	{
+		"category": "other",
+		"extensions": [
+			".dss"
+		],
+		"mimes": [],
+		"name": "Digital Speech Standard (Olympus, Grundig, & Phillips) V3",
+		"signature": [
+			{
+				"offset": 0,
+				"pattern": "\u0003dss"
+			}
+		]
+	},
+	{
+		"category": "other",
+		"extensions": [
+			".adx"
+		],
+		"mimes": [],
+		"name": "Approach Index File",
+		"signature": [
+			{
+				"offset": 0,
+				"pattern": "\u0003\u0000\u0000\u0000APPR"
+			}
+		]
+	},
+	{
+		"category": "other",
+		"extensions": [
+			".skf"
+		],
+		"mimes": [],
+		"name": "SkinCrafter Skin File",
+		"signature": [
+			{
+				"offset": 0,
+				"pattern": "\u0007SKF"
+			}
+		]
+	},
+	{
+		"category": "other",
+		"extensions": [
+			".dtd"
+		],
+		"mimes": [
+			"application/xml-dtd"
+		],
+		"name": "DesignTools 2D Design File",
+		"signature": [
+			{
+				"offset": 0,
+				"pattern": "\u0007dt2ddtd"
+			}
+		]
+	},
+	{
+		"category": "other",
+		"extensions": [
+			".wallet"
+		],
+		"mimes": [],
+		"name": "MultiBit Bitcoin Wallet File",
+		"signature": [
+			{
+				"offset": 0,
+				"pattern": "\n\u0016org.bitcoin.pr"
+			}
+		]
+	},
+	{
+		"category": "document",
+		"extensions": [
+			".doc"
+		],
+		"mimes": [],
+		"name": "DeskMate Document",
+		"signature": [
+			{
+				"offset": 0,
+				"pattern": "\rDOC"
+			}
+		]
+	},
+	{
+		"category": "other",
+		"extensions": [
+			".dsp"
+		],
+		"mimes": [],
+		"name": "Microsoft Developer Studio Project File",
+		"signature": [
+			{
+				"offset": 0,
+				"pattern": "# Microsoft Developer Studio"
+			}
+		]
+	},
+	{
+		"category": "audio",
+		"extensions": [
+			".amr"
+		],
+		"mimes": [
+			"audio/amr"
+		],
+		"name": "Adaptive Multi-Rate ACELP (Algebraic Code Excited Linear Prediction) Codec File",
+		"signature": [
+			{
+				"offset": 0,
+				"pattern": "#!AMR"
+			}
+		]
+	},
+	{
+		"category": "audio",
+		"extensions": [
+			".sil"
+		],
+		"mimes": [
+			"audio/silk"
+		],
+		"name": "Skype Compressed Audio",
+		"signature": [
+			{
+				"offset": 0,
+				"pattern": "#!SILK\n"
+			}
+		]
+	},
+	{
+		"category": "image",
+		"extensions": [
+			".hdr"
+		],
+		"mimes": [
+			"image/vnd.radiance"
+		],
+		"name": "Radiance High Dynamic Range (HDR) Image",
+		"signature": [
+			{
+				"offset": 0,
+				"pattern": "#?RADIANCE\n"
+			}
+		]
+	},
+	{
+		"category": "other",
+		"extensions": [
+			".vbe"
+		],
+		"mimes": [],
+		"name": "VBScript Encoded Script",
+		"signature": [
+			{
+				"offset": 0,
+				"pattern": "#@~^"
+			}
+		]
+	},
+	{
+		"category": "database",
+		"extensions": [
+			".cdb"
+		],
+		"mimes": [],
+		"name": "MikroTik WinBox Connection Database (Address Book)",
+		"signature": [
+			{
+				"offset": 0,
+				"pattern": "\rð\u001dÀ"
+			}
+		]
+	},
+	{
+		"category": "image",
+		"extensions": [
+			".mdf"
+		],
+		"mimes": [],
+		"name": "Alcohol 120% CD Image",
+		"signature": [
+			{
+				"offset": 0,
+				"pattern": "\u0000ÿÿÿÿÿÿÿÿÿÿ\u0000\u0000\u0002\u0000\u0001"
+			}
+		]
+	},
+	{
+		"category": "other",
+		"extensions": [
+			".b85"
+		],
+		"mimes": [],
+		"name": "ASCII85/BASE85 Encoded File",
+		"signature": [
+			{
+				"offset": 0,
+				"pattern": "<~6<\\%_0gSqh;"
+			},
+			{
+				"offset": -3,
+				"pattern": "~>\n"
+			}
+		]
+	},
+	{
+		"category": "image",
+		"extensions": [
+			".jb2"
+		],
+		"mimes": [],
+		"name": "JBIG2 Image",
+		"signature": [
+			{
+				"offset": 0,
+				"pattern": "JB2\r\n\u001a\n"
+			},
+			{
+				"offset": -8,
+				"pattern": "\u00033\u0000\u0001\u0000\u0000\u0000\u0000"
+			}
+		]
+	},
+	{
+		"category": "other",
+		"extensions": [
+			".qrp"
+		],
+		"mimes": [],
+		"name": "QuickReport Report File",
+		"signature": [
+			{
+				"offset": 0,
+				"pattern": "ÿ\n\u0000"
+			}
+		]
+	},
+	{
+		"category": "other",
+		"extensions": [
+			".cpi"
+		],
+		"mimes": [],
+		"name": "Windows International Code Page",
+		"signature": [
+			{
+				"offset": 0,
+				"pattern": "ÿFONT"
+			}
+		]
+	},
+	{
+		"category": "other",
+		"extensions": [
+			".sys"
+		],
+		"mimes": [],
+		"name": "Keyboard Driver File",
+		"signature": [
+			{
+				"offset": 0,
+				"pattern": "ÿKEYB   "
+			}
+		]
+	},
+	{
+		"category": "document",
+		"extensions": [
+			".wp",
+			".wp5",
+			".wp6",
+			".wpd",
+			".wpp"
+		],
+		"mimes": [
+			"application/vnd.wordperfect"
+		],
+		"name": "WordPerfect Document",
+		"signature": [
+			{
+				"offset": 0,
+				"pattern": "ÿWPC"
+			}
+		]
+	},
+	{
+		"category": "image",
+		"extensions": [
+			".wpg"
+		],
+		"mimes": [
+			"application/vnd.wordperfect"
+		],
+		"name": "WordPerfect Graphics",
+		"signature": [
+			{
+				"offset": 0,
+				"pattern": "ÿWPC\u0010\u0000\u0000\u0000\u0001\u0016\u0001\u0000"
+			},
+			{
+				"offset": 14,
+				"pattern": "\u0000\u0000"
+			}
+		]
+	},
+	{
+		"category": "image",
+		"extensions": [
+			".tib"
+		],
+		"mimes": [],
+		"name": "Acronis True Image",
+		"signature": [
+			{
+				"offset": 0,
+				"pattern": "Î$¹¢ \u0000\u0000\u0000"
+			}
+		]
+	},
+	{
+		"category": "other",
+		"extensions": [
+			".qdf"
+		],
+		"mimes": [],
+		"name": "Quicken Data File",
+		"signature": [
+			{
+				"offset": 0,
+				"pattern": "¬½\u0000\u0000"
+			}
+		]
+	},
+	{
+		"category": "other",
+		"extensions": [
+			".flt"
+		],
+		"mimes": [],
+		"name": "Qimage Filter",
+		"signature": [
+			{
+				"offset": 0,
+				"pattern": "v2003.10\r\n0\r\n"
+			}
+		]
+	},
+	{
+		"category": "other",
+		"extensions": [
+			".dat"
+		],
+		"mimes": [],
+		"name": "Windows NT Registry Hive File",
+		"signature": [
+			{
+				"offset": 0,
+				"pattern": "regf"
+			}
+		]
+	},
+	{
+		"category": "other",
+		"extensions": [
+			".acd"
+		],
+		"mimes": [],
+		"name": "Sonic Foundry Acid Music File",
+		"signature": [
+			{
+				"offset": 0,
+				"pattern": "riff"
+			}
+		]
+	},
+	{
+		"category": "metadata",
+		"extensions": [
+			".ram"
+		],
+		"mimes": [],
+		"name": "RealMedia Metafile",
+		"signature": [
+			{
+				"offset": 0,
+				"pattern": "rtsp://"
+			}
+		]
+	},
+	{
+		"category": "metadata",
+		"extensions": [
+			".torrent"
+		],
+		"mimes": [
+			"application/x-bittorrent"
+		],
+		"name": "Torrent File",
+		"signature": [
+			{
+				"offset": 0,
+				"pattern": "d8:announce"
+			}
+		]
+	},
+	{
+		"category": "archive",
+		"extensions": [
+			".sit"
+		],
+		"mimes": [
+			"application/x-stuffit"
+		],
+		"name": "StuffIt Compressed Archive",
+		"signature": [
+			{
+				"offset": 0,
+				"pattern": "SIT!\u0000"
+			}
+		]
+	},
+	{
+		"category": "archive",
+		"extensions": [
+			".sit"
+		],
+		"mimes": [
+			"application/x-stuffit"
+		],
+		"name": "StuffIt Compressed Archive",
+		"signature": [
+			{
+				"offset": 0,
+				"pattern": "StuffIt (c)1997"
+			},
+			{
+				"offset": 82,
+				"pattern": "\u0005"
+			}
+		]
+	},
+	{
+		"category": "archive",
+		"extensions": [
+			".sit"
+		],
+		"mimes": [
+			"application/x-stuffit"
+		],
+		"name": "StuffIt Compressed Archive",
+		"signature": [
+			{
+				"offset": 128,
+				"pattern": "SIT!"
+			},
+			{
+				"offset": 138,
+				"pattern": "rLau"
+			}
+		]
+	},
+	{
+		"category": "archive",
+		"extensions": [
+			".sit"
+		],
+		"mimes": [
+			"application/x-stuffit"
+		],
+		"name": "StuffIt Compressed Archive",
+		"signature": [
+			{
+				"offset": 0,
+				"pattern": "SIT!"
+			},
+			{
+				"offset": 10,
+				"pattern": "rLau"
+			}
+		]
+	},
+	{
+		"category": "other",
+		"extensions": [
+			".sdr"
+		],
+		"mimes": [],
+		"name": "SmartDraw Drawing File",
+		"signature": [
+			{
+				"offset": 0,
+				"pattern": "SMARTDRW"
+			}
+		]
+	},
+	{
+		"category": "other",
+		"extensions": [
+			".spf"
+		],
+		"mimes": [],
+		"name": "StorageCraft ShadownProtect Backup File",
+		"signature": [
+			{
+				"offset": 0,
+				"pattern": "SPFI\u0000"
+			}
+		]
+	},
+	{
+		"category": "other",
+		"extensions": [
+			".spvchain"
+		],
+		"mimes": [],
+		"name": "MultiBit Bitcoin Blockchain File",
+		"signature": [
+			{
+				"offset": 0,
+				"pattern": "SPVB"
+			}
+		]
+	},
+	{
+		"category": "database",
+		"extensions": [
+			".db"
+		],
+		"mimes": [],
+		"name": "Netscape Navigator (v4) Database File",
+		"signature": [
+			{
+				"offset": 0,
+				"pattern": "\u0000\u0006\u0015a\u0000\u0000\u0000\u0002\u0000\u0000\u0004Ò\u0000\u0000\u0010\u0000"
+			}
+		]
+	},
+	{
+		"category": "other",
+		"extensions": [
+			".tbi"
+		],
+		"mimes": [],
+		"name": "The Bat! Secure E-mail Message Base Index File",
+		"signature": [
+			{
+				"offset": 0,
+				"pattern": "\u0001\u0001G\u0019¤\u0000\u0000\u0000\u0000\u0000\u0000\u0000"
+			}
+		]
+	},
+	{
+		"category": "video",
+		"extensions": [
+			".mxf"
+		],
+		"mimes": [
+			"application/mxf"
+		],
+		"name": "Material Exchange Format File",
+		"signature": [
+			{
+				"offset": 0,
+				"pattern": "\u0006\u000e+4\u0002\u0005\u0001\u0001\r\u0001\u0002\u0001\u0001\u0002"
+			}
+		]
+	},
+	{
+		"category": "image",
+		"extensions": [
+			".dat"
+		],
+		"mimes": [],
+		"name": "Runtime Software Compressed Disk Image",
+		"signature": [
+			{
+				"offset": 0,
+				"pattern": "\u001aRTS COMPRESSED IMAGE V1.0\u001a"
+			}
+		]
+	},
+	{
+		"category": "other",
+		"extensions": [
+			".eta"
+		],
+		"mimes": [],
+		"name": "Google Earth Keyhole Placemark File",
+		"signature": [
+			{
+				"offset": 0,
+				"pattern": "# This is an Key"
+			}
+		]
+	},
+	{
+		"category": "other",
+		"extensions": [
+			".sav"
+		],
+		"mimes": [],
+		"name": "SPSS Statistics Data File",
+		"signature": [
+			{
+				"offset": 0,
+				"pattern": "$FL2@(#) SPSS DATA FILE"
+			}
+		]
+	},
+	{
+		"category": "compressed",
+		"extensions": [
+			".hqx"
+		],
+		"mimes": [],
+		"name": "Macintosh BinHex 4 Compressed Archive",
+		"signature": [
+			{
+				"offset": 0,
+				"pattern": "(This file must be converted with BinHex "
+			}
+		]
+	},
+	{
+		"category": "other",
+		"extensions": [
+			".log"
+		],
+		"mimes": [
+			"text/plain",
+			"text/x-log"
+		],
+		"name": "Symantec Wise Installer Log File",
+		"signature": [
+			{
+				"offset": 0,
+				"pattern": "***  Installation Started "
+			}
+		]
+	},
+	{
+		"category": "other",
+		"extensions": [
+			".sln"
+		],
+		"mimes": [
+			"application/vnd.ms-developer"
+		],
+		"name": "Microsoft Visual Studio Solution",
+		"signature": [
+			{
+				"offset": 0,
+				"pattern": "ï»¿\r\nMicrosoft Visual Studio Solution File, Format Version "
+			}
+		],
+		"variant": "BOM, CRLF"
+	},
+	{
+		"category": "other",
+		"extensions": [
+			".sln"
+		],
+		"mimes": [
+			"application/vnd.ms-developer"
+		],
+		"name": "Microsoft Visual Studio Solution",
+		"signature": [
+			{
+				"offset": 0,
+				"pattern": "ï»¿\nMicrosoft Visual Studio Solution File, Format Version "
+			}
+		],
+		"variant": "BOM, LF"
+	},
+	{
+		"category": "other",
+		"extensions": [
+			".sln"
+		],
+		"mimes": [
+			"application/vnd.ms-developer"
+		],
+		"name": "Microsoft Visual Studio Solution",
+		"signature": [
+			{
+				"offset": 0,
+				"pattern": "Microsoft Visual Studio Solution File, Format Version "
+			}
+		],
+		"variant": "Plain"
+	},
+	{
+		"category": "archive",
+		"extensions": [
+			".lzs"
+		],
+		"mimes": [
+			"application/x-lzh-compressed"
+		],
+		"name": "LArc",
+		"signature": [
+			{
+				"offset": 2,
+				"pattern": "-lz2-"
+			}
+		],
+		"variant": "2"
+	},
+	{
+		"category": "archive",
+		"extensions": [
+			".lzs"
+		],
+		"mimes": [
+			"application/x-lzh-compressed"
+		],
+		"name": "LArc",
+		"signature": [
+			{
+				"offset": 2,
+				"pattern": "-lz3-"
+			}
+		],
+		"variant": "3"
+	},
+	{
+		"category": "archive",
+		"extensions": [
+			".lzs"
+		],
+		"mimes": [
+			"application/x-lzh-compressed"
+		],
+		"name": "LArc",
+		"signature": [
+			{
+				"offset": 2,
+				"pattern": "-lz4-"
+			}
+		],
+		"variant": "4"
+	},
+	{
+		"category": "archive",
+		"extensions": [
+			".lzs"
+		],
+		"mimes": [
+			"application/x-lzh-compressed"
+		],
+		"name": "LArc",
+		"signature": [
+			{
+				"offset": 2,
+				"pattern": "-lz5-"
+			}
+		],
+		"variant": "5"
+	},
+	{
+		"category": "archive",
+		"extensions": [
+			".lzs"
+		],
+		"mimes": [
+			"application/x-lzh-compressed"
+		],
+		"name": "LArc",
+		"signature": [
+			{
+				"offset": 2,
+				"pattern": "-lz7-"
+			}
+		],
+		"variant": "7"
+	},
+	{
+		"category": "archive",
+		"extensions": [
+			".lzs"
+		],
+		"mimes": [
+			"application/x-lzh-compressed"
+		],
+		"name": "LArc",
+		"signature": [
+			{
+				"offset": 2,
+				"pattern": "-lz8-"
+			}
+		],
+		"variant": "8"
+	},
+	{
+		"category": "archive",
+		"extensions": [
+			".lzs"
+		],
+		"mimes": [
+			"application/x-lzh-compressed"
+		],
+		"name": "LArc",
+		"signature": [
+			{
+				"offset": 2,
+				"pattern": "-lzs-"
+			}
+		],
+		"variant": "s"
+	},
+	{
+		"category": "document",
+		"extensions": [
+			".abw"
+		],
+		"mimes": [
+			"application/x-abiword"
+		],
+		"name": "AbiWord Document",
+		"signature": [
+			{
+				"offset": 0,
+				"pattern": "ï»¿<!DOCTYPE abiword PUBLIC"
+			},
+			{
+				"offset": 102,
+				"pattern": "<abiword template=\"false\""
+			}
+		],
+		"variant": "BOM, DOCTYPE"
+	},
+	{
+		"category": "document",
+		"extensions": [
+			".abw"
+		],
+		"mimes": [
+			"application/x-abiword"
+		],
+		"name": "AbiWord Document",
+		"signature": [
+			{
+				"offset": 0,
+				"pattern": "<!DOCTYPE abiword PUBLIC"
+			},
+			{
+				"offset": 102,
+				"pattern": "<abiword template=\"false\""
+			}
+		],
+		"variant": "DOCTYPE"
+	},
+	{
+		"category": "document",
+		"extensions": [
+			".abw"
+		],
+		"mimes": [
+			"application/x-abiword"
+		],
+		"name": "AbiWord Document",
+		"signature": [
+			{
+				"offset": 0,
+				"pattern": "ï»¿<abiword template=\"false\""
+			}
+		],
+		"variant": "BOM, Short"
+	},
+	{
+		"category": "document",
+		"extensions": [
+			".abw"
+		],
+		"mimes": [
+			"application/x-abiword"
+		],
+		"name": "AbiWord Document",
+		"signature": [
+			{
+				"offset": 0,
+				"pattern": "<abiword template=\"false\""
+			}
+		],
+		"variant": "Short"
+	},
+	{
+		"category": "ebook",
+		"extensions": [
+			".lit"
+		],
+		"mimes": [
+			"application/x-ms-reader"
+		],
+		"name": "Microsoft Reader",
+		"signature": [
+			{
+				"offset": 0,
+				"pattern": "ITOLITLS\u0001\u0000\u0000\u0000(\u0000\u0000\u0000"
+			},
+			{
+				"offset": 24,
+				"pattern": "Á\u0007\nv@Ó\u0011\u0000\u0000ø\u0010WT"
+			}
+		]
+	},
+	{
+		"category": "model",
+		"extensions": [
+			".skp"
+		],
+		"mimes": [
+			"application/vnd.sketchup.skp"
+		],
+		"name": "SketchUp Model File",
+		"signature": [
+			{
+				"offset": 0,
+				"pattern": "ÿþÿ\u000eS\u0000k\u0000e\u0000t\u0000c\u0000h\u0000U\u0000p\u0000 \u0000M\u0000o\u0000d\u0000e\u0000l\u0000"
+			}
+		]
+	},
+	{
+		"category": "rom",
+		"extensions": [
+			".ngc"
+		],
+		"mimes": [
+			"application/x-neo-geo-pocket-rom"
+		],
+		"name": "Neo Geo Pocket Color ROM",
+		"signature": [
+			{
+				"offset": 0,
+				"pattern": " LICENSED BY SNK CORPORATION"
+			},
+			{
+				"offset": 35,
+				"pattern": "\u0010"
+			}
+		],
+		"variant": "LICENSED"
+	},
+	{
+		"category": "rom",
+		"extensions": [
+			".ngc"
+		],
+		"mimes": [
+			"application/x-neo-geo-pocket-rom"
+		],
+		"name": "Neo Geo Pocket Color ROM",
+		"signature": [
+			{
+				"offset": 0,
+				"pattern": "COPYRIGHT BY SNK CORPORATION"
+			},
+			{
+				"offset": 35,
+				"pattern": "\u0010"
+			}
+		],
+		"variant": "COPYRIGHT"
+	},
+	{
+		"category": "rom",
+		"extensions": [
+			".ngp"
+		],
+		"mimes": [
+			"application/x-neo-geo-pocket-rom"
+		],
+		"name": "Neo Geo Pocket ROM",
+		"signature": [
+			{
+				"offset": 0,
+				"pattern": " LICENSED BY SNK CORPORATION"
+			}
+		],
+		"variant": "LICENSED"
+	},
+	{
+		"category": "rom",
+		"extensions": [
+			".ngp"
+		],
+		"mimes": [
+			"application/x-neo-geo-pocket-rom"
+		],
+		"name": "Neo Geo Pocket ROM",
+		"signature": [
+			{
+				"offset": 0,
+				"pattern": "COPYRIGHT BY SNK CORPORATION"
+			}
+		],
+		"variant": "COPYRIGHT"
+	}
+]
