@@ -12,17 +12,16 @@ A TypeScript module to determine whether the bytes is match the specify signatur
 
 ## 🎯 Target
 
-<!--
-- Bun ^ v1.0.0
-- Cloudflare Workers
--->
 - Deno >= v1.34.0 / >= v1.41.1 *(Via JSR)*
   > **🛡️ Require Permission**
   >
   > *N/A*
-<!--
-- NodeJS >= v16.13.0
--->
+
+> **🚧 Work In Progress**
+>
+> - Bun ^ v1.0.0
+> - Cloudflare Workers
+> - NodeJS >= v16.13.0
 
 ## 🔰 Usage
 
