@@ -176,5 +176,6 @@ A TypeScript module to determine whether the bytes is match the specify signatur
 >
 > - [Deno CLI `deno doc`](https://deno.land/manual/tools/documentation_generator)
 > - [JSR](https://jsr.io/@hugoalh/bytes-matcher)
-
+<!--
 ## ✍️ Example
+-->
