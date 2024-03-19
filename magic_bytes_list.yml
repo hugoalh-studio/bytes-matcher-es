@@ -46,7 +46,7 @@
   signature:
     - offset: 0
       pattern: "\x00\x00\x03ó"
-- &QuarkExpressDocumentGroup
+- &QuarkExpressDocument
   category: "document"
   extensions:
     - ".qxd"
@@ -57,7 +57,7 @@
     - offset: 0
       pattern: "\x00\x00MMXPR"
   variant: "BE"
-- <<: *QuarkExpressDocumentGroup
+- <<: *QuarkExpressDocument
   signature:
     - offset: 0
       pattern: "\x00\x00IIXPR"
@@ -70,7 +70,7 @@
   signature:
     - offset: 0
       pattern: "PWS3"
-- &LibpcapFileGroup
+- &LibpcapFile
   category: "other"
   extensions:
     - ".pcap"
@@ -81,17 +81,17 @@
     - offset: 0
       pattern: "¡²ÃÔ"
   variant: "BE"
-- <<: *LibpcapFileGroup
+- <<: *LibpcapFile
   signature:
     - offset: 0
       pattern: "ÔÃ²¡"
   variant: "LE"
-- <<: *LibpcapFileGroup
+- <<: *LibpcapFile
   signature:
     - offset: 0
       pattern: "¡²<M"
   variant: "Nanosecond Resolution, BE"
-- <<: *LibpcapFileGroup
+- <<: *LibpcapFile
   signature:
     - offset: 0
       pattern: "M<²¡"
@@ -211,7 +211,7 @@
   signature:
     - offset: 4
       pattern: "ftypheic"
-- &LempelZivHuffmanArchiveGroup
+- &LempelZivHuffmanArchive
   category: "archive"
   extensions:
     - ".lzh"
@@ -222,7 +222,7 @@
     - offset: 2
       pattern: "-hl0-"
   variant: "Method 0 (No Compression)"
-- <<: *LempelZivHuffmanArchiveGroup
+- <<: *LempelZivHuffmanArchive
   signature:
     - offset: 2
       pattern: "-hl5-"
@@ -322,7 +322,7 @@
       pattern: "RIFF"
     - offset: 8
       pattern: "shr5"
-- &AdobeShockwaveFileGroup
+- &AdobeShockwaveFile
   category: "other"
   extensions:
     - ".dcr"
@@ -335,7 +335,7 @@
     - offset: 8
       pattern: "FGDM"
   variant: "BE"
-- <<: *AdobeShockwaveFileGroup
+- <<: *AdobeShockwaveFile
   signature:
     - offset: 0
       pattern: "XFIR"
@@ -379,7 +379,7 @@
   signature:
     - offset: 0
       pattern: "\x00\x01\x00\x00Standard Jet DB"
-- &AdobeFlashFileGroup
+- &AdobeFlashFile
   category: "other"
   extensions:
     - ".swf"
@@ -390,7 +390,7 @@
     - offset: 0
       pattern: "CWS"
   variant: "C"
-- <<: *AdobeFlashFileGroup
+- <<: *AdobeFlashFile
   signature:
     - offset: 0
       pattern: "FWS"
@@ -404,7 +404,7 @@
   signature:
     - offset: 0
       pattern: "\x06\x06íõØ\x1DFå½1ïçþt·\x1D"
-- &ZLibArchiveGroup
+- &ZLibArchive
   category: "archive"
   extensions:
     - ".zlib"
@@ -414,37 +414,37 @@
     - offset: 0
       pattern: "x\x01"
   variant: "No Compression Without Preset Dictionary"
-- <<: *ZLibArchiveGroup
+- <<: *ZLibArchive
   signature:
     - offset: 0
       pattern: "x^"
   variant: "Best Speed Without Preset Dictionary"
-- <<: *ZLibArchiveGroup
+- <<: *ZLibArchive
   signature:
     - offset: 0
       pattern: "x"
   variant: "Default Compression Without Preset Dictionary"
-- <<: *ZLibArchiveGroup
+- <<: *ZLibArchive
   signature:
     - offset: 0
       pattern: "xÚ"
   variant: "Best Compression Without Preset Dictionary"
-- <<: *ZLibArchiveGroup
+- <<: *ZLibArchive
   signature:
     - offset: 0
       pattern: "x "
   variant: "No Compression With Preset Dictionary"
-- <<: *ZLibArchiveGroup
+- <<: *ZLibArchive
   signature:
     - offset: 0
       pattern: "x}"
   variant: "Best Speed With Preset Dictionary"
-- <<: *ZLibArchiveGroup
+- <<: *ZLibArchive
   signature:
     - offset: 0
       pattern: "x»"
   variant: "Default Compression With Preset Dictionary"
-- <<: *ZLibArchiveGroup
+- <<: *ZLibArchive
   signature:
     - offset: 0
       pattern: "xù"
@@ -485,7 +485,7 @@
   signature:
     - offset: 0
       pattern: "P2\n"
-- &PortableGrayMapBinaryGroup
+- &PortableGrayMapBinary
   category: "image"
   extensions:
     - ".pgm"
@@ -496,22 +496,22 @@
     - offset: 0
       pattern: "P5\t"
   variant: "Tab"
-- <<: *PortableGrayMapBinaryGroup
+- <<: *PortableGrayMapBinary
   signature:
     - offset: 0
       pattern: "P5\n"
   variant: "LF"
-- <<: *PortableGrayMapBinaryGroup
+- <<: *PortableGrayMapBinary
   signature:
     - offset: 0
       pattern: "P5\r"
   variant: "CR"
-- <<: *PortableGrayMapBinaryGroup
+- <<: *PortableGrayMapBinary
   signature:
     - offset: 0
       pattern: "P5 "
   variant: "Space"
-- &PortablePixmapASCIIGroup
+- &PortablePixmapASCII
   category: "image"
   extensions:
     - ".ppm"
@@ -522,22 +522,22 @@
     - offset: 0
       pattern: "P3\t"
   variant: "Tab"
-- <<: *PortablePixmapASCIIGroup
+- <<: *PortablePixmapASCII
   signature:
     - offset: 0
       pattern: "P3\n"
   variant: "LF"
-- <<: *PortablePixmapASCIIGroup
+- <<: *PortablePixmapASCII
   signature:
     - offset: 0
       pattern: "P3\r"
   variant: "CR"
-- <<: *PortablePixmapASCIIGroup
+- <<: *PortablePixmapASCII
   signature:
     - offset: 0
       pattern: "P3 "
   variant: "Space"
-- &PortablePixmapBinaryGroup
+- &PortablePixmapBinary
   category: "image"
   extensions:
     - ".ppm"
@@ -548,17 +548,17 @@
     - offset: 0
       pattern: "P6\t"
   variant: "Tab"
-- <<: *PortablePixmapBinaryGroup
+- <<: *PortablePixmapBinary
   signature:
     - offset: 0
       pattern: "P6\n"
   variant: "LF"
-- <<: *PortablePixmapBinaryGroup
+- <<: *PortablePixmapBinary
   signature:
     - offset: 0
       pattern: "P6\r"
   variant: "CR"
-- <<: *PortablePixmapBinaryGroup
+- <<: *PortablePixmapBinary
   signature:
     - offset: 0
       pattern: "P6 "
@@ -609,7 +609,7 @@
     - offset: 0
       pattern: "ÿOÿQ"
   variant: "Short"
-- &HL7Group
+- &HL7
   category: "other"
   extensions:
     - ".hl7"
@@ -619,7 +619,7 @@
     - offset: 0
       pattern: "BSH|"
   variant: "B"
-- <<: *HL7Group
+- <<: *HL7
   signature:
     - offset: 0
       pattern: "MSH|"
@@ -644,7 +644,7 @@
   signature:
     - offset: 0
       pattern: "\x00"
-- &AppleQuickTimeMovieFileGroup
+- &AppleQuickTimeMovieFile
   category: "video"
   extensions:
     - ".mov"
@@ -655,27 +655,27 @@
     - offset: 4
       pattern: "ftypqt"
   variant: "ftypqt"
-- <<: *AppleQuickTimeMovieFileGroup
+- <<: *AppleQuickTimeMovieFile
   signature:
     - offset: 4
       pattern: "free"
   variant: "free"
-- <<: *AppleQuickTimeMovieFileGroup
+- <<: *AppleQuickTimeMovieFile
   signature:
     - offset: 4
       pattern: "mdat"
   variant: "mdat"
-- <<: *AppleQuickTimeMovieFileGroup
+- <<: *AppleQuickTimeMovieFile
   signature:
     - offset: 4
       pattern: "moov"
   variant: "moov"
-- <<: *AppleQuickTimeMovieFileGroup
+- <<: *AppleQuickTimeMovieFile
   signature:
     - offset: 4
       pattern: "skip"
   variant: "skip"
-- <<: *AppleQuickTimeMovieFileGroup
+- <<: *AppleQuickTimeMovieFile
   signature:
     - offset: 4
       pattern: "wide"
@@ -712,7 +712,7 @@
   signature:
     - offset: 0
       pattern: "\x00\x01\x00\x00"
-- &3GPPMFGroup
+- &3GPPMF
   category: "video"
   extensions:
     - ".3gp"
@@ -723,47 +723,47 @@
     - offset: 4
       pattern: "ftyp3ge"
   variant: "e"
-- <<: *3GPPMFGroup
+- <<: *3GPPMF
   signature:
     - offset: 4
       pattern: "ftyp3gf"
   variant: "f"
-- <<: *3GPPMFGroup
+- <<: *3GPPMF
   signature:
     - offset: 4
       pattern: "ftyp3gg"
   variant: "g"
-- <<: *3GPPMFGroup
+- <<: *3GPPMF
   signature:
     - offset: 4
       pattern: "ftyp3gh"
   variant: "h"
-- <<: *3GPPMFGroup
+- <<: *3GPPMF
   signature:
     - offset: 4
       pattern: "ftyp3gm"
   variant: "m"
-- <<: *3GPPMFGroup
+- <<: *3GPPMF
   signature:
     - offset: 4
       pattern: "ftyp3gp"
   variant: "p"
-- <<: *3GPPMFGroup
+- <<: *3GPPMF
   signature:
     - offset: 4
       pattern: "ftyp3gr"
   variant: "r"
-- <<: *3GPPMFGroup
+- <<: *3GPPMF
   signature:
     - offset: 4
       pattern: "ftyp3gs"
   variant: "s"
-- <<: *3GPPMFGroup
+- <<: *3GPPMF
   signature:
     - offset: 4
       pattern: "ftyp3gt"
   variant: "t"
-- &3GPP2MFGroup
+- &3GPP2MF
   category: "video"
   extensions:
     - ".3g2"
@@ -774,7 +774,7 @@
     - offset: 4
       pattern: "ftyp3g2"
   variant: "3g2"
-- <<: *3GPP2MFGroup
+- <<: *3GPP2MF
   signature:
     - offset: 4
       pattern: "ftypKDDI"
@@ -799,7 +799,7 @@
   signature:
     - offset: 0
       pattern: "\x1F\xA0"
-- &GIFGroup
+- &GIF
   category: "image"
   extensions:
     - ".gif"
@@ -810,12 +810,12 @@
     - offset: 0
       pattern: "GIF87a"
   variant: "7"
-- <<: *GIFGroup
+- <<: *GIF
   signature:
     - offset: 0
       pattern: "GIF89a"
   variant: "9"
-- &TIFFGroup
+- &TIFF
   category: "image"
   extensions:
     - ".tif"
@@ -827,17 +827,17 @@
     - offset: 0
       pattern: "MM\x00*"
   variant: "BE, 2A"
-- <<: *TIFFGroup
+- <<: *TIFF
   signature:
     - offset: 0
       pattern: "II\x00+"
   variant: "BE, 2B"
-- <<: *TIFFGroup
+- <<: *TIFF
   signature:
     - offset: 0
       pattern: "II*\x00"
   variant: "LE, 2A"
-- <<: *TIFFGroup
+- <<: *TIFF
   signature:
     - offset: 0
       pattern: "II+\x00"
@@ -851,7 +851,7 @@
   signature:
     - offset: 0
       pattern: "II\x1A\x00\x00\x00HEAPCCDR"
-- &CanonRAW2Group
+- &CanonRAW2
   category: "image"
   extensions:
     - ".cr2"
@@ -861,7 +861,7 @@
   signature:
     - offset: 0
       pattern: "II*\x00\x10\x00\x00\x00CR"
-- <<: *CanonRAW2Group
+- <<: *CanonRAW2
   signature:
     - offset: 0
       pattern: "MM\x00*\x10\x00\x00\x00CR"
@@ -913,7 +913,7 @@
   signature:
     - offset: 0
       pattern: "NURUPAL"
-- &DPXImageGroup
+- &DPXImage
   category: "image"
   extensions:
     - ".dpx"
@@ -924,7 +924,7 @@
     - offset: 0
       pattern: "SDPX"
   variant: "BE"
-- <<: *DPXImageGroup
+- <<: *DPXImage
   signature:
     - offset: 0
       pattern: "XPDS"
@@ -948,7 +948,7 @@
   signature:
     - offset: 0
       pattern: "BPGû"
-- &ISOGroup
+- &ISOImage
   category: "disk"
   extensions:
     - ".iso"
@@ -957,17 +957,17 @@
   name: "ISO 9660 CD/DVD Image"
   signature:
     - offset: 0x8001
-      pattern: &ISO9660ImageMagicBytes "CD001"
+      pattern: "CD001"
   variant: "1"
-- <<: *ISOGroup
+- <<: *ISOImage
   signature:
     - offset: 0x8801
-      pattern: *ISO9660ImageMagicBytes
+      pattern: "CD001"
   variant: "2"
-- <<: *ISOGroup
+- <<: *ISOImage
   signature:
     - offset: 0x9001
-      pattern: *ISO9660ImageMagicBytes
+      pattern: "CD001"
   variant: "3"
 - category: "image"
   extensions:
@@ -1128,7 +1128,7 @@
       pattern: "FORM"
     - offset: 8
       pattern: "AIFF"
-- &XMLFileGroup
+- &XMLFile
   category: "metadata"
   extensions:
     - ".xml"
@@ -1139,23 +1139,23 @@
   signature:
     - offset: 0
       pattern: "<?xml "
-- <<: *XMLFileGroup
+- <<: *XMLFile
   signature:
     - offset: 0
       pattern: "<\x00?\x00x\x00m\x00l\x00 "
-- <<: *XMLFileGroup
+- <<: *XMLFile
   signature:
     - offset: 0
       pattern: "\x00<\x00?\x00x\x00m\x00l\x00 "
-- <<: *XMLFileGroup
+- <<: *XMLFile
   signature:
     - offset: 0
       pattern: "<\x00\x00\x00?\x00\x00\x00x\x00\x00\x00m\x00\x00\x00l\x00\x00\x00 \x00\x00\x00"
-- <<: *XMLFileGroup
+- <<: *XMLFile
   signature:
     - offset: 0
       pattern: "\x00\x00\x00<\x00\x00\x00?\x00\x00\x00x\x00\x00\x00m\x00\x00\x00l\x00\x00\x00 "
-- <<: *XMLFileGroup
+- <<: *XMLFile
   signature:
     - offset: 0
       pattern: "Lo§@"
@@ -1209,7 +1209,7 @@
   signature:
     - offset: 0
       pattern: "\x00asm"
-- &JPEGGroup
+- &JPEG
   category: "image"
   extensions:
     - ".jpg"
@@ -1221,12 +1221,12 @@
     - offset: 0
       pattern: "ÿØÿÛ"
   variant: "DB"
-- <<: *JPEGGroup
+- <<: *JPEG
   signature:
     - offset: 0
       pattern: "ÿØÿà"
   variant: "E0"
-- <<: *JPEGGroup
+- <<: *JPEG
   signature:
     - offset: 0
       pattern: "ÿØÿî"
@@ -1272,7 +1272,7 @@
   signature:
     - offset: 0
       pattern: "070707"
-- &EXEGroup
+- &MSDOSExecutable
   category: "executable"
   extensions:
     - ".exe"
@@ -1285,7 +1285,7 @@
     - offset: 0
       pattern: "MZ"
   variant: "MZ"
-- <<: *EXEGroup
+- <<: *MSDOSExecutable
   signature:
     - offset: 0
       pattern: "ZM"
@@ -1395,7 +1395,7 @@
   signature:
     - offset: 0
       pattern: "Êþº¾"
-- &MachOBinaryGroup
+- &MachOBinary
   category: "executable"
   extensions:
     - ".mach"
@@ -1406,27 +1406,27 @@
     - offset: 0
       pattern: "þíúÎ"
   variant: "32-Bit, Head 0"
-- <<: *MachOBinaryGroup
+- <<: *MachOBinary
   signature:
     - offset: 0x1000
       pattern: "þíúÎ"
   variant: "32-Bit, Head 4096"
-- <<: *MachOBinaryGroup
+- <<: *MachOBinary
   signature:
     - offset: 0
       pattern: "þíúÏ"
   variant: "64-Bit, Head 0"
-- <<: *MachOBinaryGroup
+- <<: *MachOBinary
   signature:
     - offset: 0x1000
       pattern: "þíúÏ"
   variant: "64-Bit, Head 4096"
-- <<: *MachOBinaryGroup
+- <<: *MachOBinary
   signature:
     - offset: 0
       pattern: "Îúíþ"
   variant: "32-Bit, Reverse Byte Ordering Scheme"
-- <<: *MachOBinaryGroup
+- <<: *MachOBinary
   signature:
     - offset: 0
       pattern: "Ïúíþ"
@@ -1478,7 +1478,7 @@
   signature:
     - offset: 0
       pattern: "ITSF\x03\x00\x00\x00`\x00\x00\x00"
-- &WindowsHelpFileGroup
+- &WindowsHelpFile
   category: "other"
   extensions:
     - ".hlp"
@@ -1489,7 +1489,7 @@
     - offset: 0
       pattern: "?_"
   variant: "Short"
-- <<: *WindowsHelpFileGroup
+- <<: *WindowsHelpFile
   signature:
     - offset: 6
       pattern: "\x00\x00ÿÿÿÿ"
@@ -1678,7 +1678,7 @@
   signature:
     - offset: 0
       pattern: "dex\n035\x00"
-- &VirtualMachineDiskGroup
+- &VirtualMachineDisk
   category: "disk"
   extensions:
     - ".vmdk"
@@ -1690,17 +1690,17 @@
     - offset: 0
       pattern: "COWD\x01"
   variant: "COWD"
-- <<: *VirtualMachineDiskGroup
+- <<: *VirtualMachineDisk
   signature:
     - offset: 0
       pattern: "KDMV\x01"
   variant: "KDMV01"
-- <<: *VirtualMachineDiskGroup
+- <<: *VirtualMachineDisk
   signature:
     - offset: 0
       pattern: "KDMV\x02"
   variant: "KDMV02"
-- <<: *VirtualMachineDiskGroup
+- <<: *VirtualMachineDisk
   signature:
     - offset: 0
       pattern: "KDMV\x03"
@@ -1748,7 +1748,7 @@
   signature:
     - offset: 0
       pattern: "\x06\x07á\x00BOBO\x06\x07á\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x01"
-- &RoxioToastDiscImageGroup
+- &RoxioToastDiscImage
   category: "image"
   extensions:
     - ".toast"
@@ -1758,7 +1758,7 @@
     - offset: 0
       pattern: "ER\x02\x00\x00\x00"
   variant: "NoPrefix"
-- <<: *RoxioToastDiscImageGroup
+- <<: *RoxioToastDiscImage
   signature:
     - offset: 0
       pattern: "ER\x02\x00\x00\x00"
@@ -1961,7 +1961,7 @@
   signature:
     - offset: 0
       pattern: "TAPE"
-- &MP4Group
+- &MPEG4
   category: "other"
   extensions:
     - ".mp4"
@@ -1974,142 +1974,142 @@
     - offset: 4
       pattern: "ftypARRI"
   variant: "ARRI"
-- <<: *MP4Group
+- <<: *MPEG4
   signature:
     - offset: 4
       pattern: "ftypMSNV"
   variant: "MSNV"
-- <<: *MP4Group
+- <<: *MPEG4
   signature:
     - offset: 4
       pattern: "ftypNDAS"
   variant: "NDAS"
-- <<: *MP4Group
+- <<: *MPEG4
   signature:
     - offset: 4
       pattern: "ftypNDSC"
   variant: "NDSC"
-- <<: *MP4Group
+- <<: *MPEG4
   signature:
     - offset: 4
       pattern: "ftypNDSH"
   variant: "NDSH"
-- <<: *MP4Group
+- <<: *MPEG4
   signature:
     - offset: 4
       pattern: "ftypNDSM"
   variant: "NDSM"
-- <<: *MP4Group
+- <<: *MPEG4
   signature:
     - offset: 4
       pattern: "ftypNDSP"
   variant: "NDSP"
-- <<: *MP4Group
+- <<: *MPEG4
   signature:
     - offset: 4
       pattern: "ftypNDSS"
   variant: "NDSS"
-- <<: *MP4Group
+- <<: *MPEG4
   signature:
     - offset: 4
       pattern: "ftypNDXC"
   variant: "NDXC"
-- <<: *MP4Group
+- <<: *MPEG4
   signature:
     - offset: 4
       pattern: "ftypNDXH"
   variant: "NDXH"
-- <<: *MP4Group
+- <<: *MPEG4
   signature:
     - offset: 4
       pattern: "ftypNDXM"
   variant: "NDXM"
-- <<: *MP4Group
+- <<: *MPEG4
   signature:
     - offset: 4
       pattern: "ftypNDXP"
   variant: "NDXP"
-- <<: *MP4Group
+- <<: *MPEG4
   signature:
     - offset: 4
       pattern: "ftypNDXS"
   variant: "NDXS"
-- <<: *MP4Group
+- <<: *MPEG4
   signature:
     - offset: 4
       pattern: "ftypXAVC"
   variant: "XAVC"
-- <<: *MP4Group
+- <<: *MPEG4
   signature:
     - offset: 4
       pattern: "ftypavc1"
   variant: "avc1"
-- <<: *MP4Group
+- <<: *MPEG4
   signature:
     - offset: 4
       pattern: "ftypdash"
   variant: "dash"
-- <<: *MP4Group
+- <<: *MPEG4
   signature:
     - offset: 4
       pattern: "ftypiso2"
   variant: "iso2"
-- <<: *MP4Group
+- <<: *MPEG4
   signature:
     - offset: 4
       pattern: "ftypiso3"
   variant: "iso3"
-- <<: *MP4Group
+- <<: *MPEG4
   signature:
     - offset: 4
       pattern: "ftypiso4"
   variant: "iso4"
-- <<: *MP4Group
+- <<: *MPEG4
   signature:
     - offset: 4
       pattern: "ftypiso5"
   variant: "iso5"
-- <<: *MP4Group
+- <<: *MPEG4
   signature:
     - offset: 4
       pattern: "ftypiso6"
   variant: "iso6"
-- <<: *MP4Group
+- <<: *MPEG4
   signature:
     - offset: 4
       pattern: "ftypisom"
   variant: "isom"
-- <<: *MP4Group
+- <<: *MPEG4
   signature:
     - offset: 4
       pattern: "ftypmmp4"
   variant: "mmp4"
-- <<: *MP4Group
+- <<: *MPEG4
   signature:
     - offset: 4
       pattern: "ftypmobi"
   variant: "mobi"
-- <<: *MP4Group
+- <<: *MPEG4
   signature:
     - offset: 4
       pattern: "ftypmp21"
   variant: "mp21"
-- <<: *MP4Group
+- <<: *MPEG4
   signature:
     - offset: 4
       pattern: "ftypmp41"
   variant: "mp41"
-- <<: *MP4Group
+- <<: *MPEG4
   signature:
     - offset: 4
       pattern: "ftypmp42"
   variant: "mp42"
-- <<: *MP4Group
+- <<: *MPEG4
   signature:
     - offset: 4
       pattern: "ftypmp4v"
   variant: "mp4v"
-- <<: *MP4Group
+- <<: *MPEG4
   signature:
     - offset: 4
       pattern: "ftypmp71"
@@ -2291,7 +2291,7 @@
   signature:
     - offset: 0
       pattern: "\x0EWKS"
-- &MicrosoftWorksSpreadsheetGroup
+- &MicrosoftWorksSpreadsheet
   category: "spreadsheet"
   extensions:
     - ".wks"
@@ -2302,7 +2302,7 @@
     - offset: 0
       pattern: "\x00\x00\x02\x00\x04\x04\x05T\x02\x00"
   variant: "00"
-- <<: *MicrosoftWorksSpreadsheetGroup
+- <<: *MicrosoftWorksSpreadsheet
   signature:
     - offset: 0
       pattern: "ÿ\x00\x02\x00\x04\x04\x05T\x02\x00"
@@ -2533,7 +2533,7 @@
   signature:
     - offset: 0
       pattern: "\x1AEß£"
-- &DjVuDocumentGroup
+- &DjVuDocument
   category: "document"
   extensions:
     - ".djvu"
@@ -2547,21 +2547,21 @@
     - offset: 12
       pattern: "DJVI"
   variant: "DJVI"
-- <<: *DjVuDocumentGroup
+- <<: *DjVuDocument
   signature:
     - offset: 0
       pattern: "AT&TFORM"
     - offset: 12
       pattern: "DJVM"
   variant: "DJVM"
-- <<: *DjVuDocumentGroup
+- <<: *DjVuDocument
   signature:
     - offset: 0
       pattern: "AT&TFORM"
     - offset: 12
       pattern: "DJVU"
   variant: "DJVU"
-- <<: *DjVuDocumentGroup
+- <<: *DjVuDocument
   signature:
     - offset: 0
       pattern: "AT&TFORM"
@@ -2575,7 +2575,7 @@
   signature:
     - offset: 0
       pattern: "'\x05\x19V"
-- &LZFSEGroup
+- &LZFSEFile
   category: "compressed"
   extensions:
     - ".lzfse"
@@ -2586,17 +2586,17 @@
     - offset: 0
       pattern: "bvx-"
   variant: "-"
-- <<: *LZFSEGroup
+- <<: *LZFSEFile
   signature:
     - offset: 0
       pattern: "bvx1"
   variant: "1"
-- <<: *LZFSEGroup
+- <<: *LZFSEFile
   signature:
     - offset: 0
       pattern: "bvx2"
   variant: "2"
-- <<: *LZFSEGroup
+- <<: *LZFSEFile
   signature:
     - offset: 0
       pattern: "bvxn"
@@ -2782,7 +2782,7 @@
   signature:
     - offset: 0
       pattern: "Joy!"
-- &SubRipFileGroup
+- &SubRipFile
   category: "subtitle"
   extensions:
     - ".srt"
@@ -2793,17 +2793,17 @@
     - offset: 0
       pattern: "\xEF\xBB\xBF1\r\n00:"
   variant: "BOM, CRLF"
-- <<: *SubRipFileGroup
+- <<: *SubRipFile
   signature:
     - offset: 0
       pattern: "\xEF\xBB\xBF1\n00:"
   variant: "BOM, LF"
-- <<: *SubRipFileGroup
+- <<: *SubRipFile
   signature:
     - offset: 0
       pattern: "1\r\n00:"
   variant: "1, CRLF"
-- <<: *SubRipFileGroup
+- <<: *SubRipFile
   signature:
     - offset: 0
       pattern: "1\n00:"
@@ -2853,7 +2853,7 @@
   signature:
     - offset: 0
       pattern: "MSCF"
-- &WindowsMetafileGroup
+- &WindowsMetafile
   category: "image"
   extensions:
     - ".wmf"
@@ -2864,11 +2864,11 @@
   signature:
     - offset: 0
       pattern: "\x01\x00\x09\x00"
-- <<: *WindowsMetafileGroup
+- <<: *WindowsMetafile
   signature:
     - offset: 0
       pattern: "\x02\x00\x09\x00"
-- <<: *WindowsMetafileGroup
+- <<: *WindowsMetafile
   signature:
     - offset: 0
       pattern: "×ÍÆ"
@@ -2949,7 +2949,7 @@
       pattern: "RIFF"
     - offset: 8
       pattern: "QLCM"
-- &MacromediaDirectorFileGroup
+- &MacromediaDirectorFile
   category: "other"
   extensions:
     - ".dir"
@@ -2964,7 +2964,7 @@
     - offset: 8
       pattern: "MV93"
   variant: "BE"
-- <<: *MacromediaDirectorFileGroup
+- <<: *MacromediaDirectorFile
   signature:
     - offset: 0
       pattern: "XFIR"
@@ -3110,7 +3110,7 @@
   signature:
     - offset: 0
       pattern: "BLENDER"
-- &JPEGXLImageGroup
+- &JPEGXLImage
   category: "image"
   extensions:
     - ".jxl"
@@ -3121,7 +3121,7 @@
     - offset: 0
       pattern: "\x00\x00\x00\x0CJXL \r\n\n"
   variant: "Long"
-- <<: *JPEGXLImageGroup
+- <<: *JPEGXLImage
   signature:
     - offset: 0
       pattern: "ÿ\n"
@@ -3483,7 +3483,7 @@
   signature:
     - offset: 0
       pattern: "d8:announce"
-- &StuffItCompressedArchiveGroup
+- &StuffItCompressedArchive
   category: "archive"
   extensions:
     - ".sit"
@@ -3493,19 +3493,19 @@
   signature:
     - offset: 0
       pattern: "SIT!\x00"
-- <<: *StuffItCompressedArchiveGroup
+- <<: *StuffItCompressedArchive
   signature:
     - offset: 0
       pattern: "StuffIt (c)1997"
     - offset: 82
       pattern: "\x05"
-- <<: *StuffItCompressedArchiveGroup
+- <<: *StuffItCompressedArchive
   signature:
     - offset: 128
       pattern: "SIT!"
     - offset: 138
       pattern: "rLau"
-- <<: *StuffItCompressedArchiveGroup
+- <<: *StuffItCompressedArchive
   signature:
     - offset: 0
       pattern: "SIT!"
@@ -3602,7 +3602,7 @@
   signature:
     - offset: 0
       pattern: "***  Installation Started "
-- &MicrosoftVisualStudioSolutionGroup
+- &MicrosoftVisualStudioSolution
   category: "other"
   extensions:
     - ".sln"
@@ -3613,17 +3613,17 @@
     - offset: 0
       pattern: "ï»¿\r\nMicrosoft Visual Studio Solution File, Format Version "
   variant: "BOM, CRLF"
-- <<: *MicrosoftVisualStudioSolutionGroup
+- <<: *MicrosoftVisualStudioSolution
   signature:
     - offset: 0
       pattern: "ï»¿\nMicrosoft Visual Studio Solution File, Format Version "
   variant: "BOM, LF"
-- <<: *MicrosoftVisualStudioSolutionGroup
+- <<: *MicrosoftVisualStudioSolution
   signature:
     - offset: 0
       pattern: "Microsoft Visual Studio Solution File, Format Version "
   variant: "Plain"
-- &LArcGroup
+- &LArc
   category: "archive"
   extensions:
     - ".lzs"
@@ -3634,37 +3634,37 @@
     - offset: 2
       pattern: "-lz2-"
   variant: "2"
-- <<: *LArcGroup
+- <<: *LArc
   signature:
     - offset: 2
       pattern: "-lz3-"
   variant: "3"
-- <<: *LArcGroup
+- <<: *LArc
   signature:
     - offset: 2
       pattern: "-lz4-"
   variant: "4"
-- <<: *LArcGroup
+- <<: *LArc
   signature:
     - offset: 2
       pattern: "-lz5-"
   variant: "5"
-- <<: *LArcGroup
+- <<: *LArc
   signature:
     - offset: 2
       pattern: "-lz7-"
   variant: "7"
-- <<: *LArcGroup
+- <<: *LArc
   signature:
     - offset: 2
       pattern: "-lz8-"
   variant: "8"
-- <<: *LArcGroup
+- <<: *LArc
   signature:
     - offset: 2
       pattern: "-lzs-"
   variant: "s"
-- &AbiWordDocumentGroup
+- &AbiWordDocument
   category: "document"
   extensions:
     - ".abw"
@@ -3677,19 +3677,19 @@
     - offset: 102
       pattern: "<abiword template=\"false\""
   variant: "BOM, DOCTYPE"
-- <<: *AbiWordDocumentGroup
+- <<: *AbiWordDocument
   signature:
     - offset: 0
       pattern: "<!DOCTYPE abiword PUBLIC"
     - offset: 102
       pattern: "<abiword template=\"false\""
   variant: "DOCTYPE"
-- <<: *AbiWordDocumentGroup
+- <<: *AbiWordDocument
   signature:
     - offset: 0
       pattern: "\xEF\xBB\xBF<abiword template=\"false\""
   variant: "BOM, Short"
-- <<: *AbiWordDocumentGroup
+- <<: *AbiWordDocument
   signature:
     - offset: 0
       pattern: "<abiword template=\"false\""
@@ -3714,7 +3714,7 @@
   signature:
     - offset: 0
       pattern: "ÿþÿ\x0ES\x00k\x00e\x00t\x00c\x00h\x00U\x00p\x00 \x00M\x00o\x00d\x00e\x00l\x00"
-- &NeoGeoPocketColorROMGroup
+- &NeoGeoPocketColorROM
   category: "rom"
   extensions:
     - ".ngc"
@@ -3727,14 +3727,14 @@
     - offset: 35
       pattern: "\x10"
   variant: "LICENSED"
-- <<: *NeoGeoPocketColorROMGroup
+- <<: *NeoGeoPocketColorROM
   signature:
     - offset: 0
       pattern: "COPYRIGHT BY SNK CORPORATION"
     - offset: 35
       pattern: "\x10"
   variant: "COPYRIGHT"
-- &NeoGeoPocketROMGroup
+- &NeoGeoPocketROM
   category: "rom"
   extensions:
     - ".ngp"
@@ -3745,7 +3745,7 @@
     - offset: 0
       pattern: " LICENSED BY SNK CORPORATION"
   variant: "LICENSED"
-- <<: *NeoGeoPocketROMGroup
+- <<: *NeoGeoPocketROM
   signature:
     - offset: 0
       pattern: "COPYRIGHT BY SNK CORPORATION"
