@@ -117,52 +117,58 @@ A TypeScript module to determine whether the bytes is match the specify signatur
 - ```ts
   class MagicBytesMatcher {
     constructor(filter?: (meta: MagicBytesMeta) => boolean): MagicBytesMatcher;
-    match(item: string | Uint8Array): MagicBytesMetaWithWeight | null;
-    matchAll(item: string | Uint8Array): Generator<MagicBytesMetaWithWeight>;
-    matchFile(file: string | URL | Deno.FsFile): Promise<MagicBytesMetaWithWeight | null>;
-    matchFileAll(file: string | URL | Deno.FsFile): AsyncGenerator<MagicBytesMetaWithWeight>;
+    match(item: string | Uint8Array): MagicBytesMetaExtend | null;
+    matchAll(item: string | Uint8Array): Generator<MagicBytesMetaExtend>;
+    matchFile(file: string | URL | Deno.FsFile): Promise<MagicBytesMetaExtend | null>;
+    matchFileAll(file: string | URL | Deno.FsFile): AsyncGenerator<MagicBytesMetaExtend>;
     test(item: string | Uint8Array): boolean;
     testFile(file: string | URL | Deno.FsFile): Promise<boolean>;
   }
   ```
 - ```ts
   interface BytesMatcherSignature<T extends string | Uint8Array> {
+    /**
+     * Offset of the signature, by integer; Negative integer means offset from the end of the bytes.
+     */
     offset: number;
+    /**
+     * Pattern of the signature.
+     */
     pattern: T;
   }
   ```
 - ```ts
   interface MagicBytesMeta {
     /**
-    * Category of the magic bytes.
-    */
+     * Category of the magic bytes.
+     */
     category: MagicBytesMetaCategory;
     /**
-    * Extensions of the magic bytes.
-    * @default []
-    */
+     * Extensions of the magic bytes, always start with a dot (`.`).
+     * @default []
+     */
     extensions: `.${string}`[];
     /**
-    * MIMEs of the magic bytes.
-    * @default []
-    */
+     * MIMEs of the magic bytes.
+     * @default []
+     */
     mimes: string[];
     /**
-    * Name of the magic bytes.
-    */
+     * Name of the magic bytes.
+     */
     name: string;
     /**
-    * Variant of the magic bytes. Only available when multiple signatures with same meta.
-    * @default undefined
-    */
+     * Variant of the magic bytes. Only available when multiple signatures with same meta.
+     * @default undefined
+     */
     variant?: string;
   }
   ```
 - ```ts
-  interface MagicBytesMetaWithWeight extends MagicBytesMeta {
+  interface MagicBytesMetaExtend extends MagicBytesMeta {
     /**
      * Weight of the magic bytes.
-    */
+     */
     weight: number;
   }
   ```
