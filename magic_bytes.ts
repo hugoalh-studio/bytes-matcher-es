@@ -1,13 +1,19 @@
 import MagicBytesList from "./magic_bytes_list.json" with { type: "json" };
 import { BytesMatcher, type BytesMatcherSignature } from "./matcher.ts";
+/**
+ * Category of the magic bytes.
+ */
 export type MagicBytesMetaCategory = "archive" | "audio" | "compressed" | "database" | "diagram" | "disk" | "document" | "ebook" | "executable" | "font" | "formula" | "geospatial" | "image" | "metadata" | "model" | "other" | "package" | "playlist" | "presentation" | "rom" | "spreadsheet" | "subtitle" | "video";
+/**
+ * Meta of the magic bytes.
+ */
 export interface MagicBytesMeta {
 	/**
 	 * Category of the magic bytes.
 	 */
 	category: MagicBytesMetaCategory;
 	/**
-	 * Extensions of the magic bytes.
+	 * Extensions of the magic bytes, always start with a dot (`.`).
 	 * @default []
 	 */
 	extensions: `.${string}`[];
@@ -29,15 +35,23 @@ export interface MagicBytesMeta {
 interface MagicBytesEntry extends MagicBytesMeta {
 	signature: BytesMatcherSignature<string>[];
 }
-export interface MagicBytesMetaWithWeight extends MagicBytesMeta {
+/**
+ * Meta of the magic bytes with extend information.
+ */
+export interface MagicBytesMetaExtend extends MagicBytesMeta {
 	/**
 	 * Weight of the magic bytes.
 	 */
 	weight: number;
 }
+/**
+ * Meta of the magic bytes with weight.
+ * @deprecated Replaced by interface {@linkcode MagicBytesMetaExtend}.
+ */
+export type MagicBytesMetaWithWeight = MagicBytesMetaExtend;
 interface MagicBytesListEntry {
 	matcher: BytesMatcher;
-	meta: MagicBytesMetaWithWeight;
+	meta: MagicBytesMetaExtend;
 }
 /**
  * Magic bytes matcher to determine whether the bytes is match the specify magic bytes.
@@ -46,7 +60,7 @@ export class MagicBytesMatcher {
 	#list: MagicBytesListEntry[] = [];
 	/**
 	 * Initialize magic bytes matcher.
-	 * @param {(meta: MagicBytesMeta) => boolean} [filter] Filter.
+	 * @param {(meta: MagicBytesMeta) => boolean} [filter] Filter the magic bytes list in order to reduce execution duration.
 	 */
 	constructor(filter?: (meta: MagicBytesMeta) => boolean) {
 		for (const { signature, ...meta } of (MagicBytesList as MagicBytesEntry[])) {
@@ -75,9 +89,9 @@ export class MagicBytesMatcher {
 	/**
 	 * List all of the magic bytes meta which the bytes is match.
 	 * @param {string | Uint8Array} item Item that need to determine.
-	 * @returns {Generator<MagicBytesMetaWithWeight>} Magic bytes meta list.
+	 * @returns {Generator<MagicBytesMetaExtend>} Magic bytes meta list.
 	 */
-	*matchAll(item: string | Uint8Array): Generator<MagicBytesMetaWithWeight> {
+	*matchAll(item: string | Uint8Array): Generator<MagicBytesMetaExtend> {
 		for (const { matcher, meta } of this.#list) {
 			if (matcher.test(item)) {
 				yield meta;
@@ -86,10 +100,14 @@ export class MagicBytesMatcher {
 	}
 	/**
 	 * List all of the magic bytes meta which the file bytes is match.
+	 * 
+	 * > **🛡️ Require Permission**
+	 * >
+	 * > - File System - Read (`allow-read`)
 	 * @param {string | URL | Deno.FsFile} file File that need to determine.
-	 * @returns {AsyncGenerator<MagicBytesMetaWithWeight>} Magic bytes meta list.
+	 * @returns {AsyncGenerator<MagicBytesMetaExtend>} Magic bytes meta list.
 	 */
-	async *matchFileAll(file: string | URL | Deno.FsFile): AsyncGenerator<MagicBytesMetaWithWeight> {
+	async *matchFileAll(file: string | URL | Deno.FsFile): AsyncGenerator<MagicBytesMetaExtend> {
 		const fileResolve: Deno.FsFile = (file instanceof Deno.FsFile) ? file : (await Deno.open(file));
 		try {
 			for (const { matcher, meta } of this.#list) {
@@ -106,9 +124,9 @@ export class MagicBytesMatcher {
 	/**
 	 * Return the magic bytes meta which the bytes is match the closest.
 	 * @param {string | Uint8Array} item Item that need to determine.
-	 * @returns {MagicBytesMetaWithWeight | null} Magic bytes meta.
+	 * @returns {MagicBytesMetaExtend | null} Magic bytes meta.
 	 */
-	match(item: string | Uint8Array): MagicBytesMetaWithWeight | null {
+	match(item: string | Uint8Array): MagicBytesMetaExtend | null {
 		for (const _ of this.matchAll(item)) {
 			return _;
 		}
@@ -116,10 +134,14 @@ export class MagicBytesMatcher {
 	}
 	/**
 	 * Return the magic bytes meta which the file bytes is match the closest.
+	 * 
+	 * > **🛡️ Require Permission**
+	 * >
+	 * > - File System - Read (`allow-read`)
 	 * @param {string | URL | Deno.FsFile} file File that need to determine.
-	 * @returns {Promise<MagicBytesMetaWithWeight | null>} Magic bytes meta.
+	 * @returns {Promise<MagicBytesMetaExtend | null>} Magic bytes meta.
 	 */
-	async matchFile(file: string | URL | Deno.FsFile): Promise<MagicBytesMetaWithWeight | null> {
+	async matchFile(file: string | URL | Deno.FsFile): Promise<MagicBytesMetaExtend | null> {
 		for await (const _ of this.matchFileAll(file)) {
 			return _;
 		}
@@ -135,6 +157,10 @@ export class MagicBytesMatcher {
 	}
 	/**
 	 * Determine whether the file bytes is match any of specify magic bytes.
+	 * 
+	 * > **🛡️ Require Permission**
+	 * >
+	 * > - File System - Read (`allow-read`)
 	 * @param {string | URL | Deno.FsFile} file File that need to determine.
 	 * @returns {Promise<boolean>} Determine result.
 	 */

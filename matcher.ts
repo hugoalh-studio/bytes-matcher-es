@@ -1,5 +1,14 @@
+/**
+ * Signature of the bytes matcher.
+ */
 export interface BytesMatcherSignature<T extends string | Uint8Array> {
+	/**
+	 * Offset of the signature, by integer; Negative integer means offset from the end of the bytes.
+	 */
 	offset: number;
+	/**
+	 * Pattern of the signature.
+	 */
 	pattern: T;
 }
 /**
@@ -33,7 +42,7 @@ export class BytesMatcher {
 				const byte: number = patternResolve[index];
 				const byteMayDefine: number | undefined = this.#signatureHead.get(cursor) ?? this.#signatureTail.get(cursor);
 				if (typeof byteMayDefine !== "undefined") {
-					throw new SyntaxError(`Signature offset of ${cursor} is already defined! Exist: \\x${byteMayDefine.toString(16)}; Override: \\x${byte.toString(16)}`);
+					throw new SyntaxError(`Offset of ${cursor} is already defined! Exist: \\x${byteMayDefine.toString(16)}; Override: \\x${byte.toString(16)}`);
 				}
 				(cursor >= 0) ? this.#signatureHead.set(cursor, byte) : this.#signatureTail.set(cursor, byte);
 			}
@@ -95,6 +104,10 @@ export class BytesMatcher {
 	}
 	/**
 	 * Determine whether the file is match the specify signature.
+	 * 
+	 * > **🛡️ Require Permission**
+	 * >
+	 * > - File System - Read (`allow-read`)
 	 * @param {string | URL | Deno.FsFile} file File that need to determine.
 	 * @returns {Promise<boolean>} Determine result.
 	 */
