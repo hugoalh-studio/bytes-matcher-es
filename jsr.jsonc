@@ -1,7 +1,7 @@
-// This file is only for JSR related, non-JSR related must set in the file `deno.jsonc`!
 {
+	"$schema": "https://deno.land/x/deno/cli/schemas/config-file.v1.json",
 	"name": "@hugoalh/bytes-matcher",
-	"version": "0.1.1",
+	"version": "0.2.0",
 	"exports": {
 		"./magic-bytes": "./magic_bytes.ts",
 		"./matcher": "./matcher.ts",
@@ -22,15 +22,17 @@
 			"**/bench.tsx",
 			"**/test.ts",
 			"**/test.tsx",
-			"_convert_magic_bytes_list.ts"
+			".dnt.ts",
+			"npm/**",
+			"_convert_list.ts"
 		],
 		"include": [
+			"**/*.json",
 			"**/*.ts",
 			"**/*.tsx",
 			"jsr.jsonc",
 			"LICENSE*.md",
-			"README*.md",
-			"magic_bytes_list.json"
+			"README*.md"
 		]
 	}
 }
