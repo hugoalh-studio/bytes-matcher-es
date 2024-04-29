@@ -1,3 +1,4 @@
+import { FileHandle as NodeJSFileHandle, open as nodejsFSOpen } from "node:fs/promises";
 import MagicBytesList from "./magic_bytes_list.json" with { type: "json" };
 import { BytesMatcher, type BytesMatcherSignature } from "./matcher.ts";
 /**
@@ -13,7 +14,7 @@ export interface MagicBytesMeta {
 	 */
 	category: MagicBytesMetaCategory;
 	/**
-	 * Extensions of the magic bytes, always start with a dot (`.`).
+	 * Extensions of the magic bytes, always begin with a dot (`.`).
 	 * @default []
 	 */
 	extensions: `.${string}`[];
@@ -44,11 +45,6 @@ export interface MagicBytesMetaExtend extends MagicBytesMeta {
 	 */
 	weight: number;
 }
-/**
- * Meta of the magic bytes with weight.
- * @deprecated Replaced by interface {@linkcode MagicBytesMetaExtend}.
- */
-export type MagicBytesMetaWithWeight = MagicBytesMetaExtend;
 interface MagicBytesListEntry {
 	matcher: BytesMatcher;
 	meta: MagicBytesMetaExtend;
@@ -104,20 +100,33 @@ export class MagicBytesMatcher {
 	 * > **🛡️ Require Permission**
 	 * >
 	 * > - File System - Read (`allow-read`)
-	 * @param {string | URL | Deno.FsFile} file File that need to determine.
+	 * @param {string | Deno.FsFile | NodeJSFileHandle | URL} file File that need to determine.
 	 * @returns {AsyncGenerator<MagicBytesMetaExtend>} Magic bytes meta list.
 	 */
-	async *matchFileAll(file: string | URL | Deno.FsFile): AsyncGenerator<MagicBytesMetaExtend> {
-		const fileResolve: Deno.FsFile = (file instanceof Deno.FsFile) ? file : (await Deno.open(file));
+	async *matchFileAll(file: string | Deno.FsFile | NodeJSFileHandle | URL): AsyncGenerator<MagicBytesMetaExtend> {
+		const fileAbstract: Deno.FsFile | NodeJSFileHandle = await (async (): Promise<Deno.FsFile | NodeJSFileHandle> => {
+			if (typeof Deno !== "undefined" && (
+				typeof file === "string" ||
+				file instanceof Deno.FsFile ||
+				file instanceof URL
+			)) {
+				return ((file instanceof Deno.FsFile) ? file : (await Deno.open(file)));
+			}
+			//@ts-ignore `FileHandle` is a class in NodeJS, but is an interface in Deno.
+			return (file instanceof NodeJSFileHandle) ? (file as NodeJSFileHandle) : (await nodejsFSOpen(file as string | URL));
+		})();
 		try {
 			for (const { matcher, meta } of this.#list) {
-				if (await matcher.testFile(fileResolve)) {
+				if (await matcher.testFile(fileAbstract)) {
 					yield meta;
 				}
 			}
 		} finally {
-			if (!(file instanceof Deno.FsFile)) {
-				fileResolve.close();
+			if (
+				typeof file === "string" ||
+				file instanceof URL
+			) {
+				fileAbstract.close();
 			}
 		}
 	}

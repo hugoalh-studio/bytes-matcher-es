@@ -1,3 +1,5 @@
+import type { Stats as NodeJSFSStats } from "node:fs";
+import { FileHandle as NodeJSFileHandle, open as nodejsFSOpen } from "node:fs/promises";
 /**
  * Signature of the bytes matcher.
  */
@@ -32,14 +34,14 @@ export class BytesMatcher {
 			if (pattern.length === 0) {
 				throw new SyntaxError(`Pattern is empty from offset ${offsetFrom}!`);
 			}
-			const patternResolve: number[] = Array.from<number>((typeof pattern === "string") ? (new TextEncoder().encode(pattern)) : Uint8Array.of(...pattern));
-			const offsetTo: number = offsetFrom + patternResolve.length;
+			const patternTypeUnify: number[] = Array.from((typeof pattern === "string") ? (new TextEncoder().encode(pattern)) : Uint8Array.of(...pattern));
+			const offsetTo: number = offsetFrom + patternTypeUnify.length;
 			if (offsetFrom < 0 && offsetTo > 0) {
 				throw new Error(`Pattern is overflow (most likely cause by incorrect offset)! Offset Current: ${offsetFrom}; Offset Possible: <= ${offsetFrom - offsetTo}`);
 			}
-			for (let index = 0; index < patternResolve.length; index += 1) {
+			for (let index = 0; index < patternTypeUnify.length; index += 1) {
 				const cursor: number = offsetFrom + index;
-				const byte: number = patternResolve[index];
+				const byte: number = patternTypeUnify[index];
 				const byteMayDefine: number | undefined = this.#signatureHead.get(cursor) ?? this.#signatureTail.get(cursor);
 				if (typeof byteMayDefine !== "undefined") {
 					throw new SyntaxError(`Offset of ${cursor} is already defined! Exist: \\x${byteMayDefine.toString(16)}; Override: \\x${byte.toString(16)}`);
@@ -52,33 +54,32 @@ export class BytesMatcher {
 		}
 	}
 	/**
-	 * Helper to map signature of tail by the file size.
+	 * Map signature (majorly for tail signature) by the size of the file.
 	 * @access private
-	 * @param {Deno.FileInfo} info File info.
+	 * @param {number} fileSize Size of the file, by bytes.
 	 * @returns {false | Map<number, number>}
 	 */
-	#mapSignatureByFile(info: Deno.FileInfo): false | Map<number, number> {
-		const { size }: Deno.FileInfo = info;
-		if (size > Number.MAX_SAFE_INTEGER) {
+	#mapSignatureByFileSize(fileSize: number): false | Map<number, number> {
+		if (fileSize > Number.MAX_SAFE_INTEGER) {
 			throw new Error(`Size of the file is too large!`);
 		}
-		if (Math.max(...Array.from<number>(this.#signatureHead.keys())) >= size) {
+		if (Math.max(...Array.from(this.#signatureHead.keys())) >= fileSize) {
 			// Signature of head must smaller than or equal to the size of the file.
 			return false;
 		}
-		const signatureResolve: Map<number, number> = new Map<number, number>(this.#signatureHead.entries());
+		const signatureRemap: Map<number, number> = new Map<number, number>(this.#signatureHead.entries());
 		for (const [offset, byte] of this.#signatureTail.entries()) {
-			const offsetResolve: number = size + offset;
+			const offsetResolve: number = fileSize + offset;
 			if (
 				offsetResolve < 0 ||
-				typeof signatureResolve.get(offsetResolve) !== "undefined"
+				typeof signatureRemap.get(offsetResolve) !== "undefined"
 			) {
 				// Signature of head and tail must not overlap each other, overlapped means the file is too small and definitely not match.
 				return false;
 			}
-			signatureResolve.set(offsetResolve, byte);
+			signatureRemap.set(offsetResolve, byte);
 		}
-		return signatureResolve;
+		return signatureRemap;
 	}
 	/**
 	 * Determine whether the bytes is match the specify signature.
@@ -89,14 +90,9 @@ export class BytesMatcher {
 		if (item.length === 0) {
 			return false;
 		}
-		const itemResolve: Uint8Array = (typeof item === "string") ? (new TextEncoder().encode(item)) : Uint8Array.of(...item);
-		for (const [offset, byte] of this.#signatureHead.entries()) {
-			if (itemResolve[offset] !== byte) {
-				return false;
-			}
-		}
-		for (const [offset, byte] of this.#signatureTail.entries()) {
-			if (itemResolve[offset] !== byte) {
+		const itemTypeUnify: Uint8Array = (typeof item === "string") ? (new TextEncoder().encode(item)) : Uint8Array.of(...item);
+		for (const [offset, byte] of [...this.#signatureHead.entries(), ...this.#signatureTail.entries()]) {
+			if (itemTypeUnify[offset] !== byte) {
 				return false;
 			}
 		}
@@ -108,44 +104,85 @@ export class BytesMatcher {
 	 * > **🛡️ Require Permission**
 	 * >
 	 * > - File System - Read (`allow-read`)
-	 * @param {string | URL | Deno.FsFile} file File that need to determine.
+	 * @param {string | Deno.FsFile | NodeJSFileHandle | URL} file File that need to determine.
 	 * @returns {Promise<boolean>} Determine result.
 	 */
-	async testFile(file: string | URL | Deno.FsFile): Promise<boolean> {
-		const fileResolve: Deno.FsFile = (file instanceof Deno.FsFile) ? file : (await Deno.open(file));
-		try {
-			const fileInfo: Deno.FileInfo = await fileResolve.stat();
-			if (!fileInfo.isFile) {
-				throw new Error(`This is not a file!`);
-			}
-			const signatureResolve: false | Map<number, number> = this.#mapSignatureByFile(fileInfo);
-			if (!signatureResolve) {
-				return false;
-			}
-			const reader: ReadableStreamDefaultReader<Uint8Array> = fileResolve.readable.getReader();
-			let cursor = 0;
-			const cursorMaximum: number = Math.max(...Array.from<number>(signatureResolve.keys()));
-			while (true) {
-				const { done, value } = await reader.read();
-				if (typeof value !== "undefined") {
-					for (let index = 0; index < value.length; index += 1) {
-						const byte: number | undefined = signatureResolve.get(cursor);
-						if (typeof byte !== "undefined" && value[index] !== byte) {
-							return false;
-						}
-						cursor += 1;
-						if (cursor > cursorMaximum) {
-							return true;
+	async testFile(file: string | Deno.FsFile | NodeJSFileHandle | URL): Promise<boolean> {
+		if (typeof Deno !== "undefined" && (
+			typeof file === "string" ||
+			file instanceof Deno.FsFile ||
+			file instanceof URL
+		)) {
+			const fileAbstract: Deno.FsFile = (file instanceof Deno.FsFile) ? file : (await Deno.open(file));
+			try {
+				const { isFile, size }: Deno.FileInfo = await fileAbstract.stat();
+				if (!isFile) {
+					throw new Error(`This is not a file!`);
+				}
+				const signatureRemap: false | Map<number, number> = this.#mapSignatureByFileSize(size);
+				if (!signatureRemap) {
+					return false;
+				}
+				const reader = fileAbstract.readable.getReader();
+				let cursor = 0;
+				const cursorMaximum: number = Math.max(...Array.from(signatureRemap.keys()));
+				while (true) {
+					const { done, value } = await reader.read();
+					if (typeof value !== "undefined") {
+						for (let index = 0; index < value.length; index += 1) {
+							const byte: number | undefined = signatureRemap.get(cursor);
+							if (typeof byte !== "undefined" && value[index] !== byte) {
+								return false;
+							}
+							cursor += 1;
+							if (cursor > cursorMaximum) {
+								return true;
+							}
 						}
 					}
+					if (done) {
+						return false;
+					}
 				}
-				if (done) {
+			} finally {
+				if (!(file instanceof Deno.FsFile)) {
+					fileAbstract.close();
+				}
+			}
+		}
+		//@ts-ignore `FileHandle` is a class in NodeJS, but is an interface in Deno.
+		const fileAbstract: NodeJSFileHandle = (file instanceof NodeJSFileHandle) ? (file as NodeJSFileHandle) : (await nodejsFSOpen(file as string | URL));
+		try {
+			const { isFile, size }: NodeJSFSStats = await fileAbstract.stat();
+			if (!isFile()) {
+				throw new Error(`This is not a file!`);
+			}
+			const signatureRemap: false | Map<number, number> = this.#mapSignatureByFileSize(size);
+			if (!signatureRemap) {
+				return false;
+			}
+			let cursor = 0;
+			const cursorMaximum: number = Math.max(...Array.from(signatureRemap.keys()));
+			while (true) {
+				const { buffer, bytesRead } = await fileAbstract.read({ position: cursor });
+				for (let index = 0; index < buffer.length; index += 1) {
+					const byte: number | undefined = signatureRemap.get(cursor);
+					if (typeof byte !== "undefined" && buffer[index] !== byte) {
+						return false;
+					}
+					cursor += 1;
+					if (cursor > cursorMaximum) {
+						return true;
+					}
+				}
+				if (bytesRead === 0) {
 					return false;
 				}
 			}
 		} finally {
-			if (!(file instanceof Deno.FsFile)) {
-				fileResolve.close();
+			//@ts-ignore `FileHandle` is a class in NodeJS, but is an interface in Deno.
+			if (!(file instanceof NodeJSFileHandle)) {
+				fileAbstract.close();
 			}
 		}
 	}

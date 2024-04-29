@@ -7,7 +7,10 @@ import { walk as readDir, type WalkEntry } from "STD/fs/walk.ts";
 const pathsMain: WalkEntry[] = await Array.fromAsync(readDir("."));
 const transformResult: TransformOutput = await transform({
 	entryPoints: ["mod.ts"],
-	mappings: {},
+	mappings: {
+		"node:fs": { name: "node:fs" },
+		"node:fs/promises": { name: "node:fs/promises" }
+	},
 	shims: [],
 	target: "Latest"
 });
@@ -29,6 +32,12 @@ for (const { path } of pathsMain) {
 		/^README[^\\\/]*\.md$/.test(path)
 	) {
 		await fsCopy(path, `${npmOutputDir}/${path}`, {
+			overwrite: true,
+			preserveTimestamps: true
+		});
+	}
+	if (path === "magic_bytes_list.json") {
+		await fsCopy(path, `${npmOutputDirDist}/${path}`, {
 			overwrite: true,
 			preserveTimestamps: true
 		});
