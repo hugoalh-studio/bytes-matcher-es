@@ -1,5 +1,5 @@
-import { stringify as csvStringify, type DataItem } from "STD/csv/stringify.ts";
-import { parse as yamlParse } from "STD/yaml/parse.ts";
+import { stringify as csvStringify, type DataItem } from "STD/csv/stringify";
+import { parse as yamlParse } from "STD/yaml/parse";
 const fileName = "magic_bytes_list";
 const data = yamlParse(await Deno.readTextFile(`${fileName}.yml`));
 await Deno.writeTextFile(`${fileName}.tsv`, `${csvStringify(data as DataItem[], {
