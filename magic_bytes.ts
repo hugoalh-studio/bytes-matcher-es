@@ -1,6 +1,8 @@
-import { FileHandle as NodeJSFileHandle, open as nodejsFSOpen } from "node:fs/promises";
-import MagicBytesList from "./magic_bytes_list.json" with { type: "json" };
-import { BytesMatcher, type BytesMatcherSignature } from "./matcher.ts";
+import MagicBytesList from "./asset/magic_bytes_list.json" with { type: "json" };
+import {
+	BytesMatcher,
+	type BytesMatcherSignature
+} from "./matcher.ts";
 /**
  * Category of the magic bytes.
  */
@@ -97,24 +99,16 @@ export class MagicBytesMatcher {
 	/**
 	 * List all of the magic bytes meta which the file bytes is match.
 	 * 
-	 * > **🛡️ Require Permission**
+	 * > **🛡️ Permissions**
 	 * >
-	 * > - File System - Read (`allow-read`)
-	 * @param {string | Deno.FsFile | NodeJSFileHandle | URL} file File that need to determine.
+	 * > | **Target** | **Type** | **Coverage** |
+	 * > |:--|:--|:--|
+	 * > | Deno | File System - Read (`allow-read`) | Resource |
+	 * @param {string | URL | Deno.FsFile} file File that need to determine.
 	 * @returns {AsyncGenerator<MagicBytesMetaExtend>} Magic bytes meta list.
 	 */
-	async *matchFileAll(file: string | Deno.FsFile | NodeJSFileHandle | URL): AsyncGenerator<MagicBytesMetaExtend> {
-		const fileAbstract: Deno.FsFile | NodeJSFileHandle = await (async (): Promise<Deno.FsFile | NodeJSFileHandle> => {
-			if (typeof Deno !== "undefined" && (
-				typeof file === "string" ||
-				file instanceof Deno.FsFile ||
-				file instanceof URL
-			)) {
-				return ((file instanceof Deno.FsFile) ? file : (await Deno.open(file)));
-			}
-			//@ts-ignore `FileHandle` is a class in NodeJS, but is an interface in Deno.
-			return (file instanceof NodeJSFileHandle) ? (file as NodeJSFileHandle) : (await nodejsFSOpen(file as string | URL));
-		})();
+	async *matchFileAll(file: string | URL | Deno.FsFile): AsyncGenerator<MagicBytesMetaExtend> {
+		const fileAbstract: Deno.FsFile = (file instanceof Deno.FsFile) ? file : (await Deno.open(file));
 		try {
 			for (const { matcher, meta } of this.#list) {
 				if (await matcher.testFile(fileAbstract)) {
@@ -122,10 +116,7 @@ export class MagicBytesMatcher {
 				}
 			}
 		} finally {
-			if (
-				typeof file === "string" ||
-				file instanceof URL
-			) {
+			if (!(file instanceof Deno.FsFile)) {
 				fileAbstract.close();
 			}
 		}
@@ -144,9 +135,11 @@ export class MagicBytesMatcher {
 	/**
 	 * Return the magic bytes meta which the file bytes is match the closest.
 	 * 
-	 * > **🛡️ Require Permission**
+	 * > **🛡️ Permissions**
 	 * >
-	 * > - File System - Read (`allow-read`)
+	 * > | **Target** | **Type** | **Coverage** |
+	 * > |:--|:--|:--|
+	 * > | Deno | File System - Read (`allow-read`) | Resource |
 	 * @param {string | URL | Deno.FsFile} file File that need to determine.
 	 * @returns {Promise<MagicBytesMetaExtend | null>} Magic bytes meta.
 	 */
@@ -167,9 +160,11 @@ export class MagicBytesMatcher {
 	/**
 	 * Determine whether the file bytes is match any of specify magic bytes.
 	 * 
-	 * > **🛡️ Require Permission**
+	 * > **🛡️ Permissions**
 	 * >
-	 * > - File System - Read (`allow-read`)
+	 * > | **Target** | **Type** | **Coverage** |
+	 * > |:--|:--|:--|
+	 * > | Deno | File System - Read (`allow-read`) | Resource |
 	 * @param {string | URL | Deno.FsFile} file File that need to determine.
 	 * @returns {Promise<boolean>} Determine result.
 	 */

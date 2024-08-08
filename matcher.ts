@@ -1,5 +1,3 @@
-import type { Stats as NodeJSFSStats } from "node:fs";
-import { FileHandle as NodeJSFileHandle, open as nodejsFSOpen } from "node:fs/promises";
 /**
  * Signature of the bytes matcher.
  */
@@ -90,9 +88,9 @@ export class BytesMatcher {
 		if (item.length === 0) {
 			return false;
 		}
-		const itemTypeUnify: Uint8Array = (typeof item === "string") ? (new TextEncoder().encode(item)) : Uint8Array.of(...item);
+		const itemFmt: Uint8Array = (typeof item === "string") ? (new TextEncoder().encode(item)) : Uint8Array.of(...item);
 		for (const [offset, byte] of [...this.#signatureHead.entries(), ...this.#signatureTail.entries()]) {
-			if (itemTypeUnify[offset] !== byte) {
+			if (itemFmt[offset] !== byte) {
 				return false;
 			}
 		}
@@ -101,87 +99,48 @@ export class BytesMatcher {
 	/**
 	 * Determine whether the file is match the specify signature.
 	 * 
-	 * > **🛡️ Require Permission**
+	 * > **🛡️ Permissions**
 	 * >
-	 * > - File System - Read (`allow-read`)
-	 * @param {string | Deno.FsFile | NodeJSFileHandle | URL} file File that need to determine.
+	 * > | **Target** | **Type** | **Coverage** |
+	 * > |:--|:--|:--|
+	 * > | Deno | File System - Read (`allow-read`) | Resource |
+	 * @param {string | URL | Deno.FsFile} file File that need to determine.
 	 * @returns {Promise<boolean>} Determine result.
 	 */
-	async testFile(file: string | Deno.FsFile | NodeJSFileHandle | URL): Promise<boolean> {
-		if (typeof Deno !== "undefined" && (
-			typeof file === "string" ||
-			file instanceof Deno.FsFile ||
-			file instanceof URL
-		)) {
-			const fileAbstract: Deno.FsFile = (file instanceof Deno.FsFile) ? file : (await Deno.open(file));
-			try {
-				const { isFile, size }: Deno.FileInfo = await fileAbstract.stat();
-				if (!isFile) {
-					throw new Error(`This is not a file!`);
-				}
-				const signatureRemap: false | Map<number, number> = this.#mapSignatureByFileSize(size);
-				if (!signatureRemap) {
-					return false;
-				}
-				const reader = fileAbstract.readable.getReader();
-				let cursor = 0;
-				const cursorMaximum: number = Math.max(...Array.from(signatureRemap.keys()));
-				while (true) {
-					const { done, value } = await reader.read();
-					if (typeof value !== "undefined") {
-						for (let index = 0; index < value.length; index += 1) {
-							const byte: number | undefined = signatureRemap.get(cursor);
-							if (typeof byte !== "undefined" && value[index] !== byte) {
-								return false;
-							}
-							cursor += 1;
-							if (cursor > cursorMaximum) {
-								return true;
-							}
-						}
-					}
-					if (done) {
-						return false;
-					}
-				}
-			} finally {
-				if (!(file instanceof Deno.FsFile)) {
-					fileAbstract.close();
-				}
-			}
-		}
-		//@ts-ignore `FileHandle` is a class in NodeJS, but is an interface in Deno.
-		const fileAbstract: NodeJSFileHandle = (file instanceof NodeJSFileHandle) ? (file as NodeJSFileHandle) : (await nodejsFSOpen(file as string | URL));
+	async testFile(file: string | URL | Deno.FsFile): Promise<boolean> {
+		const fileAbstract: Deno.FsFile = (file instanceof Deno.FsFile) ? file : (await Deno.open(file));
 		try {
-			const { isFile, size }: NodeJSFSStats = await fileAbstract.stat();
-			if (!isFile()) {
+			const { isFile, size }: Deno.FileInfo = await fileAbstract.stat();
+			if (!isFile) {
 				throw new Error(`This is not a file!`);
 			}
 			const signatureRemap: false | Map<number, number> = this.#mapSignatureByFileSize(size);
 			if (!signatureRemap) {
 				return false;
 			}
+			const reader: ReadableStreamDefaultReader<Uint8Array> = fileAbstract.readable.getReader();
 			let cursor = 0;
 			const cursorMaximum: number = Math.max(...Array.from(signatureRemap.keys()));
 			while (true) {
-				const { buffer, bytesRead } = await fileAbstract.read({ position: cursor });
-				for (let index = 0; index < buffer.length; index += 1) {
-					const byte: number | undefined = signatureRemap.get(cursor);
-					if (typeof byte !== "undefined" && buffer[index] !== byte) {
-						return false;
-					}
-					cursor += 1;
-					if (cursor > cursorMaximum) {
-						return true;
+				const { done, value } = await reader.read();
+				if (typeof value !== "undefined") {
+					for (let index = 0; index < value.length; index += 1) {
+						const byte: number | undefined = signatureRemap.get(cursor);
+						if (typeof byte !== "undefined" && value[index] !== byte) {
+							return false;
+						}
+						cursor += 1;
+						if (cursor > cursorMaximum) {
+							return true;
+						}
 					}
 				}
-				if (bytesRead === 0) {
+				if (done) {
 					return false;
 				}
 			}
 		} finally {
-			//@ts-ignore `FileHandle` is a class in NodeJS, but is an interface in Deno.
-			if (!(file instanceof NodeJSFileHandle)) {
+			if (!(file instanceof Deno.FsFile)) {
 				fileAbstract.close();
 			}
 		}
@@ -195,3 +154,17 @@ export class BytesMatcher {
 	}
 }
 export default BytesMatcher;
+/**
+ * A helper function to open a file and resolve to an instance of `Deno.FsFile`.
+ * 
+ * > **🛡️ Permissions**
+ * >
+ * > | **Target** | **Type** | **Coverage** |
+ * > |:--|:--|:--|
+ * > | Deno | File System - Read (`allow-read`) | Resource |
+ * @param {string | URL} path Path of the file that need to open.
+ * @returns {Promise<Deno.FsFile>} Instance of `Deno.FsFile`.
+ */
+export function getDenoFileAbstraction(path: string | URL): Promise<Deno.FsFile> {
+	return Deno.open(path);
+}
