@@ -23,7 +23,7 @@ export class BytesMatcher {
 	 */
 	constructor(signature: BytesMatcherSignature<string | Uint8Array>[]) {
 		if (signature.length === 0) {
-			throw new TypeError(`Argument \`signature\` is not defined!`);
+			throw new TypeError(`Parameter \`signature\` is not defined!`);
 		}
 		for (const { offset: offsetFrom, pattern } of signature) {
 			if (!Number.isSafeInteger(offsetFrom)) {
