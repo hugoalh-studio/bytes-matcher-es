@@ -1,44 +1,18 @@
-import { build as invokeDNT } from "DNT";
-import { copy as fsCopy } from "STD/fs/copy";
-import { emptyDir } from "STD/fs/empty-dir";
-import { ensureDir } from "STD/fs/ensure-dir";
 import {
-	walk as fsWalk,
-	type WalkEntry
-} from "STD/fs/walk";
-const fsPathsSnapshot: WalkEntry[] = await Array.fromAsync(fsWalk("."));
-const npmOutputDirectory = "./npm";
-await ensureDir(npmOutputDirectory);
-await emptyDir(npmOutputDirectory);
-await invokeDNT({
-	compilerOptions: {
-		target: "Latest"
-	},
-	declaration: "inline",
-	declarationMap: true,
-	entryPoints: [
-		{
-			kind: "export",
-			name: "./magic-bytes",
-			path: "./magic_bytes.ts"
-		},
-		{
-			kind: "export",
-			name: "./matcher",
-			path: "./matcher.ts"
-		},
-		{
-			kind: "export",
-			name: ".",
-			path: "./mod.ts"
-		}
+	getMetadataFromConfig,
+	invokeDenoNodeJSTransformer
+} from "DNT";
+const configJSR = await getMetadataFromConfig("jsr.jsonc");
+await invokeDenoNodeJSTransformer({
+	assetsCopy: [
+		"LICENSE.md",
+		"README.md"
 	],
-	esModule: true,
-	mappings: {},
-	outDir: "./npm",
-	package: {
+	entrypoints: configJSR.exports,
+	generateDeclarationMap: true,
+	metadata: {
 		name: "@hugoalh/bytes-matcher",
-		version: "0.2.0",
+		version: configJSR.version,
 		description: "A module to determine whether the bytes is match the specify signature.",
 		keywords: [
 			"bytes",
@@ -50,50 +24,20 @@ await invokeDNT({
 		},
 		license: "MIT",
 		author: "hugoalh",
-		type: "module",
 		repository: {
 			type: "git",
 			url: "git+https://github.com/hugoalh-studio/bytes-matcher-es.git"
+		},
+		scripts: {
 		},
 		engines: {
 			node: ">=16.13.0"
 		},
 		private: false,
 		publishConfig: {
-			access: "public",
-			"git-tag-version": false,
-			"lockfile-version": 2
+			access: "public"
 		}
 	},
-	scriptModule: false,
-	shims: {
-		blob: false,
-		deno: true,
-		prompts: false,
-		timers: false,
-		undici: false,
-		weakRef: false,
-		webSocket: false
-	},
-	test: false,
-	typeCheck: false
+	outputDirectory: "npm",
+	outputDirectoryPreEmpty: true
 });
-await Deno.remove(`${npmOutputDirectory}/src`, { recursive: true });
-for (const { path } of fsPathsSnapshot) {
-	if (
-		/^LICENSE[^\\\/]*\.md$/.test(path) ||
-		/^README[^\\\/]*\.md$/.test(path)
-	) {
-		await fsCopy(path, `${npmOutputDirectory}/${path}`, {
-			overwrite: true,
-			preserveTimestamps: true
-		});
-	}
-}
-await new Deno.Command("pwsh", {
-	args: ["-NonInteractive", "-Command", "$ErrorActionPreference = 'Stop'; npm publish --dry-run"],
-	cwd: `${Deno.cwd()}/${npmOutputDirectory}`,
-	stderr: "inherit",
-	stdin: "inherit",
-	stdout: "inherit"
-}).output();

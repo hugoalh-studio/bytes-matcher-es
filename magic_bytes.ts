@@ -73,7 +73,7 @@ export class MagicBytesMatcher {
 						}
 					});
 				} catch (error) {
-					throw new Error(`Unable to initialize magic bytes matcher with meta ${JSON.stringify(meta)}: ${error?.message ?? error}`);
+					throw new Error(`Unable to initialize magic bytes matcher with meta ${JSON.stringify(meta)}: ${(error as Error)?.message ?? error}`);
 				}
 			}
 		}
@@ -99,11 +99,11 @@ export class MagicBytesMatcher {
 	/**
 	 * List all of the magic bytes meta which the file bytes is match.
 	 * 
-	 * > **🛡️ Permissions**
-	 * >
-	 * > | **Target** | **Type** | **Coverage** |
-	 * > |:--|:--|:--|
-	 * > | Deno | File System - Read (`allow-read`) | Resource |
+	 * > **🛡️ Require Runtime Permissions**
+	 * > 
+	 * > - Deno
+	 * >   - File System - Read (`read`)
+	 * >     - *Resources*
 	 * @param {string | URL | Deno.FsFile} file File that need to determine.
 	 * @returns {AsyncGenerator<MagicBytesMetaExtend>} Magic bytes meta list.
 	 */
@@ -135,11 +135,11 @@ export class MagicBytesMatcher {
 	/**
 	 * Return the magic bytes meta which the file bytes is match the closest.
 	 * 
-	 * > **🛡️ Permissions**
-	 * >
-	 * > | **Target** | **Type** | **Coverage** |
-	 * > |:--|:--|:--|
-	 * > | Deno | File System - Read (`allow-read`) | Resource |
+	 * > **🛡️ Require Runtime Permissions**
+	 * > 
+	 * > - Deno
+	 * >   - File System - Read (`read`)
+	 * >     - *Resources*
 	 * @param {string | URL | Deno.FsFile} file File that need to determine.
 	 * @returns {Promise<MagicBytesMetaExtend | null>} Magic bytes meta.
 	 */
@@ -160,11 +160,11 @@ export class MagicBytesMatcher {
 	/**
 	 * Determine whether the file bytes is match any of specify magic bytes.
 	 * 
-	 * > **🛡️ Permissions**
-	 * >
-	 * > | **Target** | **Type** | **Coverage** |
-	 * > |:--|:--|:--|
-	 * > | Deno | File System - Read (`allow-read`) | Resource |
+	 * > **🛡️ Require Runtime Permissions**
+	 * > 
+	 * > - Deno
+	 * >   - File System - Read (`read`)
+	 * >     - *Resources*
 	 * @param {string | URL | Deno.FsFile} file File that need to determine.
 	 * @returns {Promise<boolean>} Determine result.
 	 */

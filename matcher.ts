@@ -32,14 +32,14 @@ export class BytesMatcher {
 			if (pattern.length === 0) {
 				throw new SyntaxError(`Pattern is empty from offset ${offsetFrom}!`);
 			}
-			const patternTypeUnify: number[] = Array.from((typeof pattern === "string") ? (new TextEncoder().encode(pattern)) : Uint8Array.of(...pattern));
-			const offsetTo: number = offsetFrom + patternTypeUnify.length;
+			const patternFmt: number[] = Array.from((typeof pattern === "string") ? (new TextEncoder().encode(pattern)) : Uint8Array.of(...pattern));
+			const offsetTo: number = offsetFrom + patternFmt.length;
 			if (offsetFrom < 0 && offsetTo > 0) {
 				throw new Error(`Pattern is overflow (most likely cause by incorrect offset)! Offset Current: ${offsetFrom}; Offset Possible: <= ${offsetFrom - offsetTo}`);
 			}
-			for (let index = 0; index < patternTypeUnify.length; index += 1) {
+			for (let index = 0; index < patternFmt.length; index += 1) {
 				const cursor: number = offsetFrom + index;
-				const byte: number = patternTypeUnify[index];
+				const byte: number = patternFmt[index];
 				const byteMayDefine: number | undefined = this.#signatureHead.get(cursor) ?? this.#signatureTail.get(cursor);
 				if (typeof byteMayDefine !== "undefined") {
 					throw new SyntaxError(`Offset of ${cursor} is already defined! Exist: \\x${byteMayDefine.toString(16)}; Override: \\x${byte.toString(16)}`);
@@ -55,15 +55,15 @@ export class BytesMatcher {
 	 * Map signature (majorly for tail signature) by the size of the file.
 	 * @access private
 	 * @param {number} fileSize Size of the file, by bytes.
-	 * @returns {false | Map<number, number>}
+	 * @returns {Map<number, number> | null}
 	 */
-	#mapSignatureByFileSize(fileSize: number): false | Map<number, number> {
+	#mapSignatureByFileSize(fileSize: number): Map<number, number> | null {
 		if (fileSize > Number.MAX_SAFE_INTEGER) {
 			throw new Error(`Size of the file is too large!`);
 		}
 		if (Math.max(...Array.from(this.#signatureHead.keys())) >= fileSize) {
 			// Signature of head must smaller than or equal to the size of the file.
-			return false;
+			return null;
 		}
 		const signatureRemap: Map<number, number> = new Map<number, number>(this.#signatureHead.entries());
 		for (const [offset, byte] of this.#signatureTail.entries()) {
@@ -73,7 +73,7 @@ export class BytesMatcher {
 				typeof signatureRemap.get(offsetResolve) !== "undefined"
 			) {
 				// Signature of head and tail must not overlap each other, overlapped means the file is too small and definitely not match.
-				return false;
+				return null;
 			}
 			signatureRemap.set(offsetResolve, byte);
 		}
@@ -99,11 +99,11 @@ export class BytesMatcher {
 	/**
 	 * Determine whether the file is match the specify signature.
 	 * 
-	 * > **🛡️ Permissions**
-	 * >
-	 * > | **Target** | **Type** | **Coverage** |
-	 * > |:--|:--|:--|
-	 * > | Deno | File System - Read (`allow-read`) | Resource |
+	 * > **🛡️ Require Runtime Permissions**
+	 * > 
+	 * > - Deno
+	 * >   - File System - Read (`read`)
+	 * >     - *Resources*
 	 * @param {string | URL | Deno.FsFile} file File that need to determine.
 	 * @returns {Promise<boolean>} Determine result.
 	 */
@@ -114,8 +114,8 @@ export class BytesMatcher {
 			if (!isFile) {
 				throw new Error(`This is not a file!`);
 			}
-			const signatureRemap: false | Map<number, number> = this.#mapSignatureByFileSize(size);
-			if (!signatureRemap) {
+			const signatureRemap: Map<number, number> | null = this.#mapSignatureByFileSize(size);
+			if (signatureRemap === null) {
 				return false;
 			}
 			const reader: ReadableStreamDefaultReader<Uint8Array> = fileAbstract.readable.getReader();
@@ -154,17 +154,3 @@ export class BytesMatcher {
 	}
 }
 export default BytesMatcher;
-/**
- * A helper function to open a file and resolve to an instance of `Deno.FsFile`.
- * 
- * > **🛡️ Permissions**
- * >
- * > | **Target** | **Type** | **Coverage** |
- * > |:--|:--|:--|
- * > | Deno | File System - Read (`allow-read`) | Resource |
- * @param {string | URL} path Path of the file that need to open.
- * @returns {Promise<Deno.FsFile>} Instance of `Deno.FsFile`.
- */
-export function getDenoFileAbstraction(path: string | URL): Promise<Deno.FsFile> {
-	return Deno.open(path);
-}
