@@ -18,15 +18,15 @@ await invokeDenoNodeJSTransformer({
 			"bytes",
 			"matcher"
 		],
-		homepage: "https://github.com/hugoalh-studio/bytes-matcher-es#readme",
+		homepage: "https://github.com/hugoalh/bytes-matcher-es#readme",
 		bugs: {
-			url: "https://github.com/hugoalh-studio/bytes-matcher-es/issues"
+			url: "https://github.com/hugoalh/bytes-matcher-es/issues"
 		},
 		license: "MIT",
 		author: "hugoalh",
 		repository: {
 			type: "git",
-			url: "git+https://github.com/hugoalh-studio/bytes-matcher-es.git"
+			url: "git+https://github.com/hugoalh/bytes-matcher-es.git"
 		},
 		scripts: {
 		},

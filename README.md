@@ -2,7 +2,7 @@
 
 [**⚖️** MIT](./LICENSE.md)
 
-[![GitHub: hugoalh-studio/bytes-matcher-es](https://img.shields.io/github/v/release/hugoalh-studio/bytes-matcher-es?label=hugoalh-studio/bytes-matcher-es&labelColor=181717&logo=github&logoColor=ffffff&sort=semver&style=flat "GitHub: hugoalh-studio/bytes-matcher-es")](https://github.com/hugoalh-studio/bytes-matcher-es)
+[![GitHub: hugoalh/bytes-matcher-es](https://img.shields.io/github/v/release/hugoalh/bytes-matcher-es?label=hugoalh/bytes-matcher-es&labelColor=181717&logo=github&logoColor=ffffff&sort=semver&style=flat "GitHub: hugoalh/bytes-matcher-es")](https://github.com/hugoalh/bytes-matcher-es)
 [![JSR: @hugoalh/bytes-matcher](https://img.shields.io/jsr/v/@hugoalh/bytes-matcher?label=JSR%20@hugoalh/bytes-matcher&labelColor=F7DF1E&logoColor=000000&style=flat "JSR: @hugoalh/bytes-matcher")](https://jsr.io/@hugoalh/bytes-matcher)
 [![NPM: @hugoalh/bytes-matcher](https://img.shields.io/npm/v/@hugoalh/bytes-matcher?label=@hugoalh/bytes-matcher&labelColor=CB3837&logo=npm&logoColor=ffffff&style=flat "NPM: @hugoalh/bytes-matcher")](https://www.npmjs.com/package/@hugoalh/bytes-matcher)
 
@@ -26,7 +26,7 @@ An ES (JavaScript & TypeScript) module to determine whether the bytes is match t
 
 - **Remote - GitHub Raw:**
   ```
-  https://raw.githubusercontent.com/hugoalh-studio/bytes-matcher-es/{Tag}/mod.ts
+  https://raw.githubusercontent.com/hugoalh/bytes-matcher-es/{Tag}/mod.ts
   ```
 - **JSR:**
   ```
@@ -52,7 +52,7 @@ An ES (JavaScript & TypeScript) module to determine whether the bytes is match t
 
 *This module does not require any runtime permission.*
 
-## 🧩 APIs
+## 🧩 APIs (Excerpt)
 
 - ```ts
   class BytesMatcher {
@@ -75,48 +75,21 @@ An ES (JavaScript & TypeScript) module to determine whether the bytes is match t
   ```
 - ```ts
   interface BytesMatcherSignature<T extends string | Uint8Array> {
-    /**
-     * Offset of the signature, by integer; Negative integer means offset from the end of the bytes.
-     */
     offset: number;
-    /**
-     * Pattern of the signature.
-     */
     pattern: T;
   }
   ```
 - ```ts
   interface MagicBytesMeta {
-    /**
-     * Category of the magic bytes.
-     */
     category: MagicBytesMetaCategory;
-    /**
-     * Extensions of the magic bytes, always start with a dot (`.`).
-     * @default []
-     */
     extensions: `.${string}`[];
-    /**
-     * MIMEs of the magic bytes.
-     * @default []
-     */
     mimes: string[];
-    /**
-     * Name of the magic bytes.
-     */
     name: string;
-    /**
-     * Variant of the magic bytes. Only available when multiple signatures with same meta.
-     * @default undefined
-     */
     variant?: string;
   }
   ```
 - ```ts
   interface MagicBytesMetaExtend extends MagicBytesMeta {
-    /**
-     * Weight of the magic bytes.
-     */
     weight: number;
   }
   ```
@@ -125,6 +98,6 @@ An ES (JavaScript & TypeScript) module to determine whether the bytes is match t
   ```
 
 > [!NOTE]
-> - For the prettier documentation, can visit via:
+> - For the full or prettier documentation, can visit via:
 >   - [Deno CLI `deno doc`](https://docs.deno.com/runtime/reference/cli/documentation_generator/)
 >   - [JSR](https://jsr.io/@hugoalh/bytes-matcher)
