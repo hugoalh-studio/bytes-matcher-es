@@ -3,7 +3,7 @@
 [**⚖️** MIT](./LICENSE.md)
 
 [![GitHub: hugoalh/bytes-matcher-es](https://img.shields.io/github/v/release/hugoalh/bytes-matcher-es?label=hugoalh/bytes-matcher-es&labelColor=181717&logo=github&logoColor=ffffff&sort=semver&style=flat "GitHub: hugoalh/bytes-matcher-es")](https://github.com/hugoalh/bytes-matcher-es)
-[![JSR: @hugoalh/bytes-matcher](https://img.shields.io/jsr/v/@hugoalh/bytes-matcher?label=JSR%20@hugoalh/bytes-matcher&labelColor=F7DF1E&logoColor=000000&style=flat "JSR: @hugoalh/bytes-matcher")](https://jsr.io/@hugoalh/bytes-matcher)
+[![JSR: @hugoalh/bytes-matcher](https://img.shields.io/jsr/v/@hugoalh/bytes-matcher?label=@hugoalh/bytes-matcher&labelColor=F7DF1E&logo=jsr&logoColor=000000&style=flat "JSR: @hugoalh/bytes-matcher")](https://jsr.io/@hugoalh/bytes-matcher)
 [![NPM: @hugoalh/bytes-matcher](https://img.shields.io/npm/v/@hugoalh/bytes-matcher?label=@hugoalh/bytes-matcher&labelColor=CB3837&logo=npm&logoColor=ffffff&style=flat "NPM: @hugoalh/bytes-matcher")](https://www.npmjs.com/package/@hugoalh/bytes-matcher)
 
 An ES (JavaScript & TypeScript) module to determine whether the bytes is match the specify signature.
